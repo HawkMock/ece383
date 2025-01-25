@@ -1,0 +1,5 @@
+Time resolution is 1 ps
+Error: Test case 7 failed
+Time: 70 ns  Iteration: 0  Process: /priority_encoder_tb/test_process  File: C:/Users/Dustin.Mock/code/ece383/H1/ece383_hw1.srcs/sources_1/new/priority_encoder_tb.vhd
+Error: Test case 8 failed
+Time: 80 ns  Iteration: 0  Process: /priority_encoder_tb/test_process  File: C:/Users/Dustin.Mock/code/ece383/H1/ece383_hw1.srcs/sources_1/new/priority_encoder_tb.vhd
