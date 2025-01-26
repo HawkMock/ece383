@@ -1,0 +1,8 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../ece383_lab1.srcs/sources_1/new/VGA.vhd" \
+"../../../../ece383_lab1.srcs/sources_1/new/counter_baseN.vhd" \
+"../../../../ece383_lab1.srcs/sources_1/new/VGA_tb.vhd" \
+
+# Do not sort compile order
+nosort

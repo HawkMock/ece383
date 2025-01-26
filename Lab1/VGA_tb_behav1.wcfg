@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="VGA_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="VGA_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="850,401 ps"></ZoomStartTime>
+      <ZoomEndTime time="852,798 ps"></ZoomEndTime>
+      <Cursor1Time time="851,500 ps"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="177"></NameColumnWidth>
+      <ValueColumnWidth column_width="90"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="17" />
+   <wvobject fp_name="/VGA_tb/w_clk" type="logic">
+      <obj_property name="ElementShortName">w_clk</obj_property>
+      <obj_property name="ObjectShortName">w_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/VGA_tb/w_reset_n" type="logic">
+      <obj_property name="ElementShortName">w_reset_n</obj_property>
+      <obj_property name="ObjectShortName">w_reset_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/VGA_tb/w_row" type="array">
+      <obj_property name="ElementShortName">w_row[9:0]</obj_property>
+      <obj_property name="ObjectShortName">w_row[9:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/VGA_tb/w_column" type="array">
+      <obj_property name="ElementShortName">w_column[9:0]</obj_property>
+      <obj_property name="ObjectShortName">w_column[9:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+   <wvobject fp_name="/VGA_tb/w_h_sync" type="logic">
+      <obj_property name="ElementShortName">w_h_sync</obj_property>
+      <obj_property name="ObjectShortName">w_h_sync</obj_property>
+   </wvobject>
+   <wvobject fp_name="/VGA_tb/w_sync" type="logic">
+      <obj_property name="ElementShortName">w_sync</obj_property>
+      <obj_property name="ObjectShortName">w_sync</obj_property>
+   </wvobject>
+   <wvobject fp_name="/VGA_tb/w_blank" type="logic">
+      <obj_property name="ElementShortName">w_blank</obj_property>
+      <obj_property name="ObjectShortName">w_blank</obj_property>
+   </wvobject>
+   <wvobject fp_name="/VGA_tb/w_R" type="array">
+      <obj_property name="ElementShortName">w_R[7:0]</obj_property>
+      <obj_property name="ObjectShortName">w_R[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/VGA_tb/w_G" type="array">
+      <obj_property name="ElementShortName">w_G[7:0]</obj_property>
+      <obj_property name="ObjectShortName">w_G[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/VGA_tb/w_B" type="array">
+      <obj_property name="ElementShortName">w_B[7:0]</obj_property>
+      <obj_property name="ObjectShortName">w_B[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/VGA_tb/w_trigger_time" type="array">
+      <obj_property name="ElementShortName">w_trigger_time[9:0]</obj_property>
+      <obj_property name="ObjectShortName">w_trigger_time[9:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/VGA_tb/w_trigger_volt" type="array">
+      <obj_property name="ElementShortName">w_trigger_volt[9:0]</obj_property>
+      <obj_property name="ObjectShortName">w_trigger_volt[9:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/VGA_tb/w_ch1" type="logic">
+      <obj_property name="ElementShortName">w_ch1</obj_property>
+      <obj_property name="ObjectShortName">w_ch1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/VGA_tb/w_ch1_enb" type="logic">
+      <obj_property name="ElementShortName">w_ch1_enb</obj_property>
+      <obj_property name="ObjectShortName">w_ch1_enb</obj_property>
+   </wvobject>
+   <wvobject fp_name="/VGA_tb/w_ch2" type="logic">
+      <obj_property name="ElementShortName">w_ch2</obj_property>
+      <obj_property name="ObjectShortName">w_ch2</obj_property>
+   </wvobject>
+   <wvobject fp_name="/VGA_tb/w_ch2_enb" type="logic">
+      <obj_property name="ElementShortName">w_ch2_enb</obj_property>
+      <obj_property name="ObjectShortName">w_ch2_enb</obj_property>
+   </wvobject>
+   <wvobject fp_name="/VGA_tb/c_clk_period" type="other">
+      <obj_property name="ElementShortName">c_clk_period</obj_property>
+      <obj_property name="ObjectShortName">c_clk_period</obj_property>
+   </wvobject>
+</wave_config>
