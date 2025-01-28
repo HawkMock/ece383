@@ -63,8 +63,8 @@ use IEEE.NUMERIC_STD.ALL;
 entity VGA is
 	Port(	i_clk: in  STD_LOGIC;
 			i_reset_n : in  STD_LOGIC;
-			o_h_sync : out  STD_LOGIC;
-			o_sync : out  STD_LOGIC; 
+			o_h_synch : out  STD_LOGIC;
+			o_v_synch : out  STD_LOGIC; 
 			o_blank : out  STD_LOGIC;
 			o_R: out STD_LOGIC_VECTOR(7 downto 0);
 			o_G: out STD_LOGIC_VECTOR(7 downto 0);
@@ -85,7 +85,9 @@ architecture VGA_arch of VGA is
     signal w_row: unsigned(9 downto 0) := (others => '0');
     signal w_ctrl_column: STD_LOGIC := '1';
     signal w_ctrl_row: STD_LOGIC := '0';
-    signal col_prev : unsigned(9 downto 0) := (others => '0'); 
+    signal col_prev : unsigned(9 downto 0) := (others => '0');
+    signal w_h_blank : STD_LOGIC := '1';
+    signal w_v_blank : STD_LOGIC := '1';
     
     --+====> Component declarations <=====+--
     component counter_baseN is
@@ -101,6 +103,20 @@ architecture VGA_arch of VGA is
             o_Q     : out unsigned(g_bits-1 downto 0)
         );
     end component;
+    
+    component synch_blank is
+        port (
+            i_clk     : in  std_logic;
+            i_reset_n : in  std_logic;
+            o_h_synch : out STD_LOGIC;
+            o_h_blank : out STD_LOGIC;
+            o_v_synch : out STD_LOGIC;
+            o_v_blank : out STD_LOGIC;
+            i_column  : in unsigned(9 downto 0);
+            i_row     : in unsigned(9 downto 0)
+        );
+    end component;
+    
 begin
     --+====> Instantiate counters <=====+--
     column_counter : counter_baseN
@@ -120,7 +136,7 @@ begin
         generic map (
             g_base    => 525,
             g_bits    => 10,
-            g_initial => 0
+            g_initial => 475
         )
         port map (
             i_clk   => i_clk,
@@ -128,6 +144,21 @@ begin
             i_ctrl  => w_ctrl_row,
             o_Q     => w_row
         );
+        
+    --+====> Instantiate synch/blank module <=====+--
+    
+    synch_blank_inst : synch_blank
+        port map (
+            i_clk     => i_clk,
+            i_reset_n => i_reset_n,
+            o_h_synch => o_h_synch,
+            o_h_blank => w_h_blank,
+            o_v_synch => o_v_synch,
+            o_v_blank => w_v_blank,
+            i_column  => w_column,
+            i_row     => w_row
+        ); 
+    
 
     --+====> Set w_ctrl_row when w_column = 799 <=====+--
     process(i_clk)
@@ -144,5 +175,6 @@ begin
     --+====> Output Assignments <=====+--
     o_row    <= w_row;
     o_column <= w_column;
+    o_blank  <= '1' when (w_h_blank = '1' or w_v_blank = '1') else '0';
 
 end VGA_arch;

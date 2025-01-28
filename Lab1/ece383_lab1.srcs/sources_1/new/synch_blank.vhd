@@ -61,7 +61,7 @@ entity synch_blank is
            i_reset_n : in STD_LOGIC;
            o_h_synch : out STD_LOGIC;
            o_h_blank : out STD_LOGIC;
-           o_v_sync : out STD_LOGIC;
+           o_v_synch : out STD_LOGIC;
            o_v_blank : out STD_LOGIC;
            i_column : in unsigned(9 downto 0);
            i_row : in unsigned(9 downto 0) );

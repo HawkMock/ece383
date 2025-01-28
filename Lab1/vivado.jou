@@ -23,3 +23,10 @@
 #-----------------------------------------------------------
 start_gui
 open_project C:/Users/Dustin.Mock/code/ece383/Lab1/ece383_lab1.xpr
+update_compile_order -fileset sources_1
+close [ open C:/Users/Dustin.Mock/code/ece383/Lab1/ece383_lab1.srcs/sources_1/new/synch_blank.vhd w ]
+add_files C:/Users/Dustin.Mock/code/ece383/Lab1/ece383_lab1.srcs/sources_1/new/synch_blank.vhd
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+launch_simulation
+launch_simulation
