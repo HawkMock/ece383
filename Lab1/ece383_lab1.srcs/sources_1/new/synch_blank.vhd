@@ -10,14 +10,14 @@
 --| 
 --+----------------------------------------------------------------------------
 --|
---| FILENAME      : counter_baseN.vhd
+--| FILENAME      : synch_blank.vhd
 --| AUTHOR(S)     : C2C Dustin Mock
---| CREATED       : 2025-01-23
---| DESCRIPTION   : This file implements base N counter. It will count up to
---|                 N then roll over to 0.
+--| CREATED       : 2025-01-27
+--| DESCRIPTION   : This file implements a calculator to determine when the horizontal
+--|                 and vertical synch signals should be set and reset.
 --|
---| DOCUMENTATION : Used ChatGPT to implement generic:
---|                 https://chatgpt.com/share/67928cd6-285c-8012-8ea8-5e3a163fc26d
+--| DOCUMENTATION : None
+--|                 
 --| TODO:           None
 --|
 --+----------------------------------------------------------------------------
@@ -51,42 +51,40 @@
 --|
 --+----------------------------------------------------------------------------
 
+
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
 
-entity counter_baseN is
-    generic (
-        g_base : natural := 5;   -- Default base is 5
-        g_bits : natural := 3;   -- Default bit width for base 5
-        g_initial : natural := 0 -- Default initial value is 0
-    );
-    Port (
-        i_clk : in STD_LOGIC;
-        i_reset : in STD_LOGIC;
-        i_ctrl : in STD_LOGIC;
-        o_Q : out unsigned (g_bits - 1 downto 0)
-    );
-end counter_baseN;
+entity synch_blank is
+    Port ( i_clk : in STD_LOGIC;
+           i_reset_n : in STD_LOGIC;
+           o_h_synch : out STD_LOGIC;
+           o_h_blank : out STD_LOGIC;
+           o_v_sync : out STD_LOGIC;
+           o_v_blank : out STD_LOGIC;
+           i_column : in unsigned(9 downto 0);
+           i_row : in unsigned(9 downto 0) );
+end synch_blank;
 
-architecture counter_baseN_arch of counter_baseN is
-    -- Signal declarations
-    signal w_processQ: unsigned (g_bits - 1 downto 0) := to_unsigned(g_initial, g_bits);
-    constant k_base_minus_one : unsigned (g_bits - 1 downto 0) := to_unsigned(g_base - 1, g_bits);
+architecture synch_blank_arch of synch_blank is
+   
 begin
-    process(i_clk)
-    begin
-        if rising_edge(i_clk) then
-            if i_reset = '0' then
-                w_processQ <= (others => '0');
-            elsif (w_processQ < k_base_minus_one and i_ctrl = '1') then
-                w_processQ <= w_processQ + 1;
-            elsif (w_processQ = k_base_minus_one and i_ctrl = '1') then
-                w_processQ <= (others => '0');
-            end if;
-        end if;
-    end process;
 
-    o_Q <= w_processQ;
+  -- Horizontal sync: '0' when 656 <= i_column < 752, otherwise '1'
+  o_h_synch <= '0' when (i_column >= 656 and i_column < 752) else
+               '1';
 
-end counter_baseN_arch;
+  -- Horizontal blank: '1' when i_column < 640, otherwise '0'
+  o_h_blank <= '1' when (i_column < 640) else
+               '0';
+
+  -- Vertical sync: '0' when 490 <= i_row < 492, otherwise '1'
+  o_v_sync <= '0' when (i_row >= 490 and i_row < 492) else
+              '1';
+
+  -- Vertical blank: '1' when i_row < 480, otherwise '0'
+  o_v_blank <= '1' when (i_row < 480) else
+               '0';
+
+end synch_blank_arch;

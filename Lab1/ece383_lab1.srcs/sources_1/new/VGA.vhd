@@ -90,8 +90,9 @@ architecture VGA_arch of VGA is
     --+====> Component declarations <=====+--
     component counter_baseN is
         generic (
-            g_base : natural := 5;
-            g_bits : natural := 3
+            g_base   : natural := 5;
+            g_bits   : natural := 3;
+            g_initial: natural := 0
         );
         port (
             i_clk   : in  std_logic;
@@ -104,8 +105,9 @@ begin
     --+====> Instantiate counters <=====+--
     column_counter : counter_baseN
         generic map (
-            g_base => 800,
-            g_bits => 10
+            g_base    => 800,
+            g_bits    => 10,
+            g_initial => 0
         )
         port map (
             i_clk   => i_clk,
@@ -116,8 +118,9 @@ begin
         
     row_counter : counter_baseN
         generic map (
-            g_base => 525,
-            g_bits => 10
+            g_base    => 525,
+            g_bits    => 10,
+            g_initial => 0
         )
         port map (
             i_clk   => i_clk,
