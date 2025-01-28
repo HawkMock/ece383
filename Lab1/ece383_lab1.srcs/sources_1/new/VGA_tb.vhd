@@ -28,8 +28,8 @@ architecture test_bench of VGA_tb is
         Port(
             i_clk          : in  STD_LOGIC;
             i_reset_n      : in  STD_LOGIC;
-            o_h_sync       : out STD_LOGIC;
-            o_sync         : out STD_LOGIC;
+            o_h_synch      : out STD_LOGIC;
+            o_v_synch      : out STD_LOGIC;
             o_blank        : out STD_LOGIC;
             o_R            : out STD_LOGIC_VECTOR(7 downto 0);
             o_G            : out STD_LOGIC_VECTOR(7 downto 0);
@@ -50,8 +50,8 @@ architecture test_bench of VGA_tb is
     ----------------------------------------------------------------------------
     signal w_clk          : STD_LOGIC := '0';
     signal w_reset_n      : STD_LOGIC := '0';
-    signal w_h_sync       : STD_LOGIC;
-    signal w_sync         : STD_LOGIC;
+    signal w_h_synch      : STD_LOGIC;
+    signal w_v_synch      : STD_LOGIC;
     signal w_blank        : STD_LOGIC;
     signal w_R            : STD_LOGIC_VECTOR(7 downto 0);
     signal w_G            : STD_LOGIC_VECTOR(7 downto 0);
@@ -77,8 +77,8 @@ begin
         port map (
             i_clk          => w_clk,
             i_reset_n      => w_reset_n,
-            o_h_sync       => w_h_sync,
-            o_sync         => w_sync,
+            o_h_synch      => w_h_synch,
+            o_v_synch      => w_v_synch,
             o_blank        => w_blank,
             o_R            => w_R,
             o_G            => w_G,
@@ -115,8 +115,8 @@ begin
     p_stimulus : process
     begin
         -- Initial Reset
-        w_reset_n <= '0';
-        wait for 1 ns;  -- Wait some time before releasing reset
+--        w_reset_n <= '0';
+--        wait for 1 ns;  -- Wait some time before releasing reset
 
         w_reset_n <= '1';
         wait for 1 ns; -- Give counters some time to start counting

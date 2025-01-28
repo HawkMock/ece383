@@ -76,15 +76,15 @@ begin
                '1';
 
   -- Horizontal blank: '1' when i_column < 640, otherwise '0'
-  o_h_blank <= '1' when (i_column < 640) else
-               '0';
+  o_h_blank <= '0' when (i_column < 640) else
+               '1';
 
   -- Vertical sync: '0' when 490 <= i_row < 492, otherwise '1'
-  o_v_sync <= '0' when (i_row >= 490 and i_row < 492) else
+  o_v_synch <= '0' when (i_row >= 490 and i_row < 492) else
               '1';
 
   -- Vertical blank: '1' when i_row < 480, otherwise '0'
-  o_v_blank <= '1' when (i_row < 480) else
-               '0';
+  o_v_blank <= '0' when (i_row < 480) else
+               '1';
 
 end synch_blank_arch;
