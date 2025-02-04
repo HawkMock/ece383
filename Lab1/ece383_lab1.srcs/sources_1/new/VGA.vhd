@@ -88,6 +88,11 @@ architecture VGA_arch of VGA is
     signal col_prev : unsigned(9 downto 0) := (others => '0');
     signal w_h_blank : STD_LOGIC := '1';
     signal w_v_blank : STD_LOGIC := '1';
+
+    -- Signals for scopeFace outputs
+    signal w_R: std_logic_vector(7 downto 0);
+    signal w_G: std_logic_vector(7 downto 0);
+    signal w_B: std_logic_vector(7 downto 0);
     
     --+====> Component declarations <=====+--
     component counter_baseN is
@@ -116,7 +121,23 @@ architecture VGA_arch of VGA is
             i_row     : in unsigned(9 downto 0)
         );
     end component;
-    
+
+    component scopeFace is
+        Port (
+            i_row : in unsigned(9 downto 0);
+            i_column : in unsigned(9 downto 0);
+            i_trigger_volt: in unsigned(9 downto 0);
+            i_trigger_time: in unsigned(9 downto 0);
+            o_R : out std_logic_vector(7 downto 0);
+            o_G : out std_logic_vector(7 downto 0);
+            o_B : out std_logic_vector(7 downto 0);
+            i_ch1: in std_logic;
+            i_ch1_enb: in std_logic;
+            i_ch2: in std_logic;
+            i_ch2_enb: in std_logic
+        );
+    end component;
+
 begin
     --+====> Instantiate counters <=====+--
     column_counter : counter_baseN
@@ -146,7 +167,6 @@ begin
         );
         
     --+====> Instantiate synch/blank module <=====+--
-    
     synch_blank_inst : synch_blank
         port map (
             i_clk     => i_clk,
@@ -157,8 +177,23 @@ begin
             o_v_blank => w_v_blank,
             i_column  => w_column,
             i_row     => w_row
-        ); 
-    
+        );
+
+    --+====> Instantiate scopeFace module <=====+--
+    scopeFace_inst : scopeFace
+        port map (
+            i_row => w_row,
+            i_column => w_column,
+            i_trigger_volt => i_trigger_volt,
+            i_trigger_time => i_trigger_time,
+            o_R => w_R,
+            o_G => w_G,
+            o_B => w_B,
+            i_ch1 => i_ch1,
+            i_ch1_enb => i_ch1_enb,
+            i_ch2 => i_ch2,
+            i_ch2_enb => i_ch2_enb
+        );
 
     --+====> Set w_ctrl_row when w_column = 799 <=====+--
     process(i_clk)
@@ -177,4 +212,10 @@ begin
     o_column <= w_column;
     o_blank  <= '1' when (w_h_blank = '1' or w_v_blank = '1') else '0';
 
+    -- Assign colors from scopeFace to VGA outputs
+    o_R <= w_R;
+    o_G <= w_G;
+    o_B <= w_B;
+
 end VGA_arch;
+
