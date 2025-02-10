@@ -186,3 +186,5 @@ launch_simulation
 launch_simulation
 launch_simulation
 source hw07_tb.tcl
+close_sim
+close_project

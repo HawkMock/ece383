@@ -3215,3 +3215,17 @@ source hw07_tb.tcl
 INFO: [USF-XSim-96] XSim completed. Design snapshot 'hw07_tb_behav' loaded.
 INFO: [USF-XSim-97] XSim simulation ran for 1000ns
 launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:18 . Memory (MB): peak = 1986.113 ; gain = 0.000
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Dustin.Mock\code\ece383\Lab1\ece383_lab1.srcs\sources_1\imports\Lab01_cadet_code\lab1.vhdl:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Dustin.Mock\code\ece383\Lab1\ece383_lab1.srcs\sources_1\new\top_nexys_lab1.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Dustin.Mock\code\ece383\Lab1\ece383_lab1.srcs\sources_1\new\scopeFace.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Dustin.Mock\code\ece383\Lab1\ece383_lab1.srcs\sources_1\imports\Lab01_cadet_code\scopeface.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Dustin.Mock\code\ece383\Lab1\ece383_lab1.srcs\sources_1\new\scopeFace.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Dustin.Mock\code\ece383\Lab1\ece383_lab1.srcs\sources_1\new\scopeFace.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Dustin.Mock\code\ece383\ece383_hw7\ece383_hw7.srcs\sources_1\imports\Homework_7\button_debounce.vhdl:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Dustin.Mock\code\ece383\ece383_hw7\ece383_hw7.srcs\sources_1\imports\Homework_7\hw07_tb.vhdl:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Dustin.Mock\code\ece383\ece383_hw7\ece383_hw7.srcs\sources_1\imports\Homework_7\hw07_tb.vhdl:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Dustin.Mock\code\ece383\ece383_hw7\ece383_hw7.srcs\sources_1\imports\Homework_7\hw07_tb.vhdl:]
+ERROR: [Common 17-180] Spawn failed: No error
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_project
