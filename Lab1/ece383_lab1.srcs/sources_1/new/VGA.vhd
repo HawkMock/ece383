@@ -157,7 +157,7 @@ begin
         generic map (
             g_base    => 525,
             g_bits    => 10,
-            g_initial => 475
+            g_initial => 0
         )
         port map (
             i_clk   => i_clk,

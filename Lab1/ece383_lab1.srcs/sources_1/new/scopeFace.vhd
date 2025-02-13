@@ -56,8 +56,8 @@ architecture scopeFace_arch of scopeFace is
 
 begin
     --|====> Update Boolean Signals <====|--
-    is_in_grid <= (20 <= unsigned(i_column) and unsigned(i_column) <= 620) and
-                  (20 <= unsigned(i_row) and unsigned(i_row) <= 420);
+    is_in_grid     <= (20 <= unsigned(i_column) and unsigned(i_column) <= 620) and
+                      (20 <= unsigned(i_row) and unsigned(i_row) <= 420);
     is_on_gridline <= ((unsigned(i_column) - 20) mod 60 = 0) or ((unsigned(i_row) - 20) mod 50 = 0);
 
     --|====> Set Color Channels <====|--
