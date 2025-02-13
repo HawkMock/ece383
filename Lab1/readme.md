@@ -18,10 +18,7 @@ Briefly describe the methods used to verify system functionality (such as produc
 
 ### Show the `h_synch` going high, low, and high in relation to column count.
 The intended behavior of the horizontal timing is depicted below:
-```{image} ./images/Lab01_HorizontalTiming.jpg
-:width: 760
-:align: center
-```
+![image](images/Lab01_HorizontalTiming.png)
 There should be 640 pixels of active video followed by 16 pixels of the front porch before the `h_synch` signal goes low. This means you should see thhe pixel go low between the 656 and 657th column. Since the 1st column is 0, this shift occurs when `w_column` goes from 655 to 656. This is demonstrated below, around the 112,775ps point on the time axis.
 ![image](images/h_synch_front_porch.png)
 There should then be 96 pixels of the `h_synch` period. Using similar logic/math, the `h_synch` should end between the `w_column` values 751 and 752. This can be seen around 117,575ps in the wavform below.
