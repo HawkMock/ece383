@@ -282,3 +282,400 @@ dismissDialog("Open Project"); // bh (Open Project Progress)
 // WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 193 ms. Decreasing delay to 2193 ms.
 // WARNING: HEventQueue.dispatchEvent() is taking  1041 ms.
 // WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 2294 ms. Increasing delay to 6882 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 834 MB. GUI used memory: 59 MB. Current time: 2/13/25, 6:10:45 PM MST
+// HMemoryUtils.trashcanNow. Engine heap size: 834 MB. GUI used memory: 59 MB. Current time: 2/13/25, 6:40:46 PM MST
+// WARNING: HEventQueue.dispatchEvent() is taking  2129 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1309 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1157 ms.
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking 17161 ms. Increasing delay to 10000 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 19135 ms. Increasing delay to 57405 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1773 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 34 ms. Decreasing delay to 2034 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 834 MB. GUI used memory: 58 MB. Current time: 2/13/25, 7:10:50 PM MST
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 1512 ms. Increasing delay to 4536 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  3047 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 834 MB. GUI used memory: 59 MB. Current time: 2/13/25, 7:40:50 PM MST
+// WARNING: HEventQueue.dispatchEvent() is taking  4194 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1563096 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 12079 ms. Increasing delay to 36237 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 834 MB. GUI used memory: 51 MB. Current time: 2/13/25, 8:18:44 PM MST
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking 11840 ms. Increasing delay to 10000 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1164 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  2226 ms.
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking 9353 ms. Increasing delay to 10000 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1526 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 1747 ms. Decreasing delay to 3747 ms.
+// WARNING: HTimer (a Update Status Timer) is taking 525ms to process. Increasing delay to 3000 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 4459 ms. Increasing delay to 13377 ms.
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking 9146 ms. Increasing delay to 10000 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 30 ms. Decreasing delay to 2030 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 834 MB. GUI used memory: 59 MB. Current time: 2/13/25, 8:48:35 PM MST
+// HMemoryUtils.trashcanNow. Engine heap size: 834 MB. GUI used memory: 59 MB. Current time: 2/13/25, 9:18:35 PM MST
+// HMemoryUtils.trashcanNow. Engine heap size: 834 MB. GUI used memory: 58 MB. Current time: 2/13/25, 9:48:36 PM MST
+// HMemoryUtils.trashcanNow. Engine heap size: 834 MB. GUI used memory: 58 MB. Current time: 2/13/25, 10:18:36 PM MST
+// WARNING: HEventQueue.dispatchEvent() is taking  1095 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 1740 ms. Increasing delay to 5220 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  7232903 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1372 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 834 MB. GUI used memory: 60 MB. Current time: 2/14/25, 12:26:53 AM MST
+// WARNING: HEventQueue.dispatchEvent() is taking  1556 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 3325 ms. Increasing delay to 9975 ms.
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking 5040 ms. Increasing delay to 10000 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  6006 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1047 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1331 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1460 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 834 MB. GUI used memory: 59 MB. Current time: 2/14/25, 12:56:54 AM MST
+// WARNING: HEventQueue.dispatchEvent() is taking  2083143 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 834 MB. GUI used memory: 59 MB. Current time: 2/14/25, 1:34:12 AM MST
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking 8275 ms. Increasing delay to 10000 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  2230591 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 834 MB. GUI used memory: 58 MB. Current time: 2/14/25, 2:11:38 AM MST
+// WARNING: HEventQueue.dispatchEvent() is taking  1491200 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 834 MB. GUI used memory: 59 MB. Current time: 2/14/25, 2:51:50 AM MST
+// WARNING: HEventQueue.dispatchEvent() is taking  7425792 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 834 MB. GUI used memory: 58 MB. Current time: 2/14/25, 5:04:25 AM MST
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking 5356 ms. Increasing delay to 10000 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 7071 ms. Increasing delay to 21213 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 82 ms. Decreasing delay to 2082 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  58456 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  3182639 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 834 MB. GUI used memory: 58 MB. Current time: 2/14/25, 6:13:24 AM MST
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 2214 ms. Increasing delay to 6642 ms.
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking 5795 ms. Increasing delay to 10000 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  84112 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  236961 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  5343526 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  340994 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  12394 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 834 MB. GUI used memory: 59 MB. Current time: 2/14/25, 8:09:03 AM MST
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 362638 ms. Increasing delay to 1087914 ms.
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking 18635 ms. Increasing delay to 10000 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1174 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1281 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1569 ms.
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking 13407 ms. Increasing delay to 10000 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 93 ms. Decreasing delay to 2093 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 834 MB. GUI used memory: 60 MB. Current time: 2/14/25, 8:32:58 AM MST
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 3482 ms. Increasing delay to 10446 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 59 ms. Decreasing delay to 2059 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 1214 ms. Increasing delay to 3642 ms.
+// Elapsed time: 149516 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, lab1(structure) (lab1.vhdl)]", 1); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+// PAPropertyPanels.initPanels (debounce_fsm.vhd) elapsed time: 0.6s
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, lab1(structure) (lab1.vhdl), debounce_btn3 : debounce_fsm(Behavioral) (debounce_fsm.vhd)]", 5, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+// WARNING: HEventQueue.dispatchEvent() is taking  1152 ms.
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, lab1(structure) (lab1.vhdl), debounce_btn3 : debounce_fsm(Behavioral) (debounce_fsm.vhd)]", 5, false, false, false, false, false, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, lab1(structure) (lab1.vhdl), debounce_btn3 : debounce_fsm(Behavioral) (debounce_fsm.vhd)]", 5, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, lab1(structure) (lab1.vhdl), debounce_btn3 : debounce_fsm(Behavioral) (debounce_fsm.vhd)]", 5, false, false, false, false, false, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Double Click
+// Elapsed time: 99 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, lab1(structure) (lab1.vhdl), video_inst : video(structure) (video.vhdl)]", 6); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+// Elapsed time: 16 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, lab1(structure) (lab1.vhdl), video_inst : video(structure) (video.vhdl), vga_inst : VGA(VGA_arch) (VGA.vhd)]", 8); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+// Elapsed time: 74 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, lab1(structure) (lab1.vhdl), video_inst : video(structure) (video.vhdl), vga_inst : VGA(VGA_arch) (VGA.vhd), row_counter : counter_baseN(counter_baseN_arch) (counter_baseN.vhd)]", 10, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, lab1(structure) (lab1.vhdl), video_inst : video(structure) (video.vhdl), vga_inst : VGA(VGA_arch) (VGA.vhd), row_counter : counter_baseN(counter_baseN_arch) (counter_baseN.vhd)]", 10, false, false, false, false, false, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Double Click
+// Elapsed time: 255 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "debounce_fsm.vhd", 1); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Project Summary", 0); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "debounce_fsm.vhd", 1); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, lab1(structure) (lab1.vhdl), video_inst : video(structure) (video.vhdl), vga_inst : VGA(VGA_arch) (VGA.vhd)]", 8, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, lab1(structure) (lab1.vhdl), video_inst : video(structure) (video.vhdl), vga_inst : VGA(VGA_arch) (VGA.vhd)]", 8, true, false, false, false, false, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Double Click - Node
+selectCodeEditor("VGA.vhd", 447, 299); // ae (VGA.vhd)
+// Elapsed time: 169 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, lab1(structure) (lab1.vhdl), video_inst : video(structure) (video.vhdl), vga_inst : VGA(VGA_arch) (VGA.vhd)]", 8); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 2984 ms to process. Increasing delay to 2000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 2313 ms to process. Increasing delay to 2000 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 4347 ms. Increasing delay to 13041 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 118 ms. Decreasing delay to 2118 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 1219 ms. Increasing delay to 3657 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1095 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 834 MB. GUI used memory: 65 MB. Current time: 2/14/25, 9:02:59 AM MST
+// Elapsed time: 1132 seconds
+selectCodeEditor("VGA.vhd", 146, 219); // ae (VGA.vhd)
+selectCodeEditor("VGA.vhd", 152, 215); // ae (VGA.vhd)
+// Elapsed time: 19 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, lab1(structure) (lab1.vhdl), debounce_btn0 : debounce_fsm(Behavioral) (debounce_fsm.vhd)]", 2, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, lab1(structure) (lab1.vhdl), debounce_btn3 : debounce_fsm(Behavioral) (debounce_fsm.vhd)]", 5, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, lab1(structure) (lab1.vhdl), debounce_btn0 : debounce_fsm(Behavioral) (debounce_fsm.vhd)]", 2, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, lab1(structure) (lab1.vhdl), video_inst : video(structure) (video.vhdl)]", 6, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, lab1(structure) (lab1.vhdl)]", 1, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, lab1(structure) (lab1.vhdl)]", 1, true, false, false, false, false, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Double Click - Node
+// Elapsed time: 57 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, lab1(structure) (lab1.vhdl)]", 1); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+// Elapsed time: 268 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, lab1(structure) (lab1.vhdl), video_inst : video(structure) (video.vhdl), vga_inst : VGA(VGA_arch) (VGA.vhd), column_counter : counter_baseN(counter_baseN_arch) (counter_baseN.vhd)]", 9, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+// Elapsed time: 38 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, lab1(structure) (lab1.vhdl), video_inst : video(structure) (video.vhdl), vga_inst : VGA(VGA_arch) (VGA.vhd), column_counter : counter_baseN(counter_baseN_arch) (counter_baseN.vhd)]", 9, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, lab1(structure) (lab1.vhdl), video_inst : video(structure) (video.vhdl), vga_inst : VGA(VGA_arch) (VGA.vhd), column_counter : counter_baseN(counter_baseN_arch) (counter_baseN.vhd)]", 9, false, false, false, false, false, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Double Click
+// Elapsed time: 214 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, lab1(structure) (lab1.vhdl), video_inst : video(structure) (video.vhdl), vga_inst : VGA(VGA_arch) (VGA.vhd), synch_blank_inst : synch_blank(synch_blank_arch) (synch_blank.vhd)]", 11, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, lab1(structure) (lab1.vhdl), video_inst : video(structure) (video.vhdl), vga_inst : VGA(VGA_arch) (VGA.vhd), synch_blank_inst : synch_blank(synch_blank_arch) (synch_blank.vhd)]", 11, false, false, false, false, false, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Double Click
+// Elapsed time: 193 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "VGA.vhd", 3); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+// Elapsed time: 514 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, lab1(structure) (lab1.vhdl)]", 1, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, lab1(structure) (lab1.vhdl)]", 1, true, false, false, false, false, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Double Click - Node
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, lab1(structure) (lab1.vhdl)]", 1); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+// Elapsed time: 67 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, lab1(structure) (lab1.vhdl), video_inst : video(structure) (video.vhdl), vga_inst : VGA(VGA_arch) (VGA.vhd), synch_blank_inst : synch_blank(synch_blank_arch) (synch_blank.vhd)]", 11, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, lab1(structure) (lab1.vhdl), video_inst : video(structure) (video.vhdl)]", 6, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, lab1(structure) (lab1.vhdl), video_inst : video(structure) (video.vhdl)]", 6, true, false, false, false, false, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Double Click - Node
+// Elapsed time: 36 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, lab1(structure) (lab1.vhdl), video_inst : video(structure) (video.vhdl)]", 6); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 1466 ms to process. Increasing delay to 2000 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 1912 ms. Increasing delay to 5736 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 678 ms to process. Increasing delay to 2000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 1466 ms to process. Increasing delay to 2000 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1295 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 834 MB. GUI used memory: 66 MB. Current time: 2/14/25, 9:33:00 AM MST
+// WARNING: HEventQueue.dispatchEvent() is taking  1190 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  26110282 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1048 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  18642 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 20810 ms to process. Increasing delay to 2000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 20622 ms to process. Increasing delay to 2000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 20664 ms to process. Increasing delay to 3000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 876 ms to process. Increasing delay to 2000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 20665 ms to process. Increasing delay to 3000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 20663 ms to process. Increasing delay to 3000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 20663 ms to process. Increasing delay to 2000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 20665 ms to process. Increasing delay to 2000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 20658 ms to process. Increasing delay to 3000 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 834 MB. GUI used memory: 68 MB. Current time: 2/14/25, 5:09:13 PM MST
+// WARNING: HEventQueue.dispatchEvent() is taking  2532 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 2421 ms to process. Increasing delay to 2000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 1065 ms to process. Increasing delay to 3000 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1017 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 1838 ms to process. Increasing delay to 3000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 1250 ms to process. Increasing delay to 3000 ms.
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking 24712 ms. Increasing delay to 10000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 3025 ms to process. Increasing delay to 3000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 3030 ms to process. Increasing delay to 3000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 3037 ms to process. Increasing delay to 4000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 3025 ms to process. Increasing delay to 3000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 2670 ms to process. Increasing delay to 4000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 2275 ms to process. Increasing delay to 4000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 2608 ms to process. Increasing delay to 4000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 2604 ms to process. Increasing delay to 4000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 2957 ms to process. Increasing delay to 3000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 2604 ms to process. Increasing delay to 4000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 2961 ms to process. Increasing delay to 3000 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  2658 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 59910 ms. Increasing delay to 179730 ms.
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking 9599 ms. Increasing delay to 10000 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 58 ms. Decreasing delay to 2058 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 834 MB. GUI used memory: 66 MB. Current time: 2/14/25, 5:38:54 PM MST
+// WARNING: HEventQueue.dispatchEvent() is taking  1445 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 2859 ms. Increasing delay to 8577 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 834 MB. GUI used memory: 66 MB. Current time: 2/14/25, 6:08:57 PM MST
+// HMemoryUtils.trashcanNow. Engine heap size: 834 MB. GUI used memory: 65 MB. Current time: 2/14/25, 6:39:00 PM MST
+// WARNING: HEventQueue.dispatchEvent() is taking  2337751 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  3008 ms.
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking 5721 ms. Increasing delay to 10000 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 834 MB. GUI used memory: 66 MB. Current time: 2/14/25, 7:36:49 PM MST
+// WARNING: HEventQueue.dispatchEvent() is taking  1631 ms.
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking 15892 ms. Increasing delay to 10000 ms.
+// Elapsed time: 36428 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 21, false); // g (PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, Flow Navigator Tree)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: INFO: [Project 1-1161] Replacing file C:/Users/Dustin.Mock/code/ece383/Lab1/ece383_lab1.srcs/utils_1/imports/synth_1/lab1.dcp with file C:/Users/Dustin.Mock/code/ece383/Lab1/ece383_lab1.runs/synth_1/lab1.dcp 
+// 'cM' command handler elapsed time: 6 seconds
+dismissDialog("Resetting Runs"); // bh (Resetting Runs Progress)
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 4 
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Fri Feb 14 19:37:26 2025] Launched synth_1... 
+// Tcl Message: Run output will be captured here: C:/Users/Dustin.Mock/code/ece383/Lab1/ece383_lab1.runs/synth_1/runme.log 
+// Tcl Message: [Fri Feb 14 19:37:26 2025] Launched impl_1... Run output will be captured here: C:/Users/Dustin.Mock/code/ece383/Lab1/ece383_lab1.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // bh (Generate Bitstream Progress)
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 222 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager]", 22, true); // g (PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, Flow Navigator Tree) - Node
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl (Dont Echo) Command: 'rdi::info_commands get_hw_probes'
+// Tcl (Dont Echo) Command: 'load_features labtools'
+// TclEventType: LOAD_FEATURE
+// TclEventType: HW_SESSION_OPEN
+// WARNING: HEventQueue.dispatchEvent() is taking  1845 ms.
+// Tcl Message: open_hw_manager 
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // x (PAResourceOtoP.PAViews_PROJECT_SUMMARY, PlanAheadTabProject Summary)
+dismissDialog("Open Hardware Manager"); // bh (Open Hardware Manager Progress)
+selectButton(PAResourceOtoP.ProgramDebugTab_OPEN_TARGET, "Open target"); // h (PAResourceOtoP.ProgramDebugTab_OPEN_TARGET)
+selectMenuItem(PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET, "Auto Connect"); // aq (PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET, auto_connect_target_menu)
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET
+// Tcl Message: connect_hw_server -allow_non_jtag 
+// Tcl Message: INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121 
+// Tcl Message: INFO: [Labtools 27-2222] Launching hw_server... 
+// Tcl Message: INFO: [Labtools 27-2221] Launch Output:  ****** Xilinx hw_server v2024.2   **** Build date : Oct 29 2024 at 10:25:41     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.   
+// TclEventType: HW_SERVER_UPDATE
+// Tcl Message: INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:0 INFO: [Labtools 27-3417] Launching cs_server... 
+// TclEventType: RUN_STEP_COMPLETED
+// Tcl Message: INFO: [Labtools 27-2221] Launch Output:   ******** Xilinx cs_server v2024.2.0   ****** Build date   : Oct 30 2024-12:19:07     **** Build number : 2024.2.1730312347       ** Copyright 2017-2022 Xilinx, Inc. All Rights Reserved.       ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.    
+// Tcl Message: connect_hw_server: Time (s): cpu = 00:00:01 ; elapsed = 00:00:18 . Memory (MB): peak = 1157.609 ; gain = 4.062 
+// Elapsed time: 17 seconds
+dismissDialog("Auto Connect"); // bh (Auto Connect Progress)
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// Elapsed time: 417 seconds
+selectButton(PAResourceOtoP.ProgramDebugTab_OPEN_TARGET, "Open target"); // h (PAResourceOtoP.ProgramDebugTab_OPEN_TARGET)
+selectMenuItem(PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET, "Auto Connect"); // aq (PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET, auto_connect_target_menu)
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET
+// TclEventType: HW_OBJECT_DELETE
+// TclEventType: HW_SERVER_CLOSE
+// Tcl Message: disconnect_hw_server localhost:3121 
+// TclEventType: HW_SERVER_UPDATE
+// Tcl Message: connect_hw_server -allow_non_jtag 
+// Tcl Message: INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121 INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:0 INFO: [Labtools 27-3417] Launching cs_server... 
+// Tcl Message: INFO: [Labtools 27-2221] Launch Output:   ******** Xilinx cs_server v2024.2.0   ****** Build date   : Oct 30 2024-12:19:07     **** Build number : 2024.2.1730312347       ** Copyright 2017-2022 Xilinx, Inc. All Rights Reserved.       ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.    
+// TclEventType: HW_SERVER_UPDATE
+// Tcl Message: connect_hw_server: Time (s): cpu = 00:00:01 ; elapsed = 00:00:11 . Memory (MB): peak = 1157.609 ; gain = 0.000 
+// TclEventType: HW_TARGET_CHANGE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_ADD
+// TclEventType: HW_TARGET_UPDATE
+// Tcl Message: open_hw_target 
+// Tcl Message: INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210276AEF70AB 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/Dustin.Mock/code/ece383/Lab1/ece383_lab1.runs/impl_1/lab1.bit} [get_hw_devices xc7a200t_0] 
+// Tcl Message: current_hw_device [get_hw_devices xc7a200t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a200t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a200t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// Elapsed time: 12 seconds
+dismissDialog("Auto Connect"); // bh (Auto Connect Progress)
+selectButton(PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE, "Program device"); // h (PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program", "Program Device"); // a (PAResourceOtoP.ProgramFpgaDialog_PROGRAM, RDIResource.BaseDialog_OK)
+// TclEventType: HW_DEVICE_CHANGE
+dismissDialog("Program Device"); // aT (dialog0)
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a200t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a200t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/Dustin.Mock/code/ece383/Lab1/ece383_lab1.runs/impl_1/lab1.bit} [get_hw_devices xc7a200t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a200t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// Tcl Message: program_hw_devices: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1219.422 ; gain = 0.000 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a200t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a200t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// 'E' command handler elapsed time: 8 seconds
+dismissDialog("Program Device"); // bh (Program Device Progress)
+// Elapsed time: 17 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "lab1.vhdl", 3); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // I (PAResourceOtoP.PAViews_BASE_WORKSPACE, PlanAheadTabBaseWorkspace)
+// Elapsed time: 10 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "VGA.vhd", 2); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+// Elapsed time: 18 seconds
+unmaximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // I (PAResourceOtoP.PAViews_BASE_WORKSPACE, PlanAheadTabBaseWorkspace)
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // I (PAResourceOtoP.PAViews_BASE_WORKSPACE, PlanAheadTabBaseWorkspace)
+unmaximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // I (PAResourceOtoP.PAViews_BASE_WORKSPACE, PlanAheadTabBaseWorkspace)
+selectMenu(PAResourceItoN.MainMenuMgr_WINDOW, "Window"); // ai (PAResourceItoN.MainMenuMgr_WINDOW, Window)
+selectMenu(PAResourceCommand.PACommandNames_CREATE_HARDWARE_DASHBOARDS, "Dashboard"); // an (PAResourceCommand.PACommandNames_CREATE_HARDWARE_DASHBOARDS, Dashboard)
+dismissMenu(PAResourceItoN.MainMenuMgr_WINDOW, "Window"); // ai (PAResourceItoN.MainMenuMgr_WINDOW, Window)
+selectMenu(RDIResource.MainWinMenuMgr_LAYOUT, "Layout"); // ai (RDIResource.MainWinMenuMgr_LAYOUT, Layout)
+dismissMenu(RDIResource.MainWinMenuMgr_LAYOUT, "Layout"); // ai (RDIResource.MainWinMenuMgr_LAYOUT, Layout)
+selectMenu(PAResourceItoN.MainMenuMgr_WINDOW, "Window"); // ai (PAResourceItoN.MainMenuMgr_WINDOW, Window)
+dismissMenu(PAResourceItoN.MainMenuMgr_WINDOW, "Window"); // ai (PAResourceItoN.MainMenuMgr_WINDOW, Window)
+selectMenu(PAResourceItoN.MainMenuMgr_REPORTS, "Reports"); // ai (PAResourceItoN.MainMenuMgr_REPORTS, Reports)
+dismissMenu(PAResourceItoN.MainMenuMgr_REPORTS, "Reports"); // ai (PAResourceItoN.MainMenuMgr_REPORTS, Reports)
+selectMenu(PAResourceItoN.MainMenuMgr_WINDOW, "Window"); // ai (PAResourceItoN.MainMenuMgr_WINDOW, Window)
+dismissMenu(PAResourceItoN.MainMenuMgr_WINDOW, "Window"); // ai (PAResourceItoN.MainMenuMgr_WINDOW, Window)
+selectMenu(RDIResource.MainWinMenuMgr_LAYOUT, "Layout"); // ai (RDIResource.MainWinMenuMgr_LAYOUT, Layout)
+dismissMenu(RDIResource.MainWinMenuMgr_LAYOUT, "Layout"); // ai (RDIResource.MainWinMenuMgr_LAYOUT, Layout)
+selectMenu(PAResourceItoN.MainMenuMgr_WINDOW, "Window"); // ai (PAResourceItoN.MainMenuMgr_WINDOW, Window)
+dismissMenu(PAResourceItoN.MainMenuMgr_WINDOW, "Window"); // ai (PAResourceItoN.MainMenuMgr_WINDOW, Window)
+selectMenu(PAResourceItoN.MainMenuMgr_REPORTS, "Reports"); // ai (PAResourceItoN.MainMenuMgr_REPORTS, Reports)
+dismissMenu(PAResourceItoN.MainMenuMgr_REPORTS, "Reports"); // ai (PAResourceItoN.MainMenuMgr_REPORTS, Reports)
+selectMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // ai (PAResourceItoN.MainMenuMgr_TOOLS, Tools)
+dismissMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // ai (PAResourceItoN.MainMenuMgr_TOOLS, Tools)
+selectMenu(PAResourceItoN.MainMenuMgr_FLOW, "Flow"); // ai (PAResourceItoN.MainMenuMgr_FLOW, Flow)
+dismissMenu(PAResourceItoN.MainMenuMgr_FLOW, "Flow"); // ai (PAResourceItoN.MainMenuMgr_FLOW, Flow)
+selectMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // ai (PAResourceItoN.MainMenuMgr_TOOLS, Tools)
+dismissMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // ai (PAResourceItoN.MainMenuMgr_TOOLS, Tools)
+selectMenu(PAResourceItoN.MainMenuMgr_FLOW, "Flow"); // ai (PAResourceItoN.MainMenuMgr_FLOW, Flow)
+selectMenu(PAResourceItoN.MainMenuMgr_SETTINGS, "Settings"); // an (PAResourceItoN.MainMenuMgr_SETTINGS, Settings)
+selectMenu(PAResourceCommand.PACommandNames_SIMULATION_RUN, "Run Simulation"); // ai (PAResourceCommand.PACommandNames_SIMULATION_RUN)
+selectMenu(PAResourceCommand.PACommandNames_SIMULATION_RUN, "Run Simulation"); // ai (PAResourceCommand.PACommandNames_SIMULATION_RUN)
+selectMenu(PAResourceCommand.PACommandNames_SIMULATION_RUN, "Run Simulation"); // ai (PAResourceCommand.PACommandNames_SIMULATION_RUN)
+selectMenu(PAResourceItoN.MainMenuMgr_SETTINGS, "Settings"); // an (PAResourceItoN.MainMenuMgr_SETTINGS, Settings)
+dismissMenu(PAResourceItoN.MainMenuMgr_FLOW, "Flow"); // ai (PAResourceItoN.MainMenuMgr_FLOW, Flow)
+selectMenu(PAResourceItoN.MainMenuMgr_EDIT, "Edit"); // ai (PAResourceItoN.MainMenuMgr_EDIT, Edit)
+dismissMenu(PAResourceItoN.MainMenuMgr_EDIT, "Edit"); // ai (PAResourceItoN.MainMenuMgr_EDIT, Edit)
+selectMenu(PAResourceItoN.MainMenuMgr_FLOW, "Flow"); // ai (PAResourceItoN.MainMenuMgr_FLOW, Flow)
+dismissMenu(PAResourceItoN.MainMenuMgr_FLOW, "Flow"); // ai (PAResourceItoN.MainMenuMgr_FLOW, Flow)
+selectMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // ai (PAResourceItoN.MainMenuMgr_TOOLS, Tools)
+dismissMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // ai (PAResourceItoN.MainMenuMgr_TOOLS, Tools)
+selectMenu(PAResourceItoN.MainMenuMgr_REPORTS, "Reports"); // ai (PAResourceItoN.MainMenuMgr_REPORTS, Reports)
+dismissMenu(PAResourceItoN.MainMenuMgr_REPORTS, "Reports"); // ai (PAResourceItoN.MainMenuMgr_REPORTS, Reports)
+selectMenu(PAResourceItoN.MainMenuMgr_WINDOW, "Window"); // ai (PAResourceItoN.MainMenuMgr_WINDOW, Window)
+dismissMenu(PAResourceItoN.MainMenuMgr_WINDOW, "Window"); // ai (PAResourceItoN.MainMenuMgr_WINDOW, Window)
+selectMenu(RDIResource.MainWinMenuMgr_LAYOUT, "Layout"); // ai (RDIResource.MainWinMenuMgr_LAYOUT, Layout)
+dismissMenu(RDIResource.MainWinMenuMgr_LAYOUT, "Layout"); // ai (RDIResource.MainWinMenuMgr_LAYOUT, Layout)
+selectMenu(PAResourceItoN.MainMenuMgr_VIEW, "View"); // ai (PAResourceItoN.MainMenuMgr_VIEW, View)
+dismissMenu(PAResourceItoN.MainMenuMgr_VIEW, "View"); // ai (PAResourceItoN.MainMenuMgr_VIEW, View)
+selectCodeEditor("VGA.vhd", 470, 116); // ae (VGA.vhd)
+selectButton(PAResourceTtoZ.TaskBanner_CLOSE, (String) null); // k (PAResourceTtoZ.TaskBanner_CLOSE)
+closeTask("Program and Debug", "Hardware Manager", "DesignTask.PROGRAM_DEBUG");
+// TclEventType: HW_OBJECT_DELETE
+// TclEventType: HW_SERVER_CLOSE
+// TclEventType: HW_SYSMON_DELETE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_TARGET_UPDATE
+// TclEventType: DEBUG_PROBE_DELETE
+// TclEventType: HW_SESSION_CLOSE
+// Tcl Message: close_hw_manager 
+dismissDialog("Close Hardware Manager"); // bh (Close Hardware Manager Progress)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, lab1(structure) (lab1.vhdl), video_inst : video(structure) (video.vhdl), vga_inst : VGA(VGA_arch) (VGA.vhd), scopeFace_inst : scopeFace(scopeFace_arch) (scopeFace.vhd)]", 12, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, lab1(structure) (lab1.vhdl), video_inst : video(structure) (video.vhdl), vga_inst : VGA(VGA_arch) (VGA.vhd), scopeFace_inst : scopeFace(scopeFace_arch) (scopeFace.vhd)]", 12, false, false, false, false, false, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Double Click
+// Elapsed time: 110 seconds
+selectCodeEditor("scopeFace.vhd", 612, 157); // ae (scopeFace.vhd)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 52h:47m:46s
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 52h:47m:50s
+// Elapsed time: 45 seconds
+selectCodeEditor("scopeFace.vhd", 312, 185); // ae (scopeFace.vhd)
+selectCodeEditor("scopeFace.vhd", 418, 242); // ae (scopeFace.vhd)
+selectCodeEditor("scopeFace.vhd", 596, 255); // ae (scopeFace.vhd)
+selectCodeEditor("scopeFace.vhd", 596, 255, false, false, false, false, true); // ae (scopeFace.vhd) - Double Click
+typeControlKey((HResource) null, "scopeFace.vhd", 'c'); // ae (scopeFace.vhd)
+selectCodeEditor("scopeFace.vhd", 376, 113); // ae (scopeFace.vhd)
+// Elapsed time: 10 seconds
+selectCodeEditor("scopeFace.vhd", 197, 241); // ae (scopeFace.vhd)
+selectCodeEditor("scopeFace.vhd", 403, 205); // ae (scopeFace.vhd)
+selectCodeEditor("scopeFace.vhd", 394, 221); // ae (scopeFace.vhd)
+typeControlKey((HResource) null, "scopeFace.vhd", 'v'); // ae (scopeFace.vhd)
+selectCodeEditor("scopeFace.vhd", 395, 237); // ae (scopeFace.vhd)
+typeControlKey((HResource) null, "scopeFace.vhd", 'v'); // ae (scopeFace.vhd)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 52h:48m:48s
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 52h:48m:52s

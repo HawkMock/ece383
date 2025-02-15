@@ -43,7 +43,7 @@ architecture scopeFace_arch of scopeFace is
     --|====> Color Constants <====|--
     signal   w_color: STD_LOGIC_VECTOR(23 downto 0) := x"000000";
     constant YELLOW:  STD_LOGIC_VECTOR(23 downto 0) := x"FFFF00";
-    constant BLUE:    STD_LOGIC_VECTOR(23 downto 0) := x"FFFF00";
+    constant BLUE:    STD_LOGIC_VECTOR(23 downto 0) := x"0000FF";
     constant WHITE:   STD_LOGIC_VECTOR(23 downto 0) := x"ECECEC";
     constant LBLUE:   STD_LOGIC_VECTOR(23 downto 0) := x"8383FF";
     constant LGREEN:  STD_LOGIC_VECTOR(23 downto 0) := x"83FF83";
@@ -61,8 +61,8 @@ begin
     is_on_gridline <= ((unsigned(i_column) - 20) mod 60 = 0) or ((unsigned(i_row) - 20) mod 50 = 0);
 
     --|====> Set Color Channels <====|--
-    w_color <= YELLOW when (i_ch1 = '1' and i_ch1_enb = '1') else  -- Channel 1, yellow
-               BLUE   when (i_ch2 = '1' and i_ch2_enb = '1') else  -- Channel 2, blue
+    w_color <= YELLOW when (i_ch1 = '1' and i_ch1_enb = '1') and is_in_grid else  -- Channel 1, yellow
+               BLUE   when (i_ch2 = '1' and i_ch2_enb = '1') and is_in_grid else  -- Channel 2, blue
                YELLOW when ((unsigned(i_column) - 20 - 5 + 220 + unsigned(i_trigger_volt)) <= unsigned(i_row) and
                               unsigned(i_row) <= (resize(220 + unsigned(i_trigger_volt), 10) - resize(unsigned(i_column) - 20 - 5, 10)) and
                               unsigned(i_column) >= 20 and unsigned(i_column) <= 30) else -- Trigger voltage arrow

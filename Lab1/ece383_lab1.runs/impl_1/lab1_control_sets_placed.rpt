@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-| Date         : Fri Feb 14 19:41:16 2025
+| Date         : Fri Feb 14 21:36:25 2025
 | Host         : C26-5CG2151GFM running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file lab1_control_sets_placed.rpt
 | Design       : lab1
@@ -23,11 +23,11 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Total control sets                                       |     9 |
-|    Minimum number of control sets                        |     9 |
+| Total control sets                                       |    11 |
+|    Minimum number of control sets                        |    11 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |    49 |
+| Unused register locations in slices containing registers |    52 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -39,15 +39,15 @@ Table of Contents
 +--------------------+-------+
 |       Fanout       | Count |
 +--------------------+-------+
-| Total control sets |     9 |
-| >= 0 to < 4        |     1 |
+| Total control sets |    11 |
+| >= 0 to < 4        |     2 |
 | >= 4 to < 6        |     0 |
 | >= 6 to < 8        |     1 |
-| >= 8 to < 10       |     0 |
-| >= 10 to < 12      |     4 |
-| >= 12 to < 14      |     1 |
+| >= 8 to < 10       |     1 |
+| >= 10 to < 12      |     3 |
+| >= 12 to < 14      |     0 |
 | >= 14 to < 16      |     0 |
-| >= 16              |     2 |
+| >= 16              |     4 |
 +--------------------+-------+
 * Control sets can be remapped at either synth_design or opt_design
 
@@ -58,12 +58,12 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              77 |           19 |
-| No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |              18 |           13 |
-| Yes          | No                    | No                     |              20 |            8 |
-| Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |              20 |            8 |
+| No           | No                    | No                     |              73 |           23 |
+| No           | No                    | Yes                    |              21 |            7 |
+| No           | Yes                   | No                     |              23 |           15 |
+| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |              20 |            8 |
+| Yes          | Yes                   | No                     |              19 |            9 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
@@ -73,15 +73,17 @@ Table of Contents
 +--------------------------------------------------------+------------------------------------------------+-------------------------------------------------------------+------------------+----------------+--------------+
 |                      Clock Signal                      |                  Enable Signal                 |                       Set/Reset Signal                      | Slice Load Count | Bel Load Count | Bels / Slice |
 +--------------------------------------------------------+------------------------------------------------+-------------------------------------------------------------+------------------+----------------+--------------+
+|  video_inst/mmcm_adv_inst_display_clocks/inst/clk_out1 |                                                | video_inst/vga_inst/column_counter/w_processQ[8]_i_1__0_n_0 |                1 |              1 |         1.00 |
 | ~video_inst/mmcm_adv_inst_display_clocks/inst/clk_out1 |                                                |                                                             |                1 |              1 |         1.00 |
 |  video_inst/mmcm_adv_inst_display_clocks/inst/clk_out2 |                                                | video_inst/dvid_inst/shift_red[9]_i_1_n_0                   |                4 |              6 |         1.50 |
-|  clk_IBUF                                              | trigger_time[9]_i_1_n_0                        |                                                             |                4 |             10 |         2.50 |
-|  clk_IBUF                                              | trigger_volt[9]_i_1_n_0                        |                                                             |                4 |             10 |         2.50 |
-|  video_inst/mmcm_adv_inst_display_clocks/inst/clk_out1 | video_inst/vga_inst/row_counter/w_processQ0    | video_inst/vga_inst/row_counter/w_processQ[9]_i_1_n_0       |                4 |             10 |         2.50 |
-|  video_inst/mmcm_adv_inst_display_clocks/inst/clk_out1 | video_inst/vga_inst/column_counter/w_processQ0 | video_inst/vga_inst/column_counter/w_processQ[9]_i_1__0_n_0 |                4 |             10 |         2.50 |
-|  video_inst/mmcm_adv_inst_display_clocks/inst/clk_out1 |                                                | video_inst/vga_inst/column_counter/SR[0]                    |                9 |             12 |         1.33 |
-|  video_inst/mmcm_adv_inst_display_clocks/inst/clk_out2 |                                                |                                                             |                5 |             34 |         6.80 |
-|  video_inst/mmcm_adv_inst_display_clocks/inst/clk_out1 |                                                |                                                             |               13 |             42 |         3.23 |
+|  video_inst/mmcm_adv_inst_display_clocks/inst/clk_out1 | video_inst/vga_inst/column_counter/w_processQ0 | video_inst/vga_inst/column_counter/w_processQ[8]_i_1__0_n_0 |                6 |              9 |         1.50 |
+|  video_inst/mmcm_adv_inst_display_clocks/inst/clk_out1 | video_inst/vga_inst/row_counter/w_processQ0    | video_inst/vga_inst/row_counter/w_processQ[9]_i_1_n_0       |                3 |             10 |         3.33 |
+|  clk_IBUF_BUFG                                         | trigger_time                                   | counter_50Hz[19]_i_2_n_0                                    |                4 |             10 |         2.50 |
+|  clk_IBUF_BUFG                                         | trigger_volt                                   | counter_50Hz[19]_i_2_n_0                                    |                4 |             10 |         2.50 |
+|  video_inst/mmcm_adv_inst_display_clocks/inst/clk_out1 |                                                | video_inst/vga_inst/column_counter/blank                    |               10 |             16 |         1.60 |
+|  clk_IBUF_BUFG                                         |                                                | counter_50Hz[19]_i_2_n_0                                    |                7 |             21 |         3.00 |
+|  video_inst/mmcm_adv_inst_display_clocks/inst/clk_out2 |                                                |                                                             |                7 |             34 |         4.86 |
+|  video_inst/mmcm_adv_inst_display_clocks/inst/clk_out1 |                                                |                                                             |               15 |             38 |         2.53 |
 +--------------------------------------------------------+------------------------------------------------+-------------------------------------------------------------+------------------+----------------+--------------+
 
 
