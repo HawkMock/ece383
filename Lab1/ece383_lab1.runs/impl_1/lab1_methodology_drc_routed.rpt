@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-| Date         : Tue Feb  4 00:16:01 2025
+| Date         : Fri Feb 14 19:43:20 2025
 | Host         : C26-5CG2151GFM running 64-bit major release  (build 9200)
 | Command      : report_methodology -file lab1_methodology_drc_routed.rpt -pb lab1_methodology_drc_routed.pb -rpx lab1_methodology_drc_routed.rpx
 | Design       : lab1
@@ -146,7 +146,7 @@ Clock net clk_IBUF is directly driven by an IO rather than a Clock Buffer or may
 trigger_time_reg[3]/C, trigger_time_reg[4]/C, trigger_time_reg[5]/C,
 trigger_time_reg[6]/C, trigger_time_reg[7]/C, trigger_time_reg[8]/C,
 trigger_time_reg[9]/C, trigger_volt_reg[0]/C, trigger_volt_reg[1]/C,
-trigger_volt_reg[2]/C, trigger_volt_reg[3]/C, trigger_volt_reg[4]/C
+trigger_volt_reg[2]/C, trigger_volt_reg[4]/C, trigger_volt_reg[5]/C
  (the first 15 of 22 listed)
 Related violations: <none>
 

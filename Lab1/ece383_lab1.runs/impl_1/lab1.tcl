@@ -105,7 +105,6 @@ set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
   set_param chipscope.maxJobs 2
-  set_param xicom.use_bs_reader 1
   set_param runs.launchOptions { -jobs 4  }
 OPTRACE "create in-memory project" START { }
   create_project -in_memory -part xc7a200tsbg484-1
@@ -123,7 +122,7 @@ OPTRACE "set parameters" START { }
 OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
   add_files -quiet C:/Users/Dustin.Mock/code/ece383/Lab1/ece383_lab1.runs/synth_1/lab1.dcp
-  read_ip -quiet c:/Users/Dustin.Mock/code/ece383/Lab1/ece383_lab1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
+  read_ip -quiet C:/Users/Dustin.Mock/code/ece383/Lab1/ece383_lab1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
 OPTRACE "read constraints: implementation" START { }
   read_xdc C:/Users/Dustin.Mock/code/ece383/Lab1/ece383_lab1.srcs/constrs_1/imports/Lab01_cadet_code/Lab1.xdc
 OPTRACE "read constraints: implementation" END { }
