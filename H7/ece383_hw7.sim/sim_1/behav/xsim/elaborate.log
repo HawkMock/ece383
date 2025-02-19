@@ -12,7 +12,8 @@ Compiling package std.standard
 Compiling package std.textio
 Compiling package ieee.std_logic_1164
 Compiling package ieee.numeric_std
-Compiling architecture behavior of entity xil_defaultlib.lec10 [\lec10(n=5)\]
+Compiling architecture behavior of entity xil_defaultlib.lec10 [\lec10(n=11)\]
 Compiling architecture behavior of entity xil_defaultlib.button_debounce [button_debounce_default]
+Compiling architecture behavior of entity xil_defaultlib.lec10 [\lec10(n=5)\]
 Compiling architecture behavior of entity xil_defaultlib.hw07_tb
 Built simulation snapshot hw07_tb_behav

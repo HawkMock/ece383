@@ -74,8 +74,8 @@ architecture behavior of button_debounce is
     ----------------------------------------------------------------------------
     --  Use a 5-bit counter for the timer (threshold = 20 counts).
     ----------------------------------------------------------------------------
-    constant N         : integer := 5;
-    constant THRESHOLD : unsigned(N-1 downto 0) := to_unsigned(2000, N);
+    constant N         : integer := 11;
+    constant THRESHOLD : unsigned(N-1 downto 0) := to_unsigned(20000, N);
 
     signal D : unsigned(N-1 downto 0) := (others => '0');
     signal Q : unsigned(N-1 downto 0);
