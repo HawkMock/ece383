@@ -1,0 +1,10 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../ece383_hw8.srcs/sources_1/imports/H8/keyboard.vhd" \
+"../../../../ece383_hw8.srcs/sources_1/imports/H8/lec11.vhdl" \
+"../../../../ece383_hw8.srcs/sources_1/new/lec11_cu.vhd" \
+"../../../../ece383_hw8.srcs/sources_1/imports/H8/lec11_dp.vhdl" \
+"../../../../ece383_hw8.srcs/sources_1/imports/H8/lec11_tb.vhdl" \
+
+# Do not sort compile order
+nosort
