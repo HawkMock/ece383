@@ -200,6 +200,6 @@ begin
     --  Output Equation:
     --    action = '1' only when in the pressed state.
     ----------------------------------------------------------------------------
-    action <= '1' when state = pressed else '0';
+    action <= '1' when state = pressed and prev_state = timer else '0';
 
 end behavior;

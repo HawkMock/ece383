@@ -2,3 +2,6 @@ Running: xsim.dir/tb_top_hw4_behav/xsimk.exe -simmode gui -wdb tb_top_hw4_behav.
 Design successfully loaded
 Design Loading Memory Usage: 28012 KB (Peak: 28012 KB)
 Design Loading CPU Usage: 499 ms
+Simulation completed
+Simulation Memory Usage: 28960 KB (Peak: 28960 KB)
+Simulation CPU Usage: 499 ms
