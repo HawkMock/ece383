@@ -124,7 +124,7 @@ begin
                 end if;
 
             when inc =>
-                cw   <= "0010";
+                cw   <= "0001";
                 busy <= '1';
                 next_state <= comp;
 

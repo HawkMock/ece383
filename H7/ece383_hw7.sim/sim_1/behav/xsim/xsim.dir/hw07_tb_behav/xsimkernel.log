@@ -2,3 +2,6 @@ Running: xsim.dir/hw07_tb_behav/xsimk.exe -simmode gui -wdb hw07_tb_behav.wdb -s
 Design successfully loaded
 Design Loading Memory Usage: 27304 KB (Peak: 27304 KB)
 Design Loading CPU Usage: 624 ms
+Simulation completed
+Simulation Memory Usage: 30744 KB (Peak: 30744 KB)
+Simulation CPU Usage: 702 ms
