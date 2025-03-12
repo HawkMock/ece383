@@ -10,12 +10,12 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0.000000 us"></ZoomStartTime>
-      <ZoomEndTime time="22.920001 us"></ZoomEndTime>
-      <Cursor1Time time="30.000000 us"></Cursor1Time>
+      <ZoomStartTime time="5,628.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="11,388.001 ns"></ZoomEndTime>
+      <Cursor1Time time="2,500.000 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="201"></NameColumnWidth>
+      <NameColumnWidth column_width="195"></NameColumnWidth>
       <ValueColumnWidth column_width="90"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="14" />
@@ -63,13 +63,13 @@
       <obj_property name="ElementShortName">i_sig[9:0]</obj_property>
       <obj_property name="ObjectShortName">i_sig[9:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/hw8b_tb/clk_period" type="other">
-      <obj_property name="ElementShortName">clk_period</obj_property>
-      <obj_property name="ObjectShortName">clk_period</obj_property>
-   </wvobject>
    <wvobject fp_name="/hw8b_tb/uut_cu/state" type="other">
       <obj_property name="ElementShortName">state</obj_property>
       <obj_property name="ObjectShortName">state</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hw8b_tb/clk_period" type="other">
+      <obj_property name="ElementShortName">clk_period</obj_property>
+      <obj_property name="ObjectShortName">clk_period</obj_property>
    </wvobject>
    <wvobject fp_name="/hw8b_tb/ready_clk_period" type="other">
       <obj_property name="ElementShortName">ready_clk_period</obj_property>
