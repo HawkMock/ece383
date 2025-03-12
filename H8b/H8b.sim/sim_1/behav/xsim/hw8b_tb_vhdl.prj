@@ -1,0 +1,8 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../H8b.srcs/sources_1/imports/Homework_8b/hw8b2_cu.vhd" \
+"../../../../H8b.srcs/sources_1/imports/Homework_8b/hw8b2_dp.vhd" \
+"../../../../H8b.srcs/sources_1/imports/Homework_8b/hw8b2_tb.vhd" \
+
+# Do not sort compile order
+nosort
