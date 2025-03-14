@@ -23,7 +23,7 @@ USE ieee.std_logic_1164.ALL;
 USE ieee.numeric_std.ALL;
 library UNISIM;
 use UNISIM.VComponents.all;
-use work.lab2Parts.all;		
+--use work.lab2Parts.all;		
  
 ENTITY Lab2_datapath_tb IS
 END Lab2_datapath_tb;
@@ -76,7 +76,7 @@ ARCHITECTURE behavior OF Lab2_datapath_tb IS
    signal exSel : std_logic := '0';
    signal exLbus : std_logic_vector(15 downto 0) := (others => '0');
    signal exRbus : std_logic_vector(15 downto 0) := (others => '0');
-   signal flagClear : std_logic := '0');
+   signal flagClear : std_logic := '0';
 
  	--Outputs
    signal ac_mclk : std_logic;
