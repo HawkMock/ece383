@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a200tsbg484-1" LaunchTime="1742306990" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/Lab2_datapath_tb.dcp">
-  <File Type="PA-TCL" Name="Lab2_datapath_tb.tcl"/>
-  <File Type="REPORTS-TCL" Name="Lab2_datapath_tb_reports.tcl"/>
-  <File Type="RDS-RDS" Name="Lab2_datapath_tb.vds"/>
-  <File Type="RDS-PROPCONSTRS" Name="Lab2_datapath_tb_drc_synth.rpt"/>
-  <File Type="RDS-UTIL" Name="Lab2_datapath_tb_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="Lab2_datapath_tb_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="Lab2_datapath_tb.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="Lab2_datapath_tb_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="Lab2_datapath_tb_timing_summary_synth.pb"/>
+<GenRun Id="synth_1" LaunchPart="xc7a200tsbg484-1" LaunchTime="1742308101" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/Lab2_datapath_tb.dcp">
+  <File Type="PA-TCL" Name="lab2.tcl"/>
+  <File Type="REPORTS-TCL" Name="lab2_reports.tcl"/>
+  <File Type="RDS-RDS" Name="lab2.vds"/>
+  <File Type="RDS-PROPCONSTRS" Name="lab2_drc_synth.rpt"/>
+  <File Type="RDS-UTIL" Name="lab2_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="lab2_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="lab2.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="lab2_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="lab2_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/ip/clk_wiz_0/clk_wiz_0.xci">
@@ -85,6 +85,14 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/imports/lab2_code_for_cadets/lab2_fsm.vhdl">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../Downloads/Lab02_cadet_code/lab2_code_for_cadets/lab2_fsm.vhdl"/>
+        <Attr Name="ImportTime" Val="1741788696"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/imports/new/scopeFace.vhd">
       <FileInfo>
         <Attr Name="ImportPath" Val="$PPRDIR/../Lab1/ece383_lab1.srcs/sources_1/new/scopeFace.vhd"/>
@@ -123,11 +131,19 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/imports/lab2_code_for_cadets/Lab2_datapath_tb.vhd">
+    <File Path="$PSRCDIR/sources_1/imports/lab2_code_for_cadets/lab2.vhd">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../../../Downloads/Lab02_cadet_code/lab2_code_for_cadets/Lab2_datapath_tb.vhd"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../Downloads/Lab02_cadet_code/lab2_code_for_cadets/lab2.vhd"/>
         <Attr Name="ImportTime" Val="1741788696"/>
         <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/lab2_code_for_cadets/Lab2_datapath_tb.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../Downloads/Lab02_cadet_code/lab2_code_for_cadets/Lab2_datapath_tb.vhd"/>
+        <Attr Name="ImportTime" Val="1741788696"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
@@ -136,25 +152,6 @@
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="ImportPath" Val="$PPRDIR/../../../Downloads/Lab02_cadet_code/lab2_code_for_cadets/convert_unsigned_tb.vhdl"/>
         <Attr Name="ImportTime" Val="1741788696"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/imports/lab2_code_for_cadets/lab2.vhd">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="ImportPath" Val="$PPRDIR/../../../Downloads/Lab02_cadet_code/lab2_code_for_cadets/lab2.vhd"/>
-        <Attr Name="ImportTime" Val="1741788696"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/imports/lab2_code_for_cadets/lab2_fsm.vhdl">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="ImportPath" Val="$PPRDIR/../../../Downloads/Lab02_cadet_code/lab2_code_for_cadets/lab2_fsm.vhdl"/>
-        <Attr Name="ImportTime" Val="1741788696"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
@@ -163,7 +160,6 @@
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="ImportPath" Val="$PPRDIR/../../../Downloads/Lab02_cadet_code/lab2_code_for_cadets/lab2_tb.vhdl"/>
         <Attr Name="ImportTime" Val="1741788696"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
@@ -172,14 +168,12 @@
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="ImportPath" Val="$PPRDIR/../../../Downloads/Lab02_cadet_code/lab2_code_for_cadets/sandbox_tb.vhdl"/>
         <Attr Name="ImportTime" Val="1741788696"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="Lab2_datapath_tb"/>
-      <Option Name="TopAutoSet" Val="TRUE"/>
+      <Option Name="TopModule" Val="lab2"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">

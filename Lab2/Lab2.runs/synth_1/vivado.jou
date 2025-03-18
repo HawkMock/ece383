@@ -3,11 +3,11 @@
 # SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
 # IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
 # SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
-# Start of session at: Tue Mar 18 08:09:55 2025
-# Process ID         : 9228
+# Start of session at: Tue Mar 18 08:28:26 2025
+# Process ID         : 32628
 # Current directory  : C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.runs/synth_1
-# Command line       : vivado.exe -log Lab2_datapath_tb.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Lab2_datapath_tb.tcl
-# Log file           : C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.runs/synth_1/Lab2_datapath_tb.vds
+# Command line       : vivado.exe -log lab2.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source lab2.tcl
+# Log file           : C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.runs/synth_1/lab2.vds
 # Journal file       : C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.runs/synth_1\vivado.jou
 # Running On         : C26-5CG2151GFM
 # Platform           : Windows Server 2016 or Windows 10
@@ -19,6 +19,6 @@
 # Host memory        : 16374 MB
 # Swap memory        : 22548 MB
 # Total Virtual      : 38923 MB
-# Available Virtual  : 17411 MB
+# Available Virtual  : 17063 MB
 #-----------------------------------------------------------
-source Lab2_datapath_tb.tcl -notrace
+source lab2.tcl -notrace

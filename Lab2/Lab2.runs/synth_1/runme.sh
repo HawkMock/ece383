@@ -41,4 +41,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log Lab2_datapath_tb.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source Lab2_datapath_tb.tcl
+EAStep vivado -log lab2.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source lab2.tcl
