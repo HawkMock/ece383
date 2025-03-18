@@ -53,5 +53,10 @@
 create_clock -period 10.000 [get_ports clk_in1]
 set_input_jitter [get_clocks -of_objects [get_ports clk_in1]] 0.100
 
+# external feedback constraints
+# Change delay numbers as per requirement 
+# Please uncomment following lines if these pins are directly connected at top. Recommended method is to use ODDR for forwarding the clk on IO
+#set_external_delay -from [get_ports clkfb_out] -to [get_ports clkfb_in] -min 0.1  
+#set_external_delay -from [get_ports clkfb_out] -to [get_ports clkfb_in] -max 0.11  
 
 set_property PHASESHIFT_MODE WAVEFORM [get_cells -hierarchical *adv*]

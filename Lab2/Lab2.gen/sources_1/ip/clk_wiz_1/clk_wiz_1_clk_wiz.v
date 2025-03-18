@@ -66,11 +66,13 @@
 module clk_wiz_1_clk_wiz 
 
  (// Clock in ports
+  input         clkfb_in,
   // Clock out ports
   output        clk_out1,
   output        clk_out2,
+  output        clkfb_out,
   // Status and control signals
-  input         reset,
+  input         resetn,
   input         clk_in1
  );
   // Input buffering
@@ -81,7 +83,13 @@ wire clk_in2_clk_wiz_1;
    (.O (clk_in1_clk_wiz_1),
     .I (clk_in1));
 
+  wire clkfb_in_buf_out;
 
+
+  // feedback clock input buffer
+  IBUF clkfb_ibufg
+   (.O  (clkfb_in_buf_out),
+    .I  (clkfb_in));
 
 
   // Clocking PRIMITIVE
@@ -104,7 +112,6 @@ wire clk_in2_clk_wiz_1;
   wire        psdone_unused;
   wire        locked_int;
   wire        clkfbout_clk_wiz_1;
-  wire        clkfbout_buf_clk_wiz_1;
   wire        clkfboutb_unused;
     wire clkout0b_unused;
    wire clkout1b_unused;
@@ -122,7 +129,7 @@ wire clk_in2_clk_wiz_1;
   MMCME2_ADV
   #(.BANDWIDTH            ("OPTIMIZED"),
     .CLKOUT4_CASCADE      ("FALSE"),
-    .COMPENSATION         ("ZHOLD"),
+    .COMPENSATION         ("EXTERNAL"),
     .STARTUP_WAIT         ("FALSE"),
     .DIVCLK_DIVIDE        (1),
     .CLKFBOUT_MULT_F      (10.000),
@@ -154,7 +161,7 @@ wire clk_in2_clk_wiz_1;
     .CLKOUT5             (clkout5_unused),
     .CLKOUT6             (clkout6_unused),
      // Input clock control
-    .CLKFBIN             (clkfbout_buf_clk_wiz_1),
+    .CLKFBIN             (clkfb_in_buf_out),
     .CLKIN1              (clk_in1_clk_wiz_1),
     .CLKIN2              (1'b0),
      // Tied to always select the primary input clock
@@ -178,18 +185,32 @@ wire clk_in2_clk_wiz_1;
     .CLKFBSTOPPED        (clkfbstopped_unused),
     .PWRDWN              (1'b0),
     .RST                 (reset_high));
-  assign reset_high = reset; 
+  assign reset_high = ~resetn; 
 
 // Clock Monitor clock assigning
 //--------------------------------------
  // Output buffering
   //-----------------------------------
+  wire clkfb_bufg_out;
+  wire clkfb_oddr_out;
+  // Instantiate bufg on fbout
+  BUFG clkfbout_bufg
+   (.O  (clkfb_bufg_out),
+    .I  (clkfbout_clk_wiz_1));
 
-  BUFG clkf_buf
-   (.O (clkfbout_buf_clk_wiz_1),
-    .I (clkfbout_clk_wiz_1));
+  // Forward the feedback clock off-chip
+  ODDR clkfbout_oddr
+   (.Q  (clkfb_oddr_out),
+    .C  (clkfb_bufg_out),
+    .CE (1'b1),
+    .D1 (1'b1),
+    .D2 (1'b0),
+    .R  (1'b0),
+    .S  (1'b0));
 
 
+
+  assign clkfb_out = clkfb_oddr_out;
 
 
 

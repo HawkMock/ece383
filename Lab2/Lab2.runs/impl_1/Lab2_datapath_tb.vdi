@@ -1,0 +1,356 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Tue Mar 18 08:11:26 2025
+# Process ID         : 4776
+# Current directory  : C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.runs/impl_1
+# Command line       : vivado.exe -log Lab2_datapath_tb.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source Lab2_datapath_tb.tcl -notrace
+# Log file           : C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.runs/impl_1/Lab2_datapath_tb.vdi
+# Journal file       : C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.runs/impl_1\vivado.jou
+# Running On         : C26-5CG2151GFM
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 22631
+# Processor Detail   : 11th Gen Intel(R) Core(TM) i7-1165G7 @ 2.80GHz
+# CPU Frequency      : 2804 MHz
+# CPU Physical cores : 4
+# CPU Logical cores  : 8
+# Host memory        : 16374 MB
+# Swap memory        : 22548 MB
+# Total Virtual      : 38923 MB
+# Available Virtual  : 17374 MB
+#-----------------------------------------------------------
+source Lab2_datapath_tb.tcl -notrace
+Command: link_design -top Lab2_datapath_tb -part xc7a200tsbg484-1
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Device 21-403] Loading part xc7a200tsbg484-1
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.gen/sources_1/ip/clk_wiz_1/clk_wiz_1.dcp' for cell 'uut/Audio_Codec/audiocodec_master_clock'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.dcp' for cell 'uut/video_inst/mmcm_adv_inst_display_clocks'
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 555.707 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 41 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2024.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. uut/Audio_Codec/audiocodec_master_clock/inst/clkfb_ibufg 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. uut/Audio_Codec/audiocodec_master_clock/inst/clkin1_ibufg 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. uut/video_inst/mmcm_adv_inst_display_clocks/inst/clkin1_ibufg 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'uut/Audio_Codec/audiocodec_master_clock/clk_in1' is not directly connected to top level port. 'IBUF_LOW_PWR' is ignored for synthesis but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'uut/Audio_Codec/audiocodec_master_clock/clkfb_in' is not directly connected to top level port. 'IBUF_LOW_PWR' is ignored for synthesis but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'uut/video_inst/mmcm_adv_inst_display_clocks/clk_in1' is not directly connected to top level port. 'IBUF_LOW_PWR' is ignored for synthesis but preserved for implementation.
+Parsing XDC File [c:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'uut/video_inst/mmcm_adv_inst_display_clocks/inst'
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'BOARD_PART_PIN', because the property does not exist for objects of type 'pin'. [c:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc:3]
+Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'BOARD_PART_PIN', because the property does not exist for objects of type 'pin'. [c:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc:4]
+Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
+Finished Parsing XDC File [c:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'uut/video_inst/mmcm_adv_inst_display_clocks/inst'
+Parsing XDC File [c:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'uut/video_inst/mmcm_adv_inst_display_clocks/inst'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [c:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc:54]
+get_clocks: Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 1299.828 ; gain = 608.332
+Finished Parsing XDC File [c:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'uut/video_inst/mmcm_adv_inst_display_clocks/inst'
+Parsing XDC File [c:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.gen/sources_1/ip/clk_wiz_1/clk_wiz_1_board.xdc] for cell 'uut/Audio_Codec/audiocodec_master_clock/inst'
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'BOARD_PART_PIN', because the property does not exist for objects of type 'pin'. [c:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.gen/sources_1/ip/clk_wiz_1/clk_wiz_1_board.xdc:3]
+Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'BOARD_PART_PIN', because the property does not exist for objects of type 'pin'. [c:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.gen/sources_1/ip/clk_wiz_1/clk_wiz_1_board.xdc:4]
+Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
+Finished Parsing XDC File [c:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.gen/sources_1/ip/clk_wiz_1/clk_wiz_1_board.xdc] for cell 'uut/Audio_Codec/audiocodec_master_clock/inst'
+Parsing XDC File [c:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.gen/sources_1/ip/clk_wiz_1/clk_wiz_1.xdc] for cell 'uut/Audio_Codec/audiocodec_master_clock/inst'
+Finished Parsing XDC File [c:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.gen/sources_1/ip/clk_wiz_1/clk_wiz_1.xdc] for cell 'uut/Audio_Codec/audiocodec_master_clock/inst'
+Parsing XDC File [C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/constrs_1/imports/lab2_code_for_cadets/Lab2.xdc]
+WARNING: [Vivado 12-584] No ports matched 'clk'. [C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/constrs_1/imports/lab2_code_for_cadets/Lab2.xdc:8]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/constrs_1/imports/lab2_code_for_cadets/Lab2.xdc:8]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'btn[4]'. [C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/constrs_1/imports/lab2_code_for_cadets/Lab2.xdc:33]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/constrs_1/imports/lab2_code_for_cadets/Lab2.xdc:33]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'btn[2]'. [C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/constrs_1/imports/lab2_code_for_cadets/Lab2.xdc:34]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/constrs_1/imports/lab2_code_for_cadets/Lab2.xdc:34]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'btn[1]'. [C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/constrs_1/imports/lab2_code_for_cadets/Lab2.xdc:35]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/constrs_1/imports/lab2_code_for_cadets/Lab2.xdc:35]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'btn[3]'. [C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/constrs_1/imports/lab2_code_for_cadets/Lab2.xdc:36]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/constrs_1/imports/lab2_code_for_cadets/Lab2.xdc:36]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'btn[0]'. [C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/constrs_1/imports/lab2_code_for_cadets/Lab2.xdc:37]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/constrs_1/imports/lab2_code_for_cadets/Lab2.xdc:37]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'reset_n'. [C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/constrs_1/imports/lab2_code_for_cadets/Lab2.xdc:38]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/constrs_1/imports/lab2_code_for_cadets/Lab2.xdc:38]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'switch[0]'. [C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/constrs_1/imports/lab2_code_for_cadets/Lab2.xdc:42]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/constrs_1/imports/lab2_code_for_cadets/Lab2.xdc:42]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'switch[1]'. [C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/constrs_1/imports/lab2_code_for_cadets/Lab2.xdc:43]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/constrs_1/imports/lab2_code_for_cadets/Lab2.xdc:43]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'switch[2]'. [C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/constrs_1/imports/lab2_code_for_cadets/Lab2.xdc:44]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/constrs_1/imports/lab2_code_for_cadets/Lab2.xdc:44]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'switch[3]'. [C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/constrs_1/imports/lab2_code_for_cadets/Lab2.xdc:45]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/constrs_1/imports/lab2_code_for_cadets/Lab2.xdc:45]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'tmdsb[3]'. [C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/constrs_1/imports/lab2_code_for_cadets/Lab2.xdc:79]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/constrs_1/imports/lab2_code_for_cadets/Lab2.xdc:79]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'tmds[3]'. [C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/constrs_1/imports/lab2_code_for_cadets/Lab2.xdc:80]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/constrs_1/imports/lab2_code_for_cadets/Lab2.xdc:80]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'tmdsb[0]'. [C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/constrs_1/imports/lab2_code_for_cadets/Lab2.xdc:84]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/constrs_1/imports/lab2_code_for_cadets/Lab2.xdc:84]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'tmds[0]'. [C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/constrs_1/imports/lab2_code_for_cadets/Lab2.xdc:85]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/constrs_1/imports/lab2_code_for_cadets/Lab2.xdc:85]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'tmdsb[1]'. [C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/constrs_1/imports/lab2_code_for_cadets/Lab2.xdc:86]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/constrs_1/imports/lab2_code_for_cadets/Lab2.xdc:86]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'tmds[1]'. [C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/constrs_1/imports/lab2_code_for_cadets/Lab2.xdc:87]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/constrs_1/imports/lab2_code_for_cadets/Lab2.xdc:87]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'tmdsb[2]'. [C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/constrs_1/imports/lab2_code_for_cadets/Lab2.xdc:88]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/constrs_1/imports/lab2_code_for_cadets/Lab2.xdc:88]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'tmds[2]'. [C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/constrs_1/imports/lab2_code_for_cadets/Lab2.xdc:89]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/constrs_1/imports/lab2_code_for_cadets/Lab2.xdc:89]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ac_adc_sdata'. [C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/constrs_1/imports/lab2_code_for_cadets/Lab2.xdc:101]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/constrs_1/imports/lab2_code_for_cadets/Lab2.xdc:101]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ac_bclk'. [C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/constrs_1/imports/lab2_code_for_cadets/Lab2.xdc:102]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/constrs_1/imports/lab2_code_for_cadets/Lab2.xdc:102]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ac_dac_sdata'. [C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/constrs_1/imports/lab2_code_for_cadets/Lab2.xdc:103]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/constrs_1/imports/lab2_code_for_cadets/Lab2.xdc:103]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ac_lrclk'. [C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/constrs_1/imports/lab2_code_for_cadets/Lab2.xdc:104]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/constrs_1/imports/lab2_code_for_cadets/Lab2.xdc:104]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ac_mclk'. [C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/constrs_1/imports/lab2_code_for_cadets/Lab2.xdc:105]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/constrs_1/imports/lab2_code_for_cadets/Lab2.xdc:105]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'scl'. [C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/constrs_1/imports/lab2_code_for_cadets/Lab2.xdc:212]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/constrs_1/imports/lab2_code_for_cadets/Lab2.xdc:212]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sda'. [C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/constrs_1/imports/lab2_code_for_cadets/Lab2.xdc:213]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/constrs_1/imports/lab2_code_for_cadets/Lab2.xdc:213]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/constrs_1/imports/lab2_code_for_cadets/Lab2.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1299.828 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+10 Infos, 32 Warnings, 30 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+link_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:15 . Memory (MB): peak = 1299.828 ; gain = 994.035
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a200t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a200t'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:01 . Memory (MB): peak = 1299.828 ; gain = 0.000
+
+Starting Cache Timing Information Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Ending Cache Timing Information Task | Checksum: 1b6295d4a
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.026 . Memory (MB): peak = 1325.945 ; gain = 26.117
+
+Starting Logic Optimization Task
+
+Phase 1 Initialization
+
+Phase 1.1 Core Generation And Design Setup
+Phase 1.1 Core Generation And Design Setup | Checksum: 1b6295d4a
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1712.480 ; gain = 0.000
+
+Phase 1.2 Setup Constraints And Sort Netlist
+Phase 1.2 Setup Constraints And Sort Netlist | Checksum: 1b6295d4a
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1712.480 ; gain = 0.000
+Phase 1 Initialization | Checksum: 1b6295d4a
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1712.480 ; gain = 0.000
+
+Phase 2 Timer Update And Timing Data Collection
+
+Phase 2.1 Timer Update
+Phase 2.1 Timer Update | Checksum: 1b6295d4a
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.019 . Memory (MB): peak = 1712.480 ; gain = 0.000
+
+Phase 2.2 Timing Data Collection
+Phase 2.2 Timing Data Collection | Checksum: 1b6295d4a
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.036 . Memory (MB): peak = 1712.480 ; gain = 0.000
+Phase 2 Timer Update And Timing Data Collection | Checksum: 1b6295d4a
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.036 . Memory (MB): peak = 1712.480 ; gain = 0.000
+
+Phase 3 Retarget
+INFO: [Opt 31-1851] Number of loadless carry chains removed were: 0
+INFO: [Opt 31-1834] Total Chains To Be Transformed Were: 0 AND Number of Transformed insts Created are: 0
+INFO: [Opt 31-1566] Pulled 1 inverters resulting in an inversion of 22 pins
+INFO: [Opt 31-138] Pushed 2 inverter(s) to 2 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 3 Retarget | Checksum: 16c8dbef2
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.078 . Memory (MB): peak = 1712.480 ; gain = 0.000
+Retarget | Checksum: 16c8dbef2
+INFO: [Opt 31-389] Phase Retarget created 5 cells and removed 8 cells
+INFO: [Opt 31-1021] In phase Retarget, 4 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 4 Constant propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 4 Constant propagation | Checksum: 1a6321594
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.089 . Memory (MB): peak = 1712.480 ; gain = 0.000
+Constant propagation | Checksum: 1a6321594
+INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 1 cells
+
+Phase 5 Sweep
+INFO: [Constraints 18-11670] Building netlist checker database with flags, 0x8
+Done building netlist checker database: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1712.480 ; gain = 0.000
+INFO: [Constraints 18-11670] Building netlist checker database with flags, 0x8
+Done building netlist checker database: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1712.480 ; gain = 0.000
+Phase 5 Sweep | Checksum: 20fb91581
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.138 . Memory (MB): peak = 1712.480 ; gain = 0.000
+Sweep | Checksum: 20fb91581
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 615 cells
+
+Phase 6 BUFG optimization
+Phase 6 BUFG optimization | Checksum: 20fb91581
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.184 . Memory (MB): peak = 1712.480 ; gain = 0.000
+BUFG optimization | Checksum: 20fb91581
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
+
+Phase 7 Shift Register Optimization
+INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
+Phase 7 Shift Register Optimization | Checksum: 20fb91581
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.187 . Memory (MB): peak = 1712.480 ; gain = 0.000
+Shift Register Optimization | Checksum: 20fb91581
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 8 Post Processing Netlist
+Phase 8 Post Processing Netlist | Checksum: 20fb91581
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.189 . Memory (MB): peak = 1712.480 ; gain = 0.000
+Post Processing Netlist | Checksum: 20fb91581
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+
+Phase 9 Finalization
+
+Phase 9.1 Finalizing Design Cores and Updating Shapes
+Phase 9.1 Finalizing Design Cores and Updating Shapes | Checksum: 15cc2a121
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.192 . Memory (MB): peak = 1712.480 ; gain = 0.000
+
+Phase 9.2 Verifying Netlist Connectivity
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1712.480 ; gain = 0.000
+Phase 9.2 Verifying Netlist Connectivity | Checksum: 15cc2a121
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.202 . Memory (MB): peak = 1712.480 ; gain = 0.000
+Phase 9 Finalization | Checksum: 15cc2a121
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.202 . Memory (MB): peak = 1712.480 ; gain = 0.000
+Opt_design Change Summary
+=========================
+
+
+-------------------------------------------------------------------------------------------------------------------------
+|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+-------------------------------------------------------------------------------------------------------------------------
+|  Retarget                     |               5  |               8  |                                              4  |
+|  Constant propagation         |               0  |               1  |                                              0  |
+|  Sweep                        |               0  |             615  |                                              0  |
+|  BUFG optimization            |               0  |               0  |                                              0  |
+|  Shift Register Optimization  |               0  |               0  |                                              0  |
+|  Post Processing Netlist      |               0  |               0  |                                              0  |
+-------------------------------------------------------------------------------------------------------------------------
+
+
+Ending Logic Optimization Task | Checksum: 15cc2a121
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.207 . Memory (MB): peak = 1712.480 ; gain = 0.000
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+Ending Power Optimization Task | Checksum: 15cc2a121
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.032 . Memory (MB): peak = 1712.480 ; gain = 0.000
+
+Starting Final Cleanup Task
+Ending Final Cleanup Task | Checksum: 15cc2a121
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1712.480 ; gain = 0.000
+
+Starting Netlist Obfuscation Task
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1712.480 ; gain = 0.000
+Ending Netlist Obfuscation Task | Checksum: 15cc2a121
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1712.480 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+33 Infos, 32 Warnings, 30 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 1712.480 ; gain = 412.652
+INFO: [Vivado 12-24828] Executing command : report_drc -file Lab2_datapath_tb_drc_opted.rpt -pb Lab2_datapath_tb_drc_opted.pb -rpx Lab2_datapath_tb_drc_opted.rpx
+Command: report_drc -file Lab2_datapath_tb_drc_opted.rpt -pb Lab2_datapath_tb_drc_opted.pb -rpx Lab2_datapath_tb_drc_opted.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.runs/impl_1/Lab2_datapath_tb_drc_opted.rpt.
+report_drc completed successfully
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1712.480 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.runs/impl_1/Lab2_datapath_tb_opt.dcp' has been generated.
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a200t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a200t'
+INFO: [Common 17-83] Releasing license: Implementation
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 2 CPUs
+
+Starting Placer Task
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1712.480 ; gain = 0.000
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 981aeb64
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 1712.480 ; gain = 0.000
+Phase 1 Placer Initialization | Checksum: 981aeb64
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.021 . Memory (MB): peak = 1712.480 ; gain = 0.000
+ERROR: [Place 30-494] The design is empty
+Resolution: Check if opt_design has removed all the leaf cells of your design.  Check whether you have instantiated and connected all of the top level ports.
+Ending Placer Task | Checksum: 981aeb64
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.024 . Memory (MB): peak = 1712.480 ; gain = 0.000
+49 Infos, 32 Warnings, 30 Critical Warnings and 2 Errors encountered.
+place_design failed
+ERROR: [Common 17-69] Command failed: Placer could not place all instances
+INFO: [Common 17-206] Exiting Vivado at Tue Mar 18 08:11:54 2025...

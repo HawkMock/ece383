@@ -59,7 +59,7 @@ architecture Behavioral of Audio_Codec_Wrapper is
     Port (
         CLK_I       : in  std_logic; -- System clock (100 MHz)
         RST_I       : in  std_logic; -- System reset         
-        EN_TX_I     : in  std_logic; -- Transmit enable
+        EN_TX_I     : in  std_logic ; -- Transmit enable
         EN_RX_I     : in  std_logic; -- Receive enable
         FS_I        : in  std_logic_vector(3 downto 0); -- Sampling rate slector 
         MM_I        : in  std_logic; -- Audio controler Master Mode delcetor

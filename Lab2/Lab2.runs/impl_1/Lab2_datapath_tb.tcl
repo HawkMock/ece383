@@ -123,7 +123,7 @@ OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
   add_files -quiet C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.runs/synth_1/Lab2_datapath_tb.dcp
   read_ip -quiet C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
-  read_ip -quiet c:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/sources_1/ip/clk_wiz_1/clk_wiz_1.xci
+  read_ip -quiet C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/sources_1/ip/clk_wiz_1/clk_wiz_1.xci
 OPTRACE "read constraints: implementation" START { }
   read_xdc C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/constrs_1/imports/lab2_code_for_cadets/Lab2.xdc
 OPTRACE "read constraints: implementation" END { }
