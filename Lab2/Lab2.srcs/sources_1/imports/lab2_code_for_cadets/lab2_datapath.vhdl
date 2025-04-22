@@ -61,8 +61,11 @@ architecture Behavioral of lab2_datapath is
     signal ch1, ch2, reset: std_logic;
     signal readL, readR: std_logic_vector(15 downto 0);
     signal debounced_btn: std_logic_vector(4 downto 0);
-    
-    -- SOMETHING_GOES_HERE... need more signals
+    -- additional signals
+    signal sample_signed_L, sample_signed_R : signed(17 downto 0);
+    constant BIAS18      : unsigned(17 downto 0) := to_unsigned(2**17,18);
+    signal flagReg       : std_logic;
+    signal prev_sample, curr_sample : unsigned(9 downto 0);
 	
 	component video is
     Port ( clk : in  STD_LOGIC;
@@ -138,7 +141,7 @@ begin
 --    If grabbing 10-bit samples from BRAM:   offset = 512 - 220 = 292
 --          Disconnect or comment out BRAM code at the bottom of the file
 --    syntax might need work... vectors must be the proper size
-    -- for 10-bit unsigned, "1000000000" in the center number between "0000000000" and "1111111111"
+    -- for 10-bit unsigned, "1000000000" is the center number between "0000000000" and "1111111111"
 	 ch1 <= '1' when ("1000000000" + 36 = row) else '0';		-- if grabbing 10-bits from BRAM
 --	 ch1 <= '1' when ("100000000" +- offset = row) else '0';		-- if grabbing 9-bits from BRAM	
 --	 ch1 <= '1' when ("10000000" +- offset = row) else '0';		-- if grabbing 8-bits from BRAM
@@ -158,11 +161,13 @@ begin
 	
 -- BRAM needs UNSIGNED data, not SIGNED
 -- convert Signed sample from Codec into a proper Unsigned value
-        -- SOMETHING_GOES_HERE
+    sample_signed_L <= signed(L_bus_out);
+    sample_signed_R <= signed(R_bus_out);
+    L_bus_in  <= std_logic_vector(unsigned(sample_signed_L) + BIAS18);
+    R_bus_in  <= std_logic_vector(unsigned(sample_signed_R) + BIAS18);
 	
 -- Need logic for the FLAG register
-	-- SOMETHING_GOES_HERE
-
+	flagQ <= flagReg;
 		
 -- Triggers
     trigger_t: trigger
@@ -207,16 +212,16 @@ begin
 				writeCntr <= "0000010100"; -- why is this not zero?
 			else 
 				case cw(1 downto 0) is
-					when "00" => -- SOMETHING_GOES_HERE
-					when "01" => -- SOMETHING_GOES_HERE					
-					when "10" => -- SOMETHING_GOES_HERE					
-					when others => -- SOMETHING_GOES_HERE
+                    when "00" => writeCntr <= writeCntr;            -- hold
+                    when "01" => writeCntr <= writeCntr + 1;        -- up
+                    when "10" => writeCntr <= writeCntr - 1;        -- down
+                    when others => writeCntr <= (others => '0');     -- reset to zero
 				end case;
 			end if;
 		end if;
 	end process;
 	
-	sw(1) <= '1';-- when (writeCntr = -- SOMETHING_GOES_HERE) else '0';
+    sw(1) <= '1' when writeCntr = triggerTime else '0';
 	
     -- Instantiate debouncer FSMs for each button
     debounce_btn0: debounce_fsm port map (clk => clk, reset_n => reset_n, btn_in => btn(UP), btn_out => debounced_btn(UP));
@@ -230,16 +235,28 @@ begin
 	--  Buffer a copy of the sample memory to look for positive trigger crossing
 	--  "Loop back" digitized audio input to the output to confirm interface is working
 	-------------------------------------------------------------------------------
---	process (clk)
---	begin
---		if (rising_edge(clk)) then
---			if reset_n = '0' then
---					-- SOMETHING_GOES_HERE			
---			elsif(ready = '1') then
---				    -- SOMETHING_GOES_HERE	
---			end if;
---		end if;
---	end process;
+    sampleBuffer: process(clk)
+    begin
+        if rising_edge(clk) then
+            if reset_n = '0' then
+                prev_sample <= (others => '0');
+                curr_sample <= (others => '0');
+                flagReg     <= '0';
+            else
+                -- capture samples (using low 10 bits of the unsigned data)
+                curr_sample <= unsigned(L_bus_in(9 downto 0));
+
+                -- positive-crossing detect
+                if (prev_sample < triggerVolt) and (curr_sample >= triggerVolt) then
+                    flagReg <= '1';
+                elsif flagClear = '1' then
+                    flagReg <= '0';
+                end if;
+
+                prev_sample <= curr_sample;
+            end if;
+        end if;
+    end process;
 	
 	-------------------------------------------------------------------------------
 	-- Triggering Logic: A positive crossing of the trigger occurs when the previous value is 

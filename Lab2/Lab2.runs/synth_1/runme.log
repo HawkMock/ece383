@@ -8,7 +8,7 @@
   **** SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
   **** IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
   **** SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
-  **** Start of session at: Fri Apr  4 08:46:09 2025
+  **** Start of session at: Tue Apr 22 08:27:47 2025
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -25,9 +25,9 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 17724
+INFO: [Synth 8-7075] Helper process launched with PID 27792
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 1014.297 ; gain = 470.477
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:09 . Memory (MB): peak = 1014.160 ; gain = 470.320
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'lab2' [C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/sources_1/imports/lab2_code_for_cadets/lab2.vhd:23]
 INFO: [Synth 8-3491] module 'lab2_datapath' declared at 'C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/sources_1/imports/lab2_code_for_cadets/lab2_datapath.vhdl:29' bound to instance 'datapath' of component 'lab2_datapath' [C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/sources_1/imports/lab2_code_for_cadets/lab2.vhd:63]
@@ -37,7 +37,7 @@ INFO: [Synth 8-638] synthesizing module 'lab2_datapath' [C:/Users/Dustin.Mock/co
 	Parameter max_value bound to: 600 - type: integer 
 	Parameter min_value bound to: 0 - type: integer 
 	Parameter delta bound to: 10 - type: integer 
-INFO: [Synth 8-3491] module 'trigger' declared at 'C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/sources_1/new/trigger.vhd:5' bound to instance 'trigger_t' of component 'trigger' [C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/sources_1/imports/lab2_code_for_cadets/lab2_datapath.vhdl:168]
+INFO: [Synth 8-3491] module 'trigger' declared at 'C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/sources_1/new/trigger.vhd:5' bound to instance 'trigger_t' of component 'trigger' [C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/sources_1/imports/lab2_code_for_cadets/lab2_datapath.vhdl:173]
 INFO: [Synth 8-638] synthesizing module 'trigger' [C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/sources_1/new/trigger.vhd:22]
 	Parameter bits bound to: 10 - type: integer 
 	Parameter initial_value bound to: 300 - type: integer 
@@ -50,7 +50,7 @@ INFO: [Synth 8-256] done synthesizing module 'trigger' (0#1) [C:/Users/Dustin.Mo
 	Parameter max_value bound to: 400 - type: integer 
 	Parameter min_value bound to: 0 - type: integer 
 	Parameter delta bound to: 10 - type: integer 
-INFO: [Synth 8-3491] module 'trigger' declared at 'C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/sources_1/new/trigger.vhd:5' bound to instance 'trigger_v' of component 'trigger' [C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/sources_1/imports/lab2_code_for_cadets/lab2_datapath.vhdl:182]
+INFO: [Synth 8-3491] module 'trigger' declared at 'C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/sources_1/new/trigger.vhd:5' bound to instance 'trigger_v' of component 'trigger' [C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/sources_1/imports/lab2_code_for_cadets/lab2_datapath.vhdl:187]
 INFO: [Synth 8-638] synthesizing module 'trigger__parameterized1' [C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/sources_1/new/trigger.vhd:22]
 	Parameter bits bound to: 10 - type: integer 
 	Parameter initial_value bound to: 200 - type: integer 
@@ -58,16 +58,16 @@ INFO: [Synth 8-638] synthesizing module 'trigger__parameterized1' [C:/Users/Dust
 	Parameter min_value bound to: 0 - type: integer 
 	Parameter delta bound to: 10 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'trigger__parameterized1' (0#1) [C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/sources_1/new/trigger.vhd:22]
-INFO: [Synth 8-3491] module 'debounce_fsm' declared at 'C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/sources_1/imports/new/debounce_fsm.vhd:5' bound to instance 'debounce_btn0' of component 'debounce_fsm' [C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/sources_1/imports/lab2_code_for_cadets/lab2_datapath.vhdl:222]
+INFO: [Synth 8-3491] module 'debounce_fsm' declared at 'C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/sources_1/imports/new/debounce_fsm.vhd:5' bound to instance 'debounce_btn0' of component 'debounce_fsm' [C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/sources_1/imports/lab2_code_for_cadets/lab2_datapath.vhdl:227]
 INFO: [Synth 8-638] synthesizing module 'debounce_fsm' [C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/sources_1/imports/new/debounce_fsm.vhd:14]
 INFO: [Synth 8-256] done synthesizing module 'debounce_fsm' (0#1) [C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/sources_1/imports/new/debounce_fsm.vhd:14]
-INFO: [Synth 8-3491] module 'debounce_fsm' declared at 'C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/sources_1/imports/new/debounce_fsm.vhd:5' bound to instance 'debounce_btn1' of component 'debounce_fsm' [C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/sources_1/imports/lab2_code_for_cadets/lab2_datapath.vhdl:223]
-INFO: [Synth 8-3491] module 'debounce_fsm' declared at 'C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/sources_1/imports/new/debounce_fsm.vhd:5' bound to instance 'debounce_btn2' of component 'debounce_fsm' [C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/sources_1/imports/lab2_code_for_cadets/lab2_datapath.vhdl:224]
-INFO: [Synth 8-3491] module 'debounce_fsm' declared at 'C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/sources_1/imports/new/debounce_fsm.vhd:5' bound to instance 'debounce_btn3' of component 'debounce_fsm' [C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/sources_1/imports/lab2_code_for_cadets/lab2_datapath.vhdl:225]
-INFO: [Synth 8-3491] module 'video' declared at 'C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/sources_1/imports/Lab01_cadet_code/video.vhdl:10' bound to instance 'video_inst' of component 'video' [C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/sources_1/imports/lab2_code_for_cadets/lab2_datapath.vhdl:259]
+INFO: [Synth 8-3491] module 'debounce_fsm' declared at 'C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/sources_1/imports/new/debounce_fsm.vhd:5' bound to instance 'debounce_btn1' of component 'debounce_fsm' [C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/sources_1/imports/lab2_code_for_cadets/lab2_datapath.vhdl:228]
+INFO: [Synth 8-3491] module 'debounce_fsm' declared at 'C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/sources_1/imports/new/debounce_fsm.vhd:5' bound to instance 'debounce_btn2' of component 'debounce_fsm' [C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/sources_1/imports/lab2_code_for_cadets/lab2_datapath.vhdl:229]
+INFO: [Synth 8-3491] module 'debounce_fsm' declared at 'C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/sources_1/imports/new/debounce_fsm.vhd:5' bound to instance 'debounce_btn3' of component 'debounce_fsm' [C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/sources_1/imports/lab2_code_for_cadets/lab2_datapath.vhdl:230]
+INFO: [Synth 8-3491] module 'video' declared at 'C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/sources_1/imports/Lab01_cadet_code/video.vhdl:10' bound to instance 'video_inst' of component 'video' [C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/sources_1/imports/lab2_code_for_cadets/lab2_datapath.vhdl:276]
 INFO: [Synth 8-638] synthesizing module 'video' [C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/sources_1/imports/Lab01_cadet_code/video.vhdl:25]
-INFO: [Synth 8-3491] module 'clk_wiz_0' declared at 'C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.runs/synth_1/.Xil/Vivado-11684-C26-5CG2151GFM/realtime/clk_wiz_0_stub.vhdl:6' bound to instance 'mmcm_adv_inst_display_clocks' of component 'clk_wiz_0' [C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/sources_1/imports/Lab01_cadet_code/video.vhdl:71]
-INFO: [Synth 8-638] synthesizing module 'clk_wiz_0' [C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.runs/synth_1/.Xil/Vivado-11684-C26-5CG2151GFM/realtime/clk_wiz_0_stub.vhdl:19]
+INFO: [Synth 8-3491] module 'clk_wiz_0' declared at 'C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.runs/synth_1/.Xil/Vivado-30216-C26-5CG2151GFM/realtime/clk_wiz_0_stub.vhdl:6' bound to instance 'mmcm_adv_inst_display_clocks' of component 'clk_wiz_0' [C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/sources_1/imports/Lab01_cadet_code/video.vhdl:71]
+INFO: [Synth 8-638] synthesizing module 'clk_wiz_0' [C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.runs/synth_1/.Xil/Vivado-30216-C26-5CG2151GFM/realtime/clk_wiz_0_stub.vhdl:19]
 INFO: [Synth 8-3491] module 'VGA' declared at 'C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/sources_1/imports/new/VGA.vhd:63' bound to instance 'vga_inst' of component 'VGA' [C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/sources_1/imports/Lab01_cadet_code/video.vhdl:82]
 INFO: [Synth 8-638] synthesizing module 'VGA' [C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/sources_1/imports/new/VGA.vhd:82]
 	Parameter g_base bound to: 800 - type: integer 
@@ -123,7 +123,7 @@ INFO: [Synth 8-113] binding component instance 'OBUFDS_red' to cell 'OBUFDS' [C:
 INFO: [Synth 8-113] binding component instance 'OBUFDS_green' to cell 'OBUFDS' [C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/sources_1/imports/Lab01_cadet_code/video.vhdl:128]
 INFO: [Synth 8-113] binding component instance 'OBUFDS_clock' to cell 'OBUFDS' [C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/sources_1/imports/Lab01_cadet_code/video.vhdl:130]
 INFO: [Synth 8-256] done synthesizing module 'video' (0#1) [C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/sources_1/imports/Lab01_cadet_code/video.vhdl:25]
-INFO: [Synth 8-3491] module 'Audio_Codec_Wrapper' declared at 'C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/sources_1/imports/lab2_code_for_cadets/Audio_Codec_Wrapper.vhd:35' bound to instance 'Audio_Codec' of component 'Audio_Codec_Wrapper' [C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/sources_1/imports/lab2_code_for_cadets/lab2_datapath.vhdl:279]
+INFO: [Synth 8-3491] module 'Audio_Codec_Wrapper' declared at 'C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/sources_1/imports/lab2_code_for_cadets/Audio_Codec_Wrapper.vhd:35' bound to instance 'Audio_Codec' of component 'Audio_Codec_Wrapper' [C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/sources_1/imports/lab2_code_for_cadets/lab2_datapath.vhdl:296]
 INFO: [Synth 8-638] synthesizing module 'Audio_Codec_Wrapper' [C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/sources_1/imports/lab2_code_for_cadets/Audio_Codec_Wrapper.vhd:53]
 INFO: [Synth 8-3491] module 'audio_init' declared at 'C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/sources_1/imports/lab2_code_for_cadets/audio_init.v:24' bound to instance 'initialize_audio' of component 'audio_init' [C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/sources_1/imports/lab2_code_for_cadets/Audio_Codec_Wrapper.vhd:143]
 INFO: [Synth 8-6157] synthesizing module 'audio_init' [C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/sources_1/imports/lab2_code_for_cadets/audio_init.v:24]
@@ -139,8 +139,8 @@ INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Dust
 INFO: [Synth 8-6155] done synthesizing module 'audio_init' (0#1) [C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/sources_1/imports/lab2_code_for_cadets/audio_init.v:24]
 WARNING: [Synth 8-5640] Port 'clkfb_in' is missing in component declaration [C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/sources_1/imports/lab2_code_for_cadets/Audio_Codec_Wrapper.vhd:92]
 WARNING: [Synth 8-5640] Port 'clkfb_out' is missing in component declaration [C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/sources_1/imports/lab2_code_for_cadets/Audio_Codec_Wrapper.vhd:92]
-INFO: [Synth 8-3491] module 'clk_wiz_1' declared at 'C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.runs/synth_1/.Xil/Vivado-11684-C26-5CG2151GFM/realtime/clk_wiz_1_stub.vhdl:6' bound to instance 'audiocodec_master_clock' of component 'clk_wiz_1' [C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/sources_1/imports/lab2_code_for_cadets/Audio_Codec_Wrapper.vhd:150]
-INFO: [Synth 8-638] synthesizing module 'clk_wiz_1' [C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.runs/synth_1/.Xil/Vivado-11684-C26-5CG2151GFM/realtime/clk_wiz_1_stub.vhdl:20]
+INFO: [Synth 8-3491] module 'clk_wiz_1' declared at 'C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.runs/synth_1/.Xil/Vivado-30216-C26-5CG2151GFM/realtime/clk_wiz_1_stub.vhdl:6' bound to instance 'audiocodec_master_clock' of component 'clk_wiz_1' [C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/sources_1/imports/lab2_code_for_cadets/Audio_Codec_Wrapper.vhd:150]
+INFO: [Synth 8-638] synthesizing module 'clk_wiz_1' [C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.runs/synth_1/.Xil/Vivado-30216-C26-5CG2151GFM/realtime/clk_wiz_1_stub.vhdl:20]
 	Parameter C_DATA_WIDTH bound to: 24 - type: integer 
 INFO: [Synth 8-3491] module 'i2s_ctl' declared at 'C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/sources_1/imports/lab2_code_for_cadets/i2s_ctl.vhd:36' bound to instance 'audio_inout' of component 'i2s_ctl' [C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/sources_1/imports/lab2_code_for_cadets/Audio_Codec_Wrapper.vhd:157]
 INFO: [Synth 8-638] synthesizing module 'i2s_ctl' [C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/sources_1/imports/lab2_code_for_cadets/i2s_ctl.vhd:63]
@@ -792,10 +792,6 @@ WARNING: [Synth 8-6014] Unused sequential element timeOutCnt_reg was removed.  [
 WARNING: [Synth 8-6014] Unused sequential element errTypeR_reg was removed.  [C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/sources_1/imports/lab2_code_for_cadets/TWICtl.vhd:313]
 WARNING: [Synth 8-6014] Unused sequential element regData1_reg was removed.  [C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/sources_1/imports/lab2_code_for_cadets/audio_init.v:135]
 WARNING: [Synth 8-6014] Unused sequential element initFbWe_reg was removed.  [C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/sources_1/imports/lab2_code_for_cadets/audio_init.v:150]
-WARNING: [Synth 8-6014] Unused sequential element writeCntr_reg was removed.  [C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/sources_1/imports/lab2_code_for_cadets/lab2_datapath.vhdl:207]
-WARNING: [Synth 8-3848] Net flagQ in module/entity lab2_datapath does not have driver. [C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/sources_1/imports/lab2_code_for_cadets/lab2_datapath.vhdl:49]
-WARNING: [Synth 8-3848] Net L_bus_in in module/entity lab2_datapath does not have driver. [C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/sources_1/imports/lab2_code_for_cadets/lab2_datapath.vhdl:57]
-WARNING: [Synth 8-3848] Net R_bus_in in module/entity lab2_datapath does not have driver. [C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/sources_1/imports/lab2_code_for_cadets/lab2_datapath.vhdl:57]
 WARNING: [Synth 8-3848] Net cw in module/entity lab2_fsm does not have driver. [C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/sources_1/imports/lab2_code_for_cadets/lab2_fsm.vhdl:26]
 WARNING: [Synth 8-7129] Port cw[2] in module lab2_fsm is either unconnected or has no load
 WARNING: [Synth 8-7129] Port cw[1] in module lab2_fsm is either unconnected or has no load
@@ -808,12 +804,7 @@ WARNING: [Synth 8-7129] Port sw[0] in module lab2_fsm is either unconnected or h
 WARNING: [Synth 8-7129] Port MM_I in module i2s_ctl is either unconnected or has no load
 WARNING: [Synth 8-7129] Port i_clk in module synch_blank is either unconnected or has no load
 WARNING: [Synth 8-7129] Port i_reset_n in module synch_blank is either unconnected or has no load
-WARNING: [Synth 8-7129] Port sw[2] in module lab2_datapath is either unconnected or has no load
-WARNING: [Synth 8-7129] Port sw[0] in module lab2_datapath is either unconnected or has no load
-WARNING: [Synth 8-7129] Port flagQ in module lab2_datapath is either unconnected or has no load
 WARNING: [Synth 8-7129] Port cw[2] in module lab2_datapath is either unconnected or has no load
-WARNING: [Synth 8-7129] Port cw[1] in module lab2_datapath is either unconnected or has no load
-WARNING: [Synth 8-7129] Port cw[0] in module lab2_datapath is either unconnected or has no load
 WARNING: [Synth 8-7129] Port btn[4] in module lab2_datapath is either unconnected or has no load
 WARNING: [Synth 8-7129] Port switch[3] in module lab2_datapath is either unconnected or has no load
 WARNING: [Synth 8-7129] Port switch[2] in module lab2_datapath is either unconnected or has no load
@@ -861,20 +852,19 @@ WARNING: [Synth 8-7129] Port exRbus[3] in module lab2_datapath is either unconne
 WARNING: [Synth 8-7129] Port exRbus[2] in module lab2_datapath is either unconnected or has no load
 WARNING: [Synth 8-7129] Port exRbus[1] in module lab2_datapath is either unconnected or has no load
 WARNING: [Synth 8-7129] Port exRbus[0] in module lab2_datapath is either unconnected or has no load
-WARNING: [Synth 8-7129] Port flagClear in module lab2_datapath is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:11 . Memory (MB): peak = 1134.230 ; gain = 590.410
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:12 . Memory (MB): peak = 1134.609 ; gain = 590.770
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:11 . Memory (MB): peak = 1134.230 ; gain = 590.410
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:12 . Memory (MB): peak = 1134.609 ; gain = 590.770
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:11 . Memory (MB): peak = 1134.230 ; gain = 590.410
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:12 . Memory (MB): peak = 1134.609 ; gain = 590.770
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.019 . Memory (MB): peak = 1134.230 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.034 . Memory (MB): peak = 1134.609 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 10 Unisim elements for replacement
 WARNING: [Netlist 29-151] Pin 'C1' on instance 'datapath/video_inst/dvid_inst/ODDR2_blue' of cell type 'ODDR2' does not have an equivalent function on the new cell type 'ODDR'. Net 'clk_n' that is connected to this pin will not be connected to the replacement instance.
 WARNING: [Netlist 29-151] Pin 'C1' on instance 'datapath/video_inst/dvid_inst/ODDR2_clock' of cell type 'ODDR2' does not have an equivalent function on the new cell type 'ODDR'. Net 'clk_n' that is connected to this pin will not be connected to the replacement instance.
@@ -898,24 +888,24 @@ Parsing XDC File [C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.runs/synth_1/dont_t
 Finished Parsing XDC File [C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1222.156 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1229.305 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 8 instances were transformed.
   OBUFDS => OBUFDS_DUAL_BUF (INV, OBUFDS(x2)): 4 instances
   ODDR2 => ODDR: 4 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 1222.156 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 1229.305 ; gain = 0.000
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:22 . Memory (MB): peak = 1222.156 ; gain = 678.336
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:26 . Memory (MB): peak = 1229.305 ; gain = 685.465
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a200tsbg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:22 . Memory (MB): peak = 1222.156 ; gain = 678.336
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:26 . Memory (MB): peak = 1229.305 ; gain = 685.465
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -925,7 +915,7 @@ Applied set_property CLOCK_BUFFER_TYPE = NONE for clk. (constraint file  c:/User
 Applied set_property KEEP_HIERARCHY = SOFT for datapath/video_inst/mmcm_adv_inst_display_clocks. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for datapath/Audio_Codec/audiocodec_master_clock. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:22 . Memory (MB): peak = 1222.156 ; gain = 678.336
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:26 . Memory (MB): peak = 1229.305 ; gain = 685.465
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'debounce_fsm'
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'TWICtl'
@@ -953,7 +943,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using e
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'gray' in module 'TWICtl'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:23 . Memory (MB): peak = 1222.156 ; gain = 678.336
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:27 . Memory (MB): peak = 1229.305 ; gain = 685.465
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -963,8 +953,8 @@ Detailed RTL Component Info :
 	   2 Input   32 Bit       Adders := 1     
 	   2 Input   31 Bit       Adders := 1     
 	   2 Input   20 Bit       Adders := 4     
-	   2 Input   18 Bit       Adders := 2     
-	   2 Input   10 Bit       Adders := 11    
+	   2 Input   18 Bit       Adders := 4     
+	   2 Input   10 Bit       Adders := 12    
 	   3 Input   10 Bit       Adders := 4     
 	   2 Input    7 Bit       Adders := 3     
 	   2 Input    5 Bit       Adders := 2     
@@ -982,20 +972,20 @@ Detailed RTL Component Info :
 	               32 Bit    Registers := 3     
 	               31 Bit    Registers := 1     
 	               24 Bit    Registers := 2     
-	               10 Bit    Registers := 15    
+	               10 Bit    Registers := 18    
 	                8 Bit    Registers := 3     
 	                7 Bit    Registers := 3     
 	                5 Bit    Registers := 2     
 	                4 Bit    Registers := 4     
 	                3 Bit    Registers := 2     
 	                2 Bit    Registers := 2     
-	                1 Bit    Registers := 22    
+	                1 Bit    Registers := 23    
 +---Muxes : 
 	   2 Input   32 Bit        Muxes := 3     
 	   2 Input   18 Bit        Muxes := 2     
 	   2 Input   10 Bit        Muxes := 15    
 	   5 Input   10 Bit        Muxes := 6     
-	   4 Input   10 Bit        Muxes := 3     
+	   4 Input   10 Bit        Muxes := 4     
 	   2 Input    9 Bit        Muxes := 6     
 	   2 Input    8 Bit        Muxes := 2     
 	   2 Input    5 Bit        Muxes := 2     
@@ -1006,8 +996,8 @@ Detailed RTL Component Info :
 	   4 Input    2 Bit        Muxes := 4     
 	   2 Input    2 Bit        Muxes := 4     
 	   3 Input    2 Bit        Muxes := 1     
-	   2 Input    1 Bit        Muxes := 44    
-	   4 Input    1 Bit        Muxes := 25    
+	   2 Input    1 Bit        Muxes := 45    
+	   4 Input    1 Bit        Muxes := 26    
 	   3 Input    1 Bit        Muxes := 5     
 	   9 Input    1 Bit        Muxes := 1     
 	  10 Input    1 Bit        Muxes := 6     
@@ -1030,10 +1020,7 @@ Start Cross Boundary and Area Optimization
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 WARNING: [Synth 8-7129] Port sw[2] in module lab2_datapath is either unconnected or has no load
 WARNING: [Synth 8-7129] Port sw[0] in module lab2_datapath is either unconnected or has no load
-WARNING: [Synth 8-7129] Port flagQ in module lab2_datapath is either unconnected or has no load
 WARNING: [Synth 8-7129] Port cw[2] in module lab2_datapath is either unconnected or has no load
-WARNING: [Synth 8-7129] Port cw[1] in module lab2_datapath is either unconnected or has no load
-WARNING: [Synth 8-7129] Port cw[0] in module lab2_datapath is either unconnected or has no load
 WARNING: [Synth 8-7129] Port btn[4] in module lab2_datapath is either unconnected or has no load
 WARNING: [Synth 8-7129] Port switch[3] in module lab2_datapath is either unconnected or has no load
 WARNING: [Synth 8-7129] Port switch[2] in module lab2_datapath is either unconnected or has no load
@@ -1063,6 +1050,15 @@ WARNING: [Synth 8-7129] Port exLbus[5] in module lab2_datapath is either unconne
 WARNING: [Synth 8-7129] Port exLbus[4] in module lab2_datapath is either unconnected or has no load
 WARNING: [Synth 8-7129] Port exLbus[3] in module lab2_datapath is either unconnected or has no load
 WARNING: [Synth 8-7129] Port exLbus[2] in module lab2_datapath is either unconnected or has no load
+WARNING: [Synth 8-7129] Port exLbus[1] in module lab2_datapath is either unconnected or has no load
+WARNING: [Synth 8-7129] Port exLbus[0] in module lab2_datapath is either unconnected or has no load
+WARNING: [Synth 8-7129] Port exRbus[15] in module lab2_datapath is either unconnected or has no load
+WARNING: [Synth 8-7129] Port exRbus[14] in module lab2_datapath is either unconnected or has no load
+WARNING: [Synth 8-7129] Port exRbus[13] in module lab2_datapath is either unconnected or has no load
+WARNING: [Synth 8-7129] Port exRbus[12] in module lab2_datapath is either unconnected or has no load
+WARNING: [Synth 8-7129] Port exRbus[11] in module lab2_datapath is either unconnected or has no load
+WARNING: [Synth 8-7129] Port exRbus[10] in module lab2_datapath is either unconnected or has no load
+WARNING: [Synth 8-7129] Port exRbus[9] in module lab2_datapath is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'debounce_fsm:/counter_reg[19]__0/Q' [C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/sources_1/imports/new/debounce_fsm.vhd:32]
 CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/sources_1/imports/new/debounce_fsm.vhd:32]
@@ -1125,26 +1121,26 @@ CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin '
 CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/sources_1/imports/new/debounce_fsm.vhd:32]
 CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/sources_1/imports/new/debounce_fsm.vhd:32]
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:33 ; elapsed = 00:00:50 . Memory (MB): peak = 1459.387 ; gain = 915.566
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:31 ; elapsed = 00:01:07 . Memory (MB): peak = 1451.379 ; gain = 907.539
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-565] redefining clock 'clk'
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:38 ; elapsed = 00:00:59 . Memory (MB): peak = 1459.387 ; gain = 915.566
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:39 ; elapsed = 00:01:22 . Memory (MB): peak = 1451.379 ; gain = 907.539
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:42 ; elapsed = 00:01:05 . Memory (MB): peak = 1459.387 ; gain = 915.566
+Finished Timing Optimization : Time (s): cpu = 00:00:42 ; elapsed = 00:01:27 . Memory (MB): peak = 1451.379 ; gain = 907.539
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:42 ; elapsed = 00:01:05 . Memory (MB): peak = 1459.387 ; gain = 915.566
+Finished Technology Mapping : Time (s): cpu = 00:00:42 ; elapsed = 00:01:28 . Memory (MB): peak = 1459.434 ; gain = 915.594
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -1163,37 +1159,37 @@ Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 CRITICAL WARNING: [Synth 8-4442] BlackBox module \datapath/Audio_Codec/audiocodec_master_clock  has unconnected pin clkfb_in
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:46 ; elapsed = 00:01:12 . Memory (MB): peak = 1606.168 ; gain = 1062.348
+Finished IO Insertion : Time (s): cpu = 00:00:45 ; elapsed = 00:01:34 . Memory (MB): peak = 1608.734 ; gain = 1064.895
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:46 ; elapsed = 00:01:12 . Memory (MB): peak = 1606.168 ; gain = 1062.348
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:45 ; elapsed = 00:01:34 . Memory (MB): peak = 1608.734 ; gain = 1064.895
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:46 ; elapsed = 00:01:12 . Memory (MB): peak = 1606.168 ; gain = 1062.348
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:45 ; elapsed = 00:01:34 . Memory (MB): peak = 1608.734 ; gain = 1064.895
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:46 ; elapsed = 00:01:12 . Memory (MB): peak = 1606.168 ; gain = 1062.348
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:45 ; elapsed = 00:01:34 . Memory (MB): peak = 1608.734 ; gain = 1064.895
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:46 ; elapsed = 00:01:12 . Memory (MB): peak = 1606.168 ; gain = 1062.348
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:45 ; elapsed = 00:01:34 . Memory (MB): peak = 1608.734 ; gain = 1064.895
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:46 ; elapsed = 00:01:12 . Memory (MB): peak = 1606.168 ; gain = 1062.348
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:45 ; elapsed = 00:01:34 . Memory (MB): peak = 1608.734 ; gain = 1064.895
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -1214,31 +1210,32 @@ Report Cell Usage:
 |1     |clk_wiz_0_bbox |     1|
 |2     |clk_wiz_1_bbox |     1|
 |3     |CARRY4         |    40|
-|4     |LUT1           |    50|
-|5     |LUT2           |    83|
-|6     |LUT3           |    88|
-|7     |LUT4           |   136|
-|8     |LUT5           |    97|
-|9     |LUT6           |   218|
+|4     |LUT1           |    51|
+|5     |LUT2           |    87|
+|6     |LUT3           |    92|
+|7     |LUT4           |   143|
+|8     |LUT5           |   100|
+|9     |LUT6           |   239|
 |10    |ODDR2          |     4|
-|11    |FDCE           |    10|
-|12    |FDPE           |     7|
-|13    |FDRE           |   222|
-|14    |FDSE           |    28|
-|15    |IBUF           |     7|
-|16    |IOBUF          |     2|
-|17    |OBUF           |     4|
-|18    |OBUFDS         |     4|
+|11    |RAMB18E1       |     2|
+|13    |FDCE           |    10|
+|14    |FDPE           |     7|
+|15    |FDRE           |   254|
+|16    |FDSE           |    28|
+|17    |IBUF           |     7|
+|18    |IOBUF          |     2|
+|19    |OBUF           |     4|
+|20    |OBUFDS         |     4|
 +------+---------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:46 ; elapsed = 00:01:12 . Memory (MB): peak = 1606.168 ; gain = 1062.348
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:45 ; elapsed = 00:01:34 . Memory (MB): peak = 1608.734 ; gain = 1064.895
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 61 critical warnings and 56 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:38 ; elapsed = 00:01:09 . Memory (MB): peak = 1606.168 ; gain = 974.422
-Synthesis Optimization Complete : Time (s): cpu = 00:00:46 ; elapsed = 00:01:13 . Memory (MB): peak = 1606.168 ; gain = 1062.348
+Synthesis finished with 0 errors, 61 critical warnings and 52 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:39 ; elapsed = 00:01:30 . Memory (MB): peak = 1608.734 ; gain = 970.199
+Synthesis Optimization Complete : Time (s): cpu = 00:00:46 ; elapsed = 00:01:35 . Memory (MB): peak = 1608.734 ; gain = 1064.895
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.021 . Memory (MB): peak = 1611.375 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 50 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.018 . Memory (MB): peak = 1614.090 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 52 Unisim elements for replacement
 WARNING: [Netlist 29-151] Pin 'C1' on instance 'datapath/video_inst/dvid_inst/ODDR2_blue' of cell type 'ODDR2' does not have an equivalent function on the new cell type 'ODDR'. Net 'clk_out3' that is connected to this pin will not be connected to the replacement instance.
 WARNING: [Netlist 29-151] Pin 'C1' on instance 'datapath/video_inst/dvid_inst/ODDR2_clock' of cell type 'ODDR2' does not have an equivalent function on the new cell type 'ODDR'. Net 'clk_out3' that is connected to this pin will not be connected to the replacement instance.
 WARNING: [Netlist 29-151] Pin 'C1' on instance 'datapath/video_inst/dvid_inst/ODDR2_green' of cell type 'ODDR2' does not have an equivalent function on the new cell type 'ODDR'. Net 'clk_out3' that is connected to this pin will not be connected to the replacement instance.
@@ -1247,20 +1244,20 @@ INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-140] Inserted 1 IBUFs to IO ports without IO buffers.
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1621.609 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1625.008 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 10 instances were transformed.
   IOBUF => IOBUF (IBUF, OBUFT): 2 instances
   OBUFDS => OBUFDS_DUAL_BUF (INV, OBUFDS(x2)): 4 instances
   ODDR2 => ODDR: 4 instances
 
-Synth Design complete | Checksum: 597651dd
+Synth Design complete | Checksum: 2d639d8a
 INFO: [Common 17-83] Releasing license: Synthesis
-112 Infos, 122 Warnings, 61 Critical Warnings and 0 Errors encountered.
+112 Infos, 118 Warnings, 61 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:49 ; elapsed = 00:01:43 . Memory (MB): peak = 1621.609 ; gain = 1317.879
+synth_design: Time (s): cpu = 00:00:49 ; elapsed = 00:02:01 . Memory (MB): peak = 1625.008 ; gain = 1321.199
 INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1621.609 ; gain = 0.000
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1625.008 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.runs/synth_1/lab2.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file lab2_utilization_synth.rpt -pb lab2_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Fri Apr  4 08:48:12 2025...
+INFO: [Common 17-206] Exiting Vivado at Tue Apr 22 08:30:09 2025...

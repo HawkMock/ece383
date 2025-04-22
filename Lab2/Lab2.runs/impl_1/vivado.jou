@@ -3,8 +3,8 @@
 # SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
 # IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
 # SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
-# Start of session at: Fri Apr  4 08:48:22 2025
-# Process ID         : 39656
+# Start of session at: Tue Apr 22 08:30:19 2025
+# Process ID         : 26064
 # Current directory  : C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.runs/impl_1
 # Command line       : vivado.exe -log lab2.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source lab2.tcl -notrace
 # Log file           : C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.runs/impl_1/lab2.vdi
@@ -19,6 +19,6 @@
 # Host memory        : 16374 MB
 # Swap memory        : 22548 MB
 # Total Virtual      : 38923 MB
-# Available Virtual  : 17514 MB
+# Available Virtual  : 11776 MB
 #-----------------------------------------------------------
 source lab2.tcl -notrace

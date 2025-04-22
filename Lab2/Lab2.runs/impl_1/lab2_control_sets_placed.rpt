@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-| Date         : Fri Apr  4 08:49:04 2025
+| Date         : Tue Apr 22 08:31:25 2025
 | Host         : C26-5CG2151GFM running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file lab2_control_sets_placed.rpt
 | Design       : lab2
@@ -23,11 +23,11 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Total control sets                                       |    23 |
-|    Minimum number of control sets                        |    23 |
+| Total control sets                                       |    25 |
+|    Minimum number of control sets                        |    25 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |    77 |
+| Unused register locations in slices containing registers |    85 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -39,15 +39,15 @@ Table of Contents
 +--------------------+-------+
 |       Fanout       | Count |
 +--------------------+-------+
-| Total control sets |    23 |
-| >= 0 to < 4        |     2 |
+| Total control sets |    25 |
+| >= 0 to < 4        |     1 |
 | >= 4 to < 6        |     4 |
-| >= 6 to < 8        |     4 |
+| >= 6 to < 8        |     5 |
 | >= 8 to < 10       |     4 |
-| >= 10 to < 12      |     3 |
+| >= 10 to < 12      |     4 |
 | >= 12 to < 14      |     0 |
 | >= 14 to < 16      |     0 |
-| >= 16              |     6 |
+| >= 16              |     7 |
 +--------------------+-------+
 * Control sets can be remapped at either synth_design or opt_design
 
@@ -58,12 +58,12 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              93 |           28 |
+| No           | No                    | No                     |              98 |           33 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |              74 |           28 |
-| Yes          | No                    | No                     |              40 |           13 |
-| Yes          | No                    | Yes                    |              17 |            9 |
-| Yes          | Yes                   | No                     |              43 |           18 |
+| No           | Yes                   | No                     |              74 |           32 |
+| Yes          | No                    | No                     |              57 |           22 |
+| Yes          | No                    | Yes                    |              17 |            8 |
+| Yes          | Yes                   | No                     |              53 |           18 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
@@ -74,28 +74,30 @@ Table of Contents
 |                           Clock Signal                          |                                  Enable Signal                                 |                           Set/Reset Signal                           | Slice Load Count | Bel Load Count | Bels / Slice |
 +-----------------------------------------------------------------+--------------------------------------------------------------------------------+----------------------------------------------------------------------+------------------+----------------+--------------+
 | ~datapath/video_inst/mmcm_adv_inst_display_clocks/inst/clk_out1 |                                                                                |                                                                      |                1 |              1 |         1.00 |
-|  clk_IBUF_BUFG                                                  |                                                                                |                                                                      |                1 |              2 |         2.00 |
-|  datapath/Audio_Codec/audiocodec_master_clock/inst/clk_out2     | datapath/Audio_Codec/initialize_audio/twi_controller/FSM_gray_state[3]_i_1_n_0 |                                                                      |                1 |              4 |         4.00 |
-|  datapath/Audio_Codec/audiocodec_master_clock/inst/clk_out2     | datapath/Audio_Codec/initialize_audio/twi_controller/state_reg[0][0]           | datapath/Audio_Codec/initialize_audio/SR[0]                          |                3 |              4 |         1.33 |
+|  datapath/Audio_Codec/audiocodec_master_clock/inst/clk_out2     | datapath/Audio_Codec/initialize_audio/twi_controller/state_reg[0][0]           | datapath/Audio_Codec/initialize_audio/reset_n                        |                2 |              4 |         2.00 |
+|  datapath/Audio_Codec/audiocodec_master_clock/inst/clk_out2     | datapath/Audio_Codec/initialize_audio/twi_controller/FSM_gray_state[3]_i_1_n_0 |                                                                      |                3 |              4 |         1.33 |
 |  clk_IBUF_BUFG                                                  |                                                                                | datapath/Audio_Codec/audio_inout/Cnt_Bclk[4]_i_1_n_0                 |                1 |              5 |         5.00 |
-|  clk_IBUF_BUFG                                                  | datapath/Audio_Codec/audio_inout/BCLK_Fall_int                                 | datapath/Audio_Codec/initialize_audio/SR[0]                          |                2 |              5 |         2.50 |
-|  datapath/video_inst/mmcm_adv_inst_display_clocks/inst/clk_out2 |                                                                                | datapath/video_inst/dvid_inst/shift_red[9]_i_1_n_0                   |                2 |              6 |         3.00 |
-|  datapath/Audio_Codec/audiocodec_master_clock/inst/clk_out2     |                                                                                | datapath/Audio_Codec/initialize_audio/twi_controller/busFreeCnt0_1   |                3 |              7 |         2.33 |
+|  clk_IBUF_BUFG                                                  | datapath/Audio_Codec/audio_inout/BCLK_Fall_int                                 | datapath/Audio_Codec/initialize_audio/reset_n                        |                2 |              5 |         2.50 |
+|  datapath/video_inst/mmcm_adv_inst_display_clocks/inst/clk_out2 |                                                                                | datapath/video_inst/dvid_inst/shift_red[9]_i_1_n_0                   |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG                                                  |                                                                                |                                                                      |                3 |              7 |         2.33 |
+|  datapath/Audio_Codec/audiocodec_master_clock/inst/clk_out2     |                                                                                | datapath/Audio_Codec/initialize_audio/twi_controller/busFreeCnt0_1   |                2 |              7 |         3.50 |
 |  datapath/Audio_Codec/audiocodec_master_clock/inst/clk_out2     | datapath/Audio_Codec/initialize_audio/twi_controller/sclCnt[6]_i_2_n_0         | datapath/Audio_Codec/initialize_audio/twi_controller/sclCnt0_0       |                2 |              7 |         3.50 |
-|  datapath/Audio_Codec/audiocodec_master_clock/inst/clk_out2     | datapath/Audio_Codec/initialize_audio/twi_controller/E[0]                      | datapath/Audio_Codec/initialize_audio/SR[0]                          |                2 |              7 |         3.50 |
-|  datapath/Audio_Codec/audiocodec_master_clock/inst/clk_out2     | datapath/Audio_Codec/initialize_audio/twi_controller/dataByte[7]_i_1_n_0       |                                                                      |                3 |              8 |         2.67 |
-|  clk_IBUF_BUFG                                                  |                                                                                | datapath/Audio_Codec/initialize_audio/SR[0]                          |                3 |              8 |         2.67 |
-|  clk_IBUF_BUFG                                                  | datapath/debounce_btn2/E[0]                                                    | datapath/Audio_Codec/initialize_audio/SR[0]                          |                5 |              8 |         1.60 |
-|  clk_IBUF_BUFG                                                  | datapath/debounce_btn3/FSM_sequential_current_state_reg[0]_0                   | datapath/Audio_Codec/initialize_audio/SR[0]                          |                4 |              9 |         2.25 |
-|  datapath/Audio_Codec/audiocodec_master_clock/inst/clk_out2     | reset_n_IBUF                                                                   |                                                                      |                4 |             10 |         2.50 |
-|  datapath/video_inst/mmcm_adv_inst_display_clocks/inst/clk_out1 | datapath/video_inst/vga_inst/row_counter/w_processQ0                           | datapath/video_inst/vga_inst/row_counter/w_processQ[9]_i_1_n_0       |                5 |             10 |         2.00 |
+|  datapath/Audio_Codec/audiocodec_master_clock/inst/clk_out2     | datapath/Audio_Codec/initialize_audio/twi_controller/E[0]                      | datapath/Audio_Codec/initialize_audio/reset_n                        |                2 |              7 |         3.50 |
+|  clk_IBUF_BUFG                                                  |                                                                                | datapath/Audio_Codec/initialize_audio/reset_n                        |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG                                                  | datapath/debounce_btn2/E[0]                                                    | datapath/Audio_Codec/initialize_audio/reset_n                        |                4 |              8 |         2.00 |
+|  datapath/Audio_Codec/audiocodec_master_clock/inst/clk_out2     | datapath/Audio_Codec/initialize_audio/twi_controller/dataByte[7]_i_1_n_0       |                                                                      |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG                                                  | datapath/debounce_btn3/FSM_sequential_current_state_reg[0]_0                   | datapath/Audio_Codec/initialize_audio/reset_n                        |                4 |              9 |         2.25 |
 |  datapath/video_inst/mmcm_adv_inst_display_clocks/inst/clk_out1 | datapath/video_inst/vga_inst/column_counter/w_processQ0                        | datapath/video_inst/vga_inst/column_counter/w_processQ[9]_i_1__0_n_0 |                4 |             10 |         2.50 |
-|  datapath/video_inst/mmcm_adv_inst_display_clocks/inst/clk_out1 |                                                                                | datapath/video_inst/vga_inst/column_counter/blank                    |               10 |             16 |         1.60 |
-|  datapath/Audio_Codec/audiocodec_master_clock/inst/clk_out2     |                                                                                |                                                                      |                9 |             18 |         2.00 |
-|  datapath/Audio_Codec/audiocodec_master_clock/inst/clk_out2     | datapath/Audio_Codec/initialize_audio/initWord[30]_i_1_n_0                     |                                                                      |                5 |             18 |         3.60 |
+|  datapath/video_inst/mmcm_adv_inst_display_clocks/inst/clk_out1 | datapath/video_inst/vga_inst/row_counter/w_processQ0                           | datapath/video_inst/vga_inst/row_counter/w_processQ[9]_i_1_n_0       |                4 |             10 |         2.50 |
+|  clk_IBUF_BUFG                                                  | datapath/Audio_Codec/ready_sig_reg_n_0                                         | datapath/Audio_Codec/initialize_audio/reset_n                        |                2 |             10 |         5.00 |
+|  datapath/Audio_Codec/audiocodec_master_clock/inst/clk_out2     | reset_n_IBUF                                                                   |                                                                      |                4 |             10 |         2.50 |
+|  datapath/video_inst/mmcm_adv_inst_display_clocks/inst/clk_out1 |                                                                                | datapath/video_inst/vga_inst/column_counter/blank                    |               13 |             16 |         1.23 |
+|  clk_IBUF_BUFG                                                  | datapath/Audio_Codec/audio_inout/Data_Out_int[31]_i_1_n_0                      |                                                                      |                5 |             17 |         3.40 |
+|  datapath/Audio_Codec/audiocodec_master_clock/inst/clk_out2     |                                                                                |                                                                      |               11 |             18 |         1.64 |
+|  datapath/Audio_Codec/audiocodec_master_clock/inst/clk_out2     | datapath/Audio_Codec/initialize_audio/initWord[30]_i_1_n_0                     |                                                                      |                6 |             18 |         3.00 |
 |  datapath/Audio_Codec/audiocodec_master_clock/inst/clk_out2     |                                                                                | datapath/Audio_Codec/initialize_audio/delaycnt0                      |                9 |             32 |         3.56 |
 |  datapath/video_inst/mmcm_adv_inst_display_clocks/inst/clk_out2 |                                                                                |                                                                      |                6 |             34 |         5.67 |
-|  datapath/video_inst/mmcm_adv_inst_display_clocks/inst/clk_out1 |                                                                                |                                                                      |               11 |             38 |         3.45 |
+|  datapath/video_inst/mmcm_adv_inst_display_clocks/inst/clk_out1 |                                                                                |                                                                      |               12 |             38 |         3.17 |
 +-----------------------------------------------------------------+--------------------------------------------------------------------------------+----------------------------------------------------------------------+------------------+----------------+--------------+
 
 

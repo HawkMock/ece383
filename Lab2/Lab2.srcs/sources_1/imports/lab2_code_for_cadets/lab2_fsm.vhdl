@@ -1,5 +1,5 @@
 ----------------------------------------------------------------------------------
--- Name:	Template by George your (modified from Jeff Falkinburg)
+-- Name:	Template by George York (modified from Jeff Falkinburg)
 -- Date:	Spring 2023
 -- File:    lab2_fsm.vhd
 -- HW:	    Lab 2 
