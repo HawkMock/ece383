@@ -60,6 +60,7 @@ architecture Behavioral of lab2_datapath is
     signal row, column: unsigned(9 downto 0);
     signal ch1, ch2, reset: std_logic;
     signal readL, readR: std_logic_vector(15 downto 0);
+    signal debounced_btn: std_logic_vector(4 downto 0);
     
     -- SOMETHING_GOES_HERE... need more signals
 	
@@ -110,6 +111,14 @@ architecture Behavioral of lab2_datapath is
            value : out unsigned(bits-1 downto 0) := to_unsigned(initial_value, bits));
     end component;
     
+    -- button debounce
+    component debounce_fsm is
+    Port ( clk : in STD_LOGIC;
+           reset_n : in STD_LOGIC;
+           btn_in : in STD_LOGIC;
+           btn_out : out STD_LOGIC);
+    end component;
+    
     signal w_trigger_time, w_trigger_volt: unsigned(9 downto 0);
     constant UP: integer := 0;
     constant DOWN: integer := 2;
@@ -121,19 +130,19 @@ begin
 -- TEST 1:  draw a horizontal yellow line (ch1) just above the center grid line (DC or zero volts)
 --          and a horizontal green line (ch2) just below the center grid line
 --          Disconnect or comment out BRAM code at the bottom of the file
-	ch1 <= '1' when (218 = row) else '0';		
-    ch2 <= '1' when (222 = row) else '0';       
+--	  ch1 <= '1' when (218 = row) else '0';		
+--    ch2 <= '1' when (222 = row) else '0';       
 
--- TEST 2: This is a good test to calibrate your DC offcet, attempting to center the waveform on the center grid line
---    If grabbing  9-bit samples from BRAM:   offset = 256 - 220 = ______
---    If grabbing 10-bit samples from BRAM:   offset = 512 - 220 = ______
+-- TEST 2: This is a good test to calibrate your DC offset, attempting to center the waveform on the center grid line
+--    If grabbing  9-bit samples from BRAM:   offset = 256 - 220 = 36
+--    If grabbing 10-bit samples from BRAM:   offset = 512 - 220 = 292
 --          Disconnect or comment out BRAM code at the bottom of the file
 --    syntax might need work... vectors must be the proper size
     -- for 10-bit unsigned, "1000000000" in the center number between "0000000000" and "1111111111"
-	-- ch1 <= '1' when ("1000000000" +- offset = row) else '0';		-- if grabbing 10-bits from BRAM
-	-- ch1 <= '1' when ("100000000" +- offset = row) else '0';		-- if grabbing 9-bits from BRAM	
-	-- ch1 <= '1' when ("10000000" +- offset = row) else '0';		-- if grabbing 8-bits from BRAM
-	-- ch2 <= -- do the same for this channel		
+	 ch1 <= '1' when ("1000000000" + 36 = row) else '0';		-- if grabbing 10-bits from BRAM
+--	 ch1 <= '1' when ("100000000" +- offset = row) else '0';		-- if grabbing 9-bits from BRAM	
+--	 ch1 <= '1' when ("10000000" +- offset = row) else '0';		-- if grabbing 8-bits from BRAM
+	 ch2 <= '1' when ("1000000000" + 220 = row) else '0';		
 	-- If you do find the correct offset, your green and yellow line with draw on top of the center white grid line
 	
 -- TEST 3: Now that you know the offset, can properly use BRAM, and set up its comparator to video
@@ -156,7 +165,7 @@ begin
 
 		
 -- Triggers
-trigger_t: trigger
+    trigger_t: trigger
     generic map(
            bits => 10,
            initial_value => 300,
@@ -165,8 +174,8 @@ trigger_t: trigger
            delta => 10)
     port map( clk => clk,
            reset_n => reset_n,
-           btn_inc => btn(RIGHT),
-           btn_dec => btn(LEFT),
+           btn_inc => debounced_btn(RIGHT),
+           btn_dec => debounced_btn(LEFT),
            value => w_trigger_time);
     
     
@@ -179,8 +188,8 @@ trigger_t: trigger
            delta => 10)
     port map( clk => clk,
            reset_n => reset_n,
-           btn_inc => btn(UP),
-           btn_dec => btn(DOWN),
+           btn_inc => debounced_btn(UP),
+           btn_dec => debounced_btn(DOWN),
            value => w_trigger_volt);
 
 	
@@ -209,6 +218,12 @@ trigger_t: trigger
 	
 	sw(1) <= '1';-- when (writeCntr = -- SOMETHING_GOES_HERE) else '0';
 	
+    -- Instantiate debouncer FSMs for each button
+    debounce_btn0: debounce_fsm port map (clk => clk, reset_n => reset_n, btn_in => btn(UP), btn_out => debounced_btn(UP));
+    debounce_btn1: debounce_fsm port map (clk => clk, reset_n => reset_n, btn_in => btn(LEFT), btn_out => debounced_btn(LEFT));
+    debounce_btn2: debounce_fsm port map (clk => clk, reset_n => reset_n, btn_in => btn(DOWN), btn_out => debounced_btn(DOWN));
+    debounce_btn3: debounce_fsm port map (clk => clk, reset_n => reset_n, btn_in => btn(RIGHT), btn_out => debounced_btn(RIGHT));
+
 
 
 	-------------------------------------------------------------------------------
@@ -234,7 +249,9 @@ trigger_t: trigger
 	-------------------------------------------------------------------------------		
 	
 	-- SOMETHING_GOES_HERE
-	
+   
+    triggerVolt <= w_trigger_volt;
+    triggerTime <= w_trigger_time;
 	
 	-------------------------------------------------------------------------------
 	-- Instantiate the video driver from Lab1 - should integrate smoothly
@@ -249,9 +266,9 @@ trigger_t: trigger
 		row => row,
 		column => column,
 		ch1 => ch1,
-		ch1_enb => '0', -- SOMETHING_GOES_HERE, -- should this be a switch?
+		ch1_enb => switch(0), 
 		ch2 => ch2,
-		ch2_enb => '0'); -- SOMETHING_GOES_HERE); -- should this be a switch?
+		ch2_enb => switch(1)); 
 
 
 -- Audio Codec stuff goes here
@@ -462,6 +479,7 @@ Audio_Codec : Audio_Codec_Wrapper
 --            WRCLK => clk,                   -- 1-bit input write clock
 --            WREN => '0'); -- SOMETHING_GOES_HERE -- 1-bit input write port enable
 --            -- End of BRAM_SDP_MACRO_inst instantiation
+
 
 
 

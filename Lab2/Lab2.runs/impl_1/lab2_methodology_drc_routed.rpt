@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-| Date         : Tue Mar 18 08:33:56 2025
+| Date         : Fri Apr  4 08:50:37 2025
 | Host         : C26-5CG2151GFM running 64-bit major release  (build 9200)
 | Command      : report_methodology -file lab2_methodology_drc_routed.rpt -pb lab2_methodology_drc_routed.pb -rpx lab2_methodology_drc_routed.rpx
 | Design       : lab2
@@ -23,15 +23,14 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max checks: <unlimited>
-             Checks found: 16
-+-----------+------------------+------------------------------------------------------------------+--------+
-| Rule      | Severity         | Description                                                      | Checks |
-+-----------+------------------+------------------------------------------------------------------+--------+
-| TIMING-17 | Critical Warning | Non-clocked sequential cell                                      | 12     |
-| TIMING-27 | Critical Warning | Invalid primary clock on hierarchical pin                        | 2      |
-| CKLD-2    | Warning          | Clock Net has IO Driver, not a Clock Buf, and/or non-Clock loads | 1      |
-| XDCC-2    | Warning          | Scoped Non-Timing constraint/property overwritten                | 1      |
-+-----------+------------------+------------------------------------------------------------------+--------+
+             Checks found: 40
++-----------+------------------+---------------------------------------------------+--------+
+| Rule      | Severity         | Description                                       | Checks |
++-----------+------------------+---------------------------------------------------+--------+
+| TIMING-17 | Critical Warning | Non-clocked sequential cell                       | 37     |
+| TIMING-27 | Critical Warning | Invalid primary clock on hierarchical pin         | 2      |
+| XDCC-2    | Warning          | Scoped Non-Timing constraint/property overwritten | 1      |
++-----------+------------------+---------------------------------------------------+--------+
 
 2. REPORT DETAILS
 -----------------
@@ -95,6 +94,131 @@ Non-clocked sequential cell
 The clock pin datapath/Audio_Codec/audio_inout/LRCLK_reg/C is not reached by a timing clock
 Related violations: <none>
 
+TIMING-17#13 Critical Warning
+Non-clocked sequential cell  
+The clock pin datapath/debounce_btn0/FSM_sequential_current_state_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#14 Critical Warning
+Non-clocked sequential cell  
+The clock pin datapath/debounce_btn0/FSM_sequential_current_state_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#15 Critical Warning
+Non-clocked sequential cell  
+The clock pin datapath/debounce_btn1/FSM_sequential_current_state_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#16 Critical Warning
+Non-clocked sequential cell  
+The clock pin datapath/debounce_btn1/FSM_sequential_current_state_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#17 Critical Warning
+Non-clocked sequential cell  
+The clock pin datapath/debounce_btn2/FSM_sequential_current_state_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#18 Critical Warning
+Non-clocked sequential cell  
+The clock pin datapath/debounce_btn2/FSM_sequential_current_state_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#19 Critical Warning
+Non-clocked sequential cell  
+The clock pin datapath/debounce_btn3/FSM_sequential_current_state_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#20 Critical Warning
+Non-clocked sequential cell  
+The clock pin datapath/debounce_btn3/FSM_sequential_current_state_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#21 Critical Warning
+Non-clocked sequential cell  
+The clock pin datapath/trigger_t/current_value_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#22 Critical Warning
+Non-clocked sequential cell  
+The clock pin datapath/trigger_t/current_value_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#23 Critical Warning
+Non-clocked sequential cell  
+The clock pin datapath/trigger_t/current_value_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#24 Critical Warning
+Non-clocked sequential cell  
+The clock pin datapath/trigger_t/current_value_reg[4]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#25 Critical Warning
+Non-clocked sequential cell  
+The clock pin datapath/trigger_t/current_value_reg[5]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#26 Critical Warning
+Non-clocked sequential cell  
+The clock pin datapath/trigger_t/current_value_reg[6]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#27 Critical Warning
+Non-clocked sequential cell  
+The clock pin datapath/trigger_t/current_value_reg[7]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#28 Critical Warning
+Non-clocked sequential cell  
+The clock pin datapath/trigger_t/current_value_reg[8]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#29 Critical Warning
+Non-clocked sequential cell  
+The clock pin datapath/trigger_t/current_value_reg[9]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#30 Critical Warning
+Non-clocked sequential cell  
+The clock pin datapath/trigger_v/current_value_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#31 Critical Warning
+Non-clocked sequential cell  
+The clock pin datapath/trigger_v/current_value_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#32 Critical Warning
+Non-clocked sequential cell  
+The clock pin datapath/trigger_v/current_value_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#33 Critical Warning
+Non-clocked sequential cell  
+The clock pin datapath/trigger_v/current_value_reg[4]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#34 Critical Warning
+Non-clocked sequential cell  
+The clock pin datapath/trigger_v/current_value_reg[5]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#35 Critical Warning
+Non-clocked sequential cell  
+The clock pin datapath/trigger_v/current_value_reg[6]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#36 Critical Warning
+Non-clocked sequential cell  
+The clock pin datapath/trigger_v/current_value_reg[7]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#37 Critical Warning
+Non-clocked sequential cell  
+The clock pin datapath/trigger_v/current_value_reg[8]/C is not reached by a timing clock
+Related violations: <none>
+
 TIMING-27#1 Critical Warning
 Invalid primary clock on hierarchical pin  
 A primary clock datapath/Audio_Codec/audiocodec_master_clock/inst/clk_in1 is created on an inappropriate internal pin datapath/Audio_Codec/audiocodec_master_clock/inst/clk_in1. It is not recommended to create a primary clock on a hierarchical pin when its driver pin has a fanout connected to multiple clock pins
@@ -103,11 +227,6 @@ Related violations: <none>
 TIMING-27#2 Critical Warning
 Invalid primary clock on hierarchical pin  
 A primary clock datapath/video_inst/mmcm_adv_inst_display_clocks/inst/clk_in1 is created on an inappropriate internal pin datapath/video_inst/mmcm_adv_inst_display_clocks/inst/clk_in1. It is not recommended to create a primary clock on a hierarchical pin when its driver pin has a fanout connected to multiple clock pins
-Related violations: <none>
-
-CKLD-2#1 Warning
-Clock Net has IO Driver, not a Clock Buf, and/or non-Clock loads  
-Clock net clk_IBUF is directly driven by an IO rather than a Clock Buffer or may be an IO driving a mix of Clock Buffer and non-Clock loads. This connectivity should be reviewed and corrected as appropriate. Driver(s): clk_IBUF_inst/O, datapath/clk
 Related violations: <none>
 
 XDCC-2#1 Warning
