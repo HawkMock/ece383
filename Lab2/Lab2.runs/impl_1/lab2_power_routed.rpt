@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-| Date             : Tue Apr 22 08:33:13 2025
+| Date             : Tue Apr 29 16:39:03 2025
 | Host             : C26-5CG2151GFM running 64-bit major release  (build 9200)
 | Command          : report_power -file lab2_power_routed.rpt -pb lab2_power_summary_routed.pb -rpx lab2_power_routed.rpx
 | Design           : lab2
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.516        |
+| Total On-Chip Power (W)  | 0.518        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.375        |
+| Dynamic (W)              | 0.378        |
 | Device Static (W)        | 0.140        |
 | Effective TJA (C/W)      | 3.3          |
 | Max Ambient (C)          | 83.3         |
@@ -53,17 +53,17 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |     0.005 |        9 |       --- |             --- |
-| Slice Logic    |     0.001 |     1084 |       --- |             --- |
-|   LUT as Logic |    <0.001 |      542 |    133800 |            0.41 |
-|   CARRY4       |    <0.001 |       40 |     33450 |            0.12 |
-|   Register     |    <0.001 |      299 |    267600 |            0.11 |
-|   Others       |     0.000 |       34 |       --- |             --- |
-| Signals        |    <0.001 |      768 |       --- |             --- |
-| Block RAM      |     0.002 |        1 |       365 |            0.27 |
+| Slice Logic    |     0.001 |     1177 |       --- |             --- |
+|   LUT as Logic |     0.001 |      567 |    133800 |            0.42 |
+|   CARRY4       |    <0.001 |       42 |     33450 |            0.13 |
+|   Register     |    <0.001 |      361 |    267600 |            0.13 |
+|   Others       |     0.000 |       36 |       --- |             --- |
+| Signals        |     0.001 |      872 |       --- |             --- |
+| Block RAM      |     0.004 |        2 |       365 |            0.55 |
 | MMCM           |     0.228 |        2 |        10 |           20.00 |
-| I/O            |     0.138 |       22 |       285 |            7.72 |
+| I/O            |     0.138 |       24 |       285 |            8.42 |
 | Static Power   |     0.140 |          |           |                 |
-| Total          |     0.516 |          |           |                 |
+| Total          |     0.518 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -73,7 +73,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.042 |       0.010 |      0.032 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.045 |       0.013 |      0.032 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.157 |       0.127 |      0.031 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.047 |       0.042 |      0.005 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -147,9 +147,10 @@ Table of Contents
 +------------------------------------+-----------+
 | Name                               | Power (W) |
 +------------------------------------+-----------+
-| lab2                               |     0.375 |
-|   datapath                         |     0.370 |
+| lab2                               |     0.378 |
+|   datapath                         |     0.373 |
 |     Audio_Codec                    |     0.127 |
+|       audio_inout                  |     0.002 |
 |       audiocodec_master_clock      |     0.122 |
 |       initialize_audio             |     0.001 |
 |     video_inst                     |     0.242 |

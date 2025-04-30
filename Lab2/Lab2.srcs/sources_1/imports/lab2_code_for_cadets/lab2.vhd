@@ -75,7 +75,7 @@ begin
 		sw => sw,
 		cw => cw,
 		btn => btn, 
-		switch => switch,
+		switch => switch,     
 		exWrAddr => "0000000000",
 		exWen => '0',
 		exSel => switch(2),
