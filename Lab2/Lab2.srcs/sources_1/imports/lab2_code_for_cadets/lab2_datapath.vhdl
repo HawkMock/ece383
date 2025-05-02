@@ -54,7 +54,7 @@ architecture Behavioral of lab2_datapath is
 
     signal sim_live: std_logic;
     signal ready : std_logic;
-	signal L_bus_in, R_bus_in, L_bus_out, R_bus_out: std_logic_vector(17 downto 0);	    
+	signal L_bus_in, R_bus_in, L_bus_out, R_bus_out, feedback_sample: std_logic_vector(17 downto 0);	    
     signal triggerVolt, triggerTime, writeCntr: unsigned (9 downto 0);
     signal trigger_time, trigger_volt: unsigned(9 downto 0);
     signal row, column: unsigned(9 downto 0);
@@ -62,10 +62,11 @@ architecture Behavioral of lab2_datapath is
     signal readL, readR: std_logic_vector(15 downto 0);
     signal debounced_btn: std_logic_vector(4 downto 0);
     -- additional signals
-    signal sample_signed_L, sample_signed_R : signed(17 downto 0);
-    constant BIAS18      : unsigned(17 downto 0) := to_unsigned(2**17,18);
-    signal prev_sample, curr_sample : unsigned(9 downto 0);
+    signal prev_sample, curr_sampleL, curr_sampleR : unsigned(9 downto 0);
     signal flagReg : std_logic;
+    signal writeEnable : std_logic;
+    signal wrAddr : std_logic_vector(9 downto 0);
+    signal writeL, writeR : std_logic_vector(15 downto 0);
 	
 	component video is
     Port ( clk : in  STD_LOGIC;
@@ -137,13 +138,6 @@ begin
 	Lbus_out <= L_bus_out(17 downto 2);		-- Just the upper 16 Bits
 	Rbus_out <= R_bus_out(17 downto 2);
 	
--- BRAM needs UNSIGNED data, not SIGNED
--- convert Signed sample from Codec into a proper Unsigned value
-    sample_signed_L <= signed(L_bus_out);
-    sample_signed_R <= signed(R_bus_out);
-    L_bus_in  <= std_logic_vector(unsigned(sample_signed_L) + BIAS18);
-    R_bus_in  <= std_logic_vector(unsigned(sample_signed_R) + BIAS18);
-	
 -- Need logic for the FLAG register
 	flagQ <= flagReg;
 	flagReg <= '1' when (ready = '1') else
@@ -202,7 +196,7 @@ begin
 		end if;
 	end process;
 	
-    sw(1) <= '1' when writeCntr = triggerTime else '0';
+    sw(1) <= ready;
 	
     -- Instantiate debouncer FSMs for each button
     debounce_btn0: debounce_fsm port map (clk => clk, reset_n => reset_n, btn_in => btn(UP), btn_out => debounced_btn(UP));
@@ -221,22 +215,26 @@ begin
         if rising_edge(ready) then
             if reset_n = '0' then
                 prev_sample <= (others => '0');
-                curr_sample <= (others => '0');
-                sw(0)       <= '0';
+                curr_sampleL <= (others => '0');
+                sw(2)       <= '0';
             else
                 -- capture samples (using low 10 bits of the unsigned data)
-                curr_sample <= unsigned(L_bus_in(9 downto 0));
+                curr_sampleL <= unsigned(L_bus_out(17 downto 8));
+                curr_sampleR <= unsigned(R_bus_out(17 downto 8));
+                feedback_sample <= L_bus_out;
 
                 -- positive-crossing detect
-                if (prev_sample < triggerVolt) and (curr_sample >= triggerVolt) then
-                    sw(0) <= '1';
-                else sw(0) <= '0';
+                if (prev_sample < triggerVolt) and (curr_sampleL >= triggerVolt) then
+                    sw(2) <= '1';
+                else sw(2) <= '0';
                 end if;
 
-                prev_sample <= curr_sample;
+                prev_sample <= curr_sampleL;
             end if;
         end if;
     end process;
+    
+    L_bus_in <= feedback_sample;
 	
    
     triggerVolt <= w_trigger_volt;
@@ -285,7 +283,11 @@ Audio_Codec : Audio_Codec_Wrapper
 
 -- BRAM stuff goes here
 
+    writeEnable <= exWen when (exSel = '1') else cw(2);
+    wrAddr      <= std_logic_vector(writeCntr) when (exSel = '0') else (exWrAddr);
 	reset <= not reset_n;
+	writeL <= "000000" & std_logic_vector(curr_sampleL) when (exSel = '0') else (exLBus);
+	writeR <= "000000" & std_logic_vector(curr_sampleR) when (exSel = '0') else (exRBus);
 	
 	leftChannelMemory : BRAM_SDP_MACRO
 		generic map (
@@ -370,11 +372,11 @@ Audio_Codec : Audio_Codec_Wrapper
             RST => reset,                 -- active high reset
             RDEN => '1',                    -- read enable
             REGCE => '1',                   -- 1-bit input read output register enable
-            DI => x"0000", -- SOMETHING_GOES_HERE,                   -- Input data port, width defined by WRITE_WIDTH parameter
+            DI => writeL,                    -- Input data port, width defined by WRITE_WIDTH parameter
             WE => "11",                     -- Input write enable, width defined by write port depth
-            WRADDR => "0000000000", -- SOMETHING_GOES_HERE,                -- Input write address, width defined by write port depth
+            WRADDR => wrAddr,                 -- Input write address, width defined by write port depth
             WRCLK => clk,                   -- 1-bit input write clock
-            WREN => '0'); -- SOMETHING_GOES_HERE -- 1-bit input write port enable
+            WREN => writeEnable);  -- 1-bit input write port enable
             -- End of BRAM_SDP_MACRO_inst instantiation
 
 
@@ -462,11 +464,11 @@ Audio_Codec : Audio_Codec_Wrapper
             RST => reset,                 -- active high reset
             RDEN => '1',                    -- read enable
             REGCE => '1',                   -- 1-bit input read output register enable
-            DI => x"0000", -- SOMETHING_GOES_HERE,                   -- Input data port, width defined by WRITE_WIDTH parameter
+            DI => writeR, -- SOMETHING_GOES_HERE,                   -- Input data port, width defined by WRITE_WIDTH parameter
             WE => "11",                     -- Input write enable, width defined by write port depth
-            WRADDR => "0000000000", -- SOMETHING_GOES_HERE,                -- Input write address, width defined by write port depth
+            WRADDR => wrAddr,                 -- Input write address, width defined by write port depth
             WRCLK => clk,                   -- 1-bit input write clock
-            WREN => '0'); -- SOMETHING_GOES_HERE -- 1-bit input write port enable
+            WREN => writeEnable);  -- 1-bit input write port enable
             -- End of BRAM_SDP_MACRO_inst instantiation
 
 
