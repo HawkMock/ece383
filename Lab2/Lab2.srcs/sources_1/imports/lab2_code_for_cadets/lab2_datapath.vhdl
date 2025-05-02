@@ -60,13 +60,17 @@ architecture Behavioral of lab2_datapath is
     signal row, column: unsigned(9 downto 0);
     signal ch1, ch2, reset: std_logic;
     signal readL, readR: std_logic_vector(15 downto 0);
-    signal debounced_btn: std_logic_vector(4 downto 0);
     -- additional signals
     signal prev_sample, curr_sampleL, curr_sampleR : unsigned(9 downto 0);
     signal flagReg : std_logic;
     signal writeEnable : std_logic;
     signal wrAddr : std_logic_vector(9 downto 0);
     signal writeL, writeR : std_logic_vector(15 downto 0);
+    -- Clock divider signals for generating a 50Hz tick
+    constant MAX_COUNT : unsigned(19 downto 0) := to_unsigned(1048575, 20); -- Adjust as needed for your clock frequency
+    signal counter_50Hz: unsigned(19 downto 0) := (others => '0');
+    signal tick_50Hz: std_logic := '0';
+    signal writeEnable_reg : std_logic;
 	
 	component video is
     Port ( clk : in  STD_LOGIC;
@@ -101,29 +105,20 @@ architecture Behavioral of lab2_datapath is
         sim_live : in STD_LOGIC);   --  '0' simulate audio; '1' live audio
 	end component;
 
-	component trigger is
-    generic (
-           bits : integer := 10;
-           initial_value : integer := 300;
-           max_value : integer := 600;
-           min_value : integer := 20;
-           delta : integer := 10);
-    port ( clk : in STD_LOGIC;
-           reset_n : in STD_LOGIC;
-           btn_inc : in STD_LOGIC;
-           btn_dec : in STD_LOGIC;
-           value : out unsigned(bits-1 downto 0) := to_unsigned(initial_value, bits));
-    end component;
+--	component trigger is
+--    generic (
+--           bits : integer := 10;
+--           initial_value : integer := 300;
+--           max_value : integer := 600;
+--           min_value : integer := 20;
+--           delta : integer := 10);
+--    port ( clk : in STD_LOGIC;
+--           reset_n : in STD_LOGIC;
+--           btn_inc : in STD_LOGIC;
+--           btn_dec : in STD_LOGIC;
+--           value : out unsigned(bits-1 downto 0) := to_unsigned(initial_value, bits));
+--    end component;
     
-    -- button debounce
-    component debounce_fsm is
-    Port ( clk : in STD_LOGIC;
-           reset_n : in STD_LOGIC;
-           btn_in : in STD_LOGIC;
-           btn_out : out STD_LOGIC);
-    end component;
-    
-    signal w_trigger_time, w_trigger_volt: unsigned(9 downto 0);
     constant UP: integer := 0;
     constant DOWN: integer := 2;
     constant LEFT: integer := 1;
@@ -131,8 +126,8 @@ architecture Behavioral of lab2_datapath is
 begin
 
 -- Compare BRAM values to current row to draw waveforms
-	ch1 <= '1' when (row = unsigned("00" & readL(15 downto 8)) + 92) else '0';		
-    ch2 <= '1' when (row = unsigned("00" & readR(15 downto 8)) + 92) else '0';
+	ch1 <= '1' when (row = ("00" & unsigned(readL(15 downto 8)) + 92)) else '0';		
+    ch2 <= '1' when (row = ("00" & unsigned(readR(15 downto 8)) + 92)) else '0';
 
 -- do we need all 18-bits or just the upper 16-bits to write to BRAM?
 	Lbus_out <= L_bus_out(17 downto 2);		-- Just the upper 16 Bits
@@ -145,32 +140,45 @@ begin
 	           flagReg;
 		
 -- Triggers
-    trigger_t: trigger
-    generic map(
-           bits => 10,
-           initial_value => 320,
-           max_value => 620,
-           min_value => 20,
-           delta => 10)
-    port map( clk => clk,
-           reset_n => reset_n,
-           btn_inc => btn(RIGHT),
-           btn_dec => btn(LEFT),
-           value => w_trigger_time);
-    
-    
-    trigger_v: trigger
-    generic map(
-           bits => 10,
-           initial_value => 200,
-           max_value => 400,
-           min_value => 0,
-           delta => 10)
-    port map( clk => clk,
-           reset_n => reset_n,
-           btn_inc => btn(UP),
-           btn_dec => btn(DOWN),
-           value => w_trigger_volt);
+        -- Clock divider process to generate a 50Hz tick from the faster clock
+    clk_divider: process(clk, reset_n)
+    begin
+        if reset_n = '0' then
+            counter_50Hz <= (others => '0');
+            tick_50Hz <= '0';
+        elsif rising_edge(clk) then
+            if counter_50Hz = MAX_COUNT then
+                counter_50Hz <= (others => '0');
+                tick_50Hz <= '1';
+            else
+                counter_50Hz <= counter_50Hz + 1;
+                tick_50Hz <= '0';
+            end if;
+        end if;
+    end process clk_divider;
+
+    -- Process to adjust trigger_time and trigger_volt using the slower 50Hz tick
+    process(clk, reset_n)
+    begin
+        if reset_n = '0' then
+            trigger_time <= (others => '0');
+            trigger_volt <= (others => '0');
+        elsif rising_edge(clk) then
+            if tick_50Hz = '1' then  -- Only update at the slower clock tick
+                if btn(UP) = '1' then
+                    trigger_volt <= trigger_volt - 1;
+                elsif btn(DOWN) = '1' then
+                    trigger_volt <= trigger_volt + 1;
+                end if;
+
+                if btn(LEFT) = '1' then
+                    trigger_time <= trigger_time - 1;
+                elsif btn(RIGHT) = '1' then
+                    trigger_time <= trigger_time + 1;
+                end if;
+            end if;
+        end if;
+    end process;
 
 	
 	-------------------------------------------------------------------------------
@@ -184,7 +192,7 @@ begin
 	begin
 		if (rising_edge(clk)) then
 			if (reset_n = '0') then
-				writeCntr <= "0000010100"; -- why is this not zero?
+				writeCntr <= "0000010100"; -- start at 20 on BRAM
 			else 
 				case cw(1 downto 0) is
                     when "00" => writeCntr <= writeCntr;            -- hold
@@ -197,22 +205,15 @@ begin
 	end process;
 	
     sw(1) <= ready;
-	
-    -- Instantiate debouncer FSMs for each button
-    debounce_btn0: debounce_fsm port map (clk => clk, reset_n => reset_n, btn_in => btn(UP), btn_out => debounced_btn(UP));
-    debounce_btn1: debounce_fsm port map (clk => clk, reset_n => reset_n, btn_in => btn(LEFT), btn_out => debounced_btn(LEFT));
-    debounce_btn2: debounce_fsm port map (clk => clk, reset_n => reset_n, btn_in => btn(DOWN), btn_out => debounced_btn(DOWN));
-    debounce_btn3: debounce_fsm port map (clk => clk, reset_n => reset_n, btn_in => btn(RIGHT), btn_out => debounced_btn(RIGHT));
-
-
+    
 
 	-------------------------------------------------------------------------------
 	--  Buffer a copy of the sample memory to look for positive trigger crossing
 	--  "Loop back" digitized audio input to the output to confirm interface is working
 	-------------------------------------------------------------------------------
-    sampleBuffer: process(clk, ready)
+    sampleBuffer: process(clk)
     begin
-        if rising_edge(ready) then
+        if rising_edge(clk) then
             if reset_n = '0' then
                 prev_sample <= (others => '0');
                 curr_sampleL <= (others => '0');
@@ -223,22 +224,19 @@ begin
                 curr_sampleR <= unsigned(R_bus_out(17 downto 8));
                 feedback_sample <= L_bus_out;
 
-                -- positive-crossing detect
-                if (prev_sample < triggerVolt) and (curr_sampleL >= triggerVolt) then
-                    sw(2) <= '1';
-                else sw(2) <= '0';
-                end if;
-
                 prev_sample <= curr_sampleL;
             end if;
         end if;
     end process;
     
+    sw(2) <= '1' when (prev_sample < triggerVolt) and (curr_sampleL >= triggerVolt) else '0';
+    sw(0) <= '1' when (writeCntr = x"3FF") else '0';
+
     L_bus_in <= feedback_sample;
 	
    
-    triggerVolt <= w_trigger_volt;
-    triggerTime <= w_trigger_time;
+    triggerVolt <= trigger_volt;
+    triggerTime <= trigger_time;
 	
 	-------------------------------------------------------------------------------
 	-- Instantiate the video driver from Lab1 - should integrate smoothly
@@ -283,11 +281,21 @@ Audio_Codec : Audio_Codec_Wrapper
 
 -- BRAM stuff goes here
 
-    writeEnable <= exWen when (exSel = '1') else cw(2);
+    -- in your clocked process, *before* the BRAM instantiation:
+    process(clk)
+    begin
+      if rising_edge(clk) then
+        writeEnable_reg <= cw(2);
+      end if;
+    end process;
+    
+    -- then feed that to the macro:
+    writeEnable <= exWen when exSel='1' else writeEnable_reg;
+--    writeEnable <= exWen when (exSel = '1') else cw(2);
     wrAddr      <= std_logic_vector(writeCntr) when (exSel = '0') else (exWrAddr);
 	reset <= not reset_n;
-	writeL <= "000000" & std_logic_vector(curr_sampleL) when (exSel = '0') else (exLBus);
-	writeR <= "000000" & std_logic_vector(curr_sampleR) when (exSel = '0') else (exRBus);
+	writeL <= std_logic_vector(curr_sampleL) & "000000" when (exSel = '0') else (exLBus);
+	writeR <= std_logic_vector(curr_sampleR) & "000000" when (exSel = '0') else (exRBus);
 	
 	leftChannelMemory : BRAM_SDP_MACRO
 		generic map (
@@ -464,7 +472,7 @@ Audio_Codec : Audio_Codec_Wrapper
             RST => reset,                 -- active high reset
             RDEN => '1',                    -- read enable
             REGCE => '1',                   -- 1-bit input read output register enable
-            DI => writeR, -- SOMETHING_GOES_HERE,                   -- Input data port, width defined by WRITE_WIDTH parameter
+            DI => writeR,                    -- Input data port, width defined by WRITE_WIDTH parameter
             WE => "11",                     -- Input write enable, width defined by write port depth
             WRADDR => wrAddr,                 -- Input write address, width defined by write port depth
             WRCLK => clk,                   -- 1-bit input write clock

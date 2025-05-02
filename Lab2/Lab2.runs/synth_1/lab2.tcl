@@ -57,6 +57,8 @@ if {$::dispatch::connected} {
 
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param chipscope.maxJobs 2
+set_param xicom.use_bs_reader 1
+set_msg_config -id {Common 17-41} -limit 10000000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a200tsbg484-1
 
@@ -81,7 +83,6 @@ read_vhdl -library xil_defaultlib {
   C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/sources_1/imports/lab2_code_for_cadets/TWICtl.vhd
   C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/sources_1/imports/new/VGA.vhd
   C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/sources_1/imports/new/counter_baseN.vhd
-  C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/sources_1/imports/new/debounce_fsm.vhd
   C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/sources_1/imports/Lab01_cadet_code/dvid.vhdl
   C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/sources_1/imports/lab2_code_for_cadets/i2s_ctl.vhd
   C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/sources_1/imports/lab2_code_for_cadets/lab2_datapath.vhdl
@@ -89,7 +90,6 @@ read_vhdl -library xil_defaultlib {
   C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/sources_1/imports/new/scopeFace.vhd
   C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/sources_1/imports/new/synch_blank.vhd
   C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/sources_1/imports/Lab01_cadet_code/tdms.vhdl
-  C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/sources_1/new/trigger.vhd
   C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/sources_1/imports/Lab01_cadet_code/video.vhdl
   C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/sources_1/imports/lab2_code_for_cadets/lab2.vhd
 }

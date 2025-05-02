@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-| Date         : Wed Apr 30 15:00:44 2025
+| Date         : Fri May  2 15:23:26 2025
 | Host         : C26-5CG2151GFM running 64-bit major release  (build 9200)
 | Command      : report_methodology -file lab2_methodology_drc_routed.rpt -pb lab2_methodology_drc_routed.pb -rpx lab2_methodology_drc_routed.rpx
 | Design       : lab2
@@ -23,11 +23,11 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max checks: <unlimited>
-             Checks found: 197
+             Checks found: 211
 +-----------+------------------+---------------------------------------------------+--------+
 | Rule      | Severity         | Description                                       | Checks |
 +-----------+------------------+---------------------------------------------------+--------+
-| TIMING-17 | Critical Warning | Non-clocked sequential cell                       | 194    |
+| TIMING-17 | Critical Warning | Non-clocked sequential cell                       | 208    |
 | TIMING-27 | Critical Warning | Invalid primary clock on hierarchical pin         | 2      |
 | XDCC-2    | Warning          | Scoped Non-Timing constraint/property overwritten | 1      |
 +-----------+------------------+---------------------------------------------------+--------+
@@ -606,402 +606,472 @@ Related violations: <none>
 
 TIMING-17#115 Critical Warning
 Non-clocked sequential cell  
-The clock pin datapath/curr_sampleL_reg[0]/C is not reached by a timing clock
+The clock pin datapath/counter_50Hz_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#116 Critical Warning
 Non-clocked sequential cell  
-The clock pin datapath/curr_sampleL_reg[1]/C is not reached by a timing clock
+The clock pin datapath/counter_50Hz_reg[10]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#117 Critical Warning
 Non-clocked sequential cell  
-The clock pin datapath/curr_sampleL_reg[2]/C is not reached by a timing clock
+The clock pin datapath/counter_50Hz_reg[11]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#118 Critical Warning
 Non-clocked sequential cell  
-The clock pin datapath/curr_sampleL_reg[3]/C is not reached by a timing clock
+The clock pin datapath/counter_50Hz_reg[12]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#119 Critical Warning
 Non-clocked sequential cell  
-The clock pin datapath/curr_sampleL_reg[4]/C is not reached by a timing clock
+The clock pin datapath/counter_50Hz_reg[13]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#120 Critical Warning
 Non-clocked sequential cell  
-The clock pin datapath/curr_sampleL_reg[5]/C is not reached by a timing clock
+The clock pin datapath/counter_50Hz_reg[14]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#121 Critical Warning
 Non-clocked sequential cell  
-The clock pin datapath/curr_sampleL_reg[6]/C is not reached by a timing clock
+The clock pin datapath/counter_50Hz_reg[15]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#122 Critical Warning
 Non-clocked sequential cell  
-The clock pin datapath/curr_sampleL_reg[7]/C is not reached by a timing clock
+The clock pin datapath/counter_50Hz_reg[16]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#123 Critical Warning
 Non-clocked sequential cell  
-The clock pin datapath/curr_sampleL_reg[8]/C is not reached by a timing clock
+The clock pin datapath/counter_50Hz_reg[17]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#124 Critical Warning
 Non-clocked sequential cell  
-The clock pin datapath/curr_sampleL_reg[9]/C is not reached by a timing clock
+The clock pin datapath/counter_50Hz_reg[18]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#125 Critical Warning
 Non-clocked sequential cell  
-The clock pin datapath/curr_sampleR_reg[0]/C is not reached by a timing clock
+The clock pin datapath/counter_50Hz_reg[19]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#126 Critical Warning
 Non-clocked sequential cell  
-The clock pin datapath/curr_sampleR_reg[1]/C is not reached by a timing clock
+The clock pin datapath/counter_50Hz_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#127 Critical Warning
 Non-clocked sequential cell  
-The clock pin datapath/curr_sampleR_reg[2]/C is not reached by a timing clock
+The clock pin datapath/counter_50Hz_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#128 Critical Warning
 Non-clocked sequential cell  
-The clock pin datapath/curr_sampleR_reg[3]/C is not reached by a timing clock
+The clock pin datapath/counter_50Hz_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#129 Critical Warning
 Non-clocked sequential cell  
-The clock pin datapath/curr_sampleR_reg[4]/C is not reached by a timing clock
+The clock pin datapath/counter_50Hz_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#130 Critical Warning
 Non-clocked sequential cell  
-The clock pin datapath/curr_sampleR_reg[5]/C is not reached by a timing clock
+The clock pin datapath/counter_50Hz_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#131 Critical Warning
 Non-clocked sequential cell  
-The clock pin datapath/curr_sampleR_reg[6]/C is not reached by a timing clock
+The clock pin datapath/counter_50Hz_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#132 Critical Warning
 Non-clocked sequential cell  
-The clock pin datapath/curr_sampleR_reg[7]/C is not reached by a timing clock
+The clock pin datapath/counter_50Hz_reg[7]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#133 Critical Warning
 Non-clocked sequential cell  
-The clock pin datapath/curr_sampleR_reg[8]/C is not reached by a timing clock
+The clock pin datapath/counter_50Hz_reg[8]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#134 Critical Warning
 Non-clocked sequential cell  
-The clock pin datapath/curr_sampleR_reg[9]/C is not reached by a timing clock
+The clock pin datapath/counter_50Hz_reg[9]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#135 Critical Warning
 Non-clocked sequential cell  
-The clock pin datapath/feedback_sample_reg[0]/C is not reached by a timing clock
+The clock pin datapath/curr_sampleL_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#136 Critical Warning
 Non-clocked sequential cell  
-The clock pin datapath/feedback_sample_reg[10]/C is not reached by a timing clock
+The clock pin datapath/curr_sampleL_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#137 Critical Warning
 Non-clocked sequential cell  
-The clock pin datapath/feedback_sample_reg[11]/C is not reached by a timing clock
+The clock pin datapath/curr_sampleL_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#138 Critical Warning
 Non-clocked sequential cell  
-The clock pin datapath/feedback_sample_reg[12]/C is not reached by a timing clock
+The clock pin datapath/curr_sampleL_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#139 Critical Warning
 Non-clocked sequential cell  
-The clock pin datapath/feedback_sample_reg[13]/C is not reached by a timing clock
+The clock pin datapath/curr_sampleL_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#140 Critical Warning
 Non-clocked sequential cell  
-The clock pin datapath/feedback_sample_reg[14]/C is not reached by a timing clock
+The clock pin datapath/curr_sampleL_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#141 Critical Warning
 Non-clocked sequential cell  
-The clock pin datapath/feedback_sample_reg[15]/C is not reached by a timing clock
+The clock pin datapath/curr_sampleL_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#142 Critical Warning
 Non-clocked sequential cell  
-The clock pin datapath/feedback_sample_reg[16]/C is not reached by a timing clock
+The clock pin datapath/curr_sampleL_reg[7]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#143 Critical Warning
 Non-clocked sequential cell  
-The clock pin datapath/feedback_sample_reg[17]/C is not reached by a timing clock
+The clock pin datapath/curr_sampleL_reg[8]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#144 Critical Warning
 Non-clocked sequential cell  
-The clock pin datapath/feedback_sample_reg[1]/C is not reached by a timing clock
+The clock pin datapath/curr_sampleL_reg[9]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#145 Critical Warning
 Non-clocked sequential cell  
-The clock pin datapath/feedback_sample_reg[2]/C is not reached by a timing clock
+The clock pin datapath/curr_sampleR_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#146 Critical Warning
 Non-clocked sequential cell  
-The clock pin datapath/feedback_sample_reg[3]/C is not reached by a timing clock
+The clock pin datapath/curr_sampleR_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#147 Critical Warning
 Non-clocked sequential cell  
-The clock pin datapath/feedback_sample_reg[4]/C is not reached by a timing clock
+The clock pin datapath/curr_sampleR_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#148 Critical Warning
 Non-clocked sequential cell  
-The clock pin datapath/feedback_sample_reg[5]/C is not reached by a timing clock
+The clock pin datapath/curr_sampleR_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#149 Critical Warning
 Non-clocked sequential cell  
-The clock pin datapath/feedback_sample_reg[6]/C is not reached by a timing clock
+The clock pin datapath/curr_sampleR_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#150 Critical Warning
 Non-clocked sequential cell  
-The clock pin datapath/feedback_sample_reg[7]/C is not reached by a timing clock
+The clock pin datapath/curr_sampleR_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#151 Critical Warning
 Non-clocked sequential cell  
-The clock pin datapath/feedback_sample_reg[8]/C is not reached by a timing clock
+The clock pin datapath/curr_sampleR_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#152 Critical Warning
 Non-clocked sequential cell  
-The clock pin datapath/feedback_sample_reg[9]/C is not reached by a timing clock
+The clock pin datapath/curr_sampleR_reg[7]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#153 Critical Warning
 Non-clocked sequential cell  
-The clock pin datapath/leftChannelMemory/sdp_bl.ramb18_dp_bl.ram18_bl/CLKARDCLK is not reached by a timing clock
+The clock pin datapath/curr_sampleR_reg[8]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#154 Critical Warning
 Non-clocked sequential cell  
-The clock pin datapath/leftChannelMemory/sdp_bl.ramb18_dp_bl.ram18_bl/CLKBWRCLK is not reached by a timing clock
+The clock pin datapath/curr_sampleR_reg[9]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#155 Critical Warning
 Non-clocked sequential cell  
-The clock pin datapath/prev_sample_reg[0]/C is not reached by a timing clock
+The clock pin datapath/feedback_sample_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#156 Critical Warning
 Non-clocked sequential cell  
-The clock pin datapath/prev_sample_reg[1]/C is not reached by a timing clock
+The clock pin datapath/feedback_sample_reg[10]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#157 Critical Warning
 Non-clocked sequential cell  
-The clock pin datapath/prev_sample_reg[2]/C is not reached by a timing clock
+The clock pin datapath/feedback_sample_reg[11]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#158 Critical Warning
 Non-clocked sequential cell  
-The clock pin datapath/prev_sample_reg[3]/C is not reached by a timing clock
+The clock pin datapath/feedback_sample_reg[12]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#159 Critical Warning
 Non-clocked sequential cell  
-The clock pin datapath/prev_sample_reg[4]/C is not reached by a timing clock
+The clock pin datapath/feedback_sample_reg[13]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#160 Critical Warning
 Non-clocked sequential cell  
-The clock pin datapath/prev_sample_reg[5]/C is not reached by a timing clock
+The clock pin datapath/feedback_sample_reg[14]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#161 Critical Warning
 Non-clocked sequential cell  
-The clock pin datapath/prev_sample_reg[6]/C is not reached by a timing clock
+The clock pin datapath/feedback_sample_reg[15]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#162 Critical Warning
 Non-clocked sequential cell  
-The clock pin datapath/prev_sample_reg[7]/C is not reached by a timing clock
+The clock pin datapath/feedback_sample_reg[16]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#163 Critical Warning
 Non-clocked sequential cell  
-The clock pin datapath/prev_sample_reg[8]/C is not reached by a timing clock
+The clock pin datapath/feedback_sample_reg[17]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#164 Critical Warning
 Non-clocked sequential cell  
-The clock pin datapath/prev_sample_reg[9]/C is not reached by a timing clock
+The clock pin datapath/feedback_sample_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#165 Critical Warning
 Non-clocked sequential cell  
-The clock pin datapath/rightChannelMemory/sdp_bl.ramb18_dp_bl.ram18_bl/CLKARDCLK is not reached by a timing clock
+The clock pin datapath/feedback_sample_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#166 Critical Warning
 Non-clocked sequential cell  
-The clock pin datapath/rightChannelMemory/sdp_bl.ramb18_dp_bl.ram18_bl/CLKBWRCLK is not reached by a timing clock
+The clock pin datapath/feedback_sample_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#167 Critical Warning
 Non-clocked sequential cell  
-The clock pin datapath/sw_reg[2]/C is not reached by a timing clock
+The clock pin datapath/feedback_sample_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#168 Critical Warning
 Non-clocked sequential cell  
-The clock pin datapath/trigger_t/current_value_reg[1]/C is not reached by a timing clock
+The clock pin datapath/feedback_sample_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#169 Critical Warning
 Non-clocked sequential cell  
-The clock pin datapath/trigger_t/current_value_reg[2]/C is not reached by a timing clock
+The clock pin datapath/feedback_sample_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#170 Critical Warning
 Non-clocked sequential cell  
-The clock pin datapath/trigger_t/current_value_reg[3]/C is not reached by a timing clock
+The clock pin datapath/feedback_sample_reg[7]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#171 Critical Warning
 Non-clocked sequential cell  
-The clock pin datapath/trigger_t/current_value_reg[4]/C is not reached by a timing clock
+The clock pin datapath/feedback_sample_reg[8]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#172 Critical Warning
 Non-clocked sequential cell  
-The clock pin datapath/trigger_t/current_value_reg[5]/C is not reached by a timing clock
+The clock pin datapath/feedback_sample_reg[9]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#173 Critical Warning
 Non-clocked sequential cell  
-The clock pin datapath/trigger_t/current_value_reg[6]/C is not reached by a timing clock
+The clock pin datapath/leftChannelMemory/sdp_bl.ramb18_dp_bl.ram18_bl/CLKARDCLK is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#174 Critical Warning
 Non-clocked sequential cell  
-The clock pin datapath/trigger_t/current_value_reg[7]/C is not reached by a timing clock
+The clock pin datapath/leftChannelMemory/sdp_bl.ramb18_dp_bl.ram18_bl/CLKBWRCLK is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#175 Critical Warning
 Non-clocked sequential cell  
-The clock pin datapath/trigger_t/current_value_reg[8]/C is not reached by a timing clock
+The clock pin datapath/rightChannelMemory/sdp_bl.ramb18_dp_bl.ram18_bl/CLKARDCLK is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#176 Critical Warning
 Non-clocked sequential cell  
-The clock pin datapath/trigger_t/current_value_reg[9]/C is not reached by a timing clock
+The clock pin datapath/rightChannelMemory/sdp_bl.ramb18_dp_bl.ram18_bl/CLKBWRCLK is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#177 Critical Warning
 Non-clocked sequential cell  
-The clock pin datapath/trigger_v/current_value_reg[1]/C is not reached by a timing clock
+The clock pin datapath/tick_50Hz_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#178 Critical Warning
 Non-clocked sequential cell  
-The clock pin datapath/trigger_v/current_value_reg[2]/C is not reached by a timing clock
+The clock pin datapath/trigger_time_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#179 Critical Warning
 Non-clocked sequential cell  
-The clock pin datapath/trigger_v/current_value_reg[3]/C is not reached by a timing clock
+The clock pin datapath/trigger_time_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#180 Critical Warning
 Non-clocked sequential cell  
-The clock pin datapath/trigger_v/current_value_reg[4]/C is not reached by a timing clock
+The clock pin datapath/trigger_time_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#181 Critical Warning
 Non-clocked sequential cell  
-The clock pin datapath/trigger_v/current_value_reg[5]/C is not reached by a timing clock
+The clock pin datapath/trigger_time_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#182 Critical Warning
 Non-clocked sequential cell  
-The clock pin datapath/trigger_v/current_value_reg[6]/C is not reached by a timing clock
+The clock pin datapath/trigger_time_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#183 Critical Warning
 Non-clocked sequential cell  
-The clock pin datapath/trigger_v/current_value_reg[7]/C is not reached by a timing clock
+The clock pin datapath/trigger_time_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#184 Critical Warning
 Non-clocked sequential cell  
-The clock pin datapath/trigger_v/current_value_reg[8]/C is not reached by a timing clock
+The clock pin datapath/trigger_time_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#185 Critical Warning
 Non-clocked sequential cell  
-The clock pin datapath/writeCntr_reg[0]/C is not reached by a timing clock
+The clock pin datapath/trigger_time_reg[7]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#186 Critical Warning
 Non-clocked sequential cell  
-The clock pin datapath/writeCntr_reg[1]/C is not reached by a timing clock
+The clock pin datapath/trigger_time_reg[8]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#187 Critical Warning
 Non-clocked sequential cell  
-The clock pin datapath/writeCntr_reg[2]/C is not reached by a timing clock
+The clock pin datapath/trigger_time_reg[9]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#188 Critical Warning
 Non-clocked sequential cell  
-The clock pin datapath/writeCntr_reg[3]/C is not reached by a timing clock
+The clock pin datapath/trigger_volt_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#189 Critical Warning
 Non-clocked sequential cell  
-The clock pin datapath/writeCntr_reg[4]/C is not reached by a timing clock
+The clock pin datapath/trigger_volt_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#190 Critical Warning
 Non-clocked sequential cell  
-The clock pin datapath/writeCntr_reg[5]/C is not reached by a timing clock
+The clock pin datapath/trigger_volt_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#191 Critical Warning
 Non-clocked sequential cell  
-The clock pin datapath/writeCntr_reg[6]/C is not reached by a timing clock
+The clock pin datapath/trigger_volt_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#192 Critical Warning
 Non-clocked sequential cell  
-The clock pin datapath/writeCntr_reg[7]/C is not reached by a timing clock
+The clock pin datapath/trigger_volt_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#193 Critical Warning
 Non-clocked sequential cell  
-The clock pin datapath/writeCntr_reg[8]/C is not reached by a timing clock
+The clock pin datapath/trigger_volt_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#194 Critical Warning
 Non-clocked sequential cell  
+The clock pin datapath/trigger_volt_reg[6]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#195 Critical Warning
+Non-clocked sequential cell  
+The clock pin datapath/trigger_volt_reg[7]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#196 Critical Warning
+Non-clocked sequential cell  
+The clock pin datapath/trigger_volt_reg[8]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#197 Critical Warning
+Non-clocked sequential cell  
+The clock pin datapath/trigger_volt_reg[9]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#198 Critical Warning
+Non-clocked sequential cell  
+The clock pin datapath/writeCntr_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#199 Critical Warning
+Non-clocked sequential cell  
+The clock pin datapath/writeCntr_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#200 Critical Warning
+Non-clocked sequential cell  
+The clock pin datapath/writeCntr_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#201 Critical Warning
+Non-clocked sequential cell  
+The clock pin datapath/writeCntr_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#202 Critical Warning
+Non-clocked sequential cell  
+The clock pin datapath/writeCntr_reg[4]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#203 Critical Warning
+Non-clocked sequential cell  
+The clock pin datapath/writeCntr_reg[5]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#204 Critical Warning
+Non-clocked sequential cell  
+The clock pin datapath/writeCntr_reg[6]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#205 Critical Warning
+Non-clocked sequential cell  
+The clock pin datapath/writeCntr_reg[7]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#206 Critical Warning
+Non-clocked sequential cell  
+The clock pin datapath/writeCntr_reg[8]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#207 Critical Warning
+Non-clocked sequential cell  
 The clock pin datapath/writeCntr_reg[9]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#208 Critical Warning
+Non-clocked sequential cell  
+The clock pin datapath/writeEnable_reg_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-27#1 Critical Warning
