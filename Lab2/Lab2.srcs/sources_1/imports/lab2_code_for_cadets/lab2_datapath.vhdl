@@ -70,7 +70,13 @@ architecture Behavioral of lab2_datapath is
     constant MAX_COUNT : unsigned(19 downto 0) := to_unsigned(1048575, 20); -- Adjust as needed for your clock frequency
     signal counter_50Hz: unsigned(19 downto 0) := (others => '0');
     signal tick_50Hz: std_logic := '0';
+    -- Register for syncing BRAM writing
     signal writeEnable_reg : std_logic;
+    -- Trigger arrow limiters
+    constant X_MAX : signed(9 downto 0) := "0100101100"; --  300
+    constant X_MIN : signed(9 downto 0) := "1011010100"; -- -300
+    constant Y_MAX : signed(9 downto 0) := "0011001000"; --  200
+    constant Y_MIN : signed(9 downto 0) := "1100111000"; -- -200
 	
 	component video is
     Port ( clk : in  STD_LOGIC;
@@ -165,15 +171,15 @@ begin
             trigger_volt <= (others => '0');
         elsif rising_edge(clk) then
             if tick_50Hz = '1' then  -- Only update at the slower clock tick
-                if btn(UP) = '1' then
+                if btn(UP) = '1' and signed(trigger_volt) < Y_MAX then
                     trigger_volt <= trigger_volt - 1;
-                elsif btn(DOWN) = '1' then
+                elsif btn(DOWN) = '1' and signed(trigger_volt) > Y_MIN then
                     trigger_volt <= trigger_volt + 1;
                 end if;
 
-                if btn(LEFT) = '1' then
+                if btn(LEFT) = '1' and signed(trigger_time) > X_MIN then
                     trigger_time <= trigger_time - 1;
-                elsif btn(RIGHT) = '1' then
+                elsif btn(RIGHT) = '1' and signed(trigger_time) < X_MAX then
                     trigger_time <= trigger_time + 1;
                 end if;
             end if;
@@ -217,19 +223,18 @@ begin
             if reset_n = '0' then
                 prev_sample <= (others => '0');
                 curr_sampleL <= (others => '0');
-                sw(2)       <= '0';
             else
-                -- capture samples (using low 10 bits of the unsigned data)
-                curr_sampleL <= unsigned(L_bus_out(17 downto 8));
-                curr_sampleR <= unsigned(R_bus_out(17 downto 8));
-                feedback_sample <= L_bus_out;
-
                 prev_sample <= curr_sampleL;
+                -- capture samples (using low 10 bits of the unsigned data)
+                curr_sampleL <= unsigned(not L_bus_out(17) & L_bus_out(16 downto 8));
+                curr_sampleR <= unsigned(not L_bus_out(17) & R_bus_out(16 downto 8));
+                feedback_sample <= L_bus_out;
+                
             end if;
         end if;
     end process;
     
-    sw(2) <= '1' when (prev_sample < triggerVolt) and (curr_sampleL >= triggerVolt) else '0';
+    sw(2) <= '1' when (signed(prev_sample) < signed(triggerVolt)) and (signed(curr_sampleL) >= signed(triggerVolt)) else '0';
     sw(0) <= '1' when (writeCntr = x"3FF") else '0';
 
     L_bus_in <= feedback_sample;
