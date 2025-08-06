@@ -12,9 +12,9 @@ entity video is
            reset_n : in  STD_LOGIC;
            tmds : out  STD_LOGIC_VECTOR (3 downto 0);
            tmdsb : out  STD_LOGIC_VECTOR (3 downto 0);
-			  row: out unsigned(9 downto 0);
-			  column: out unsigned(9 downto 0);
-			  color: in unsigned(23 downto 0)
+           row: out unsigned(9 downto 0);
+           column: out unsigned(9 downto 0);
+           color: in std_logic_vector(23 downto 0)
           );
 end video;
 -- For final project, ch1 is 
@@ -38,7 +38,7 @@ component VGA is
         o_B : out STD_LOGIC_VECTOR(7 downto 0);
         o_row : out unsigned(9 downto 0);
         o_column : out unsigned(9 downto 0);
-        color: in unsigned(23 downto 0) 
+        color: in std_logic_vector(23 downto 0) 
     );
 end component;
     --------------------------------------------------------------------------

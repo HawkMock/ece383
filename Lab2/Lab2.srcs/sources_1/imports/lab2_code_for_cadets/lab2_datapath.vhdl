@@ -56,7 +56,6 @@ architecture Behavioral of lab2_datapath is
     signal ready : std_logic;
 	signal L_bus_in, R_bus_in, L_bus_out, R_bus_out, feedback_sample: std_logic_vector(17 downto 0);	    
     signal triggerVolt, triggerTime, writeCntr: unsigned (9 downto 0);
-    signal trigger_time, trigger_volt: unsigned(9 downto 0);
     signal row, column: unsigned(9 downto 0);
     signal ch1, ch2, reset: std_logic;
     signal readL, readR: std_logic_vector(15 downto 0);
@@ -73,10 +72,10 @@ architecture Behavioral of lab2_datapath is
     -- Register for syncing BRAM writing
     signal writeEnable_reg : std_logic;
     -- Trigger arrow limiters
-    constant X_MAX : signed(9 downto 0) := "0100101100"; --  300
-    constant X_MIN : signed(9 downto 0) := "1011010100"; -- -300
-    constant Y_MAX : signed(9 downto 0) := "0011001000"; --  200
-    constant Y_MIN : signed(9 downto 0) := "1100111000"; -- -200
+    constant X_MAX : integer := 600;
+    constant X_MIN : integer := 0;
+    constant Y_MAX : integer := 400;
+    constant Y_MIN : integer := 0;
 	
 	component video is
     Port ( clk : in  STD_LOGIC;
@@ -166,25 +165,30 @@ begin
     -- Process to adjust trigger_time and trigger_volt using the slower 50Hz tick
     process(clk, reset_n)
     begin
-        if reset_n = '0' then
-            trigger_time <= (others => '0');
-            trigger_volt <= (others => '0');
-        elsif rising_edge(clk) then
-            if tick_50Hz = '1' then  -- Only update at the slower clock tick
-                if btn(UP) = '1' and signed(trigger_volt) < Y_MAX then
-                    trigger_volt <= trigger_volt - 1;
-                elsif btn(DOWN) = '1' and signed(trigger_volt) > Y_MIN then
-                    trigger_volt <= trigger_volt + 1;
-                end if;
-
-                if btn(LEFT) = '1' and signed(trigger_time) > X_MIN then
-                    trigger_time <= trigger_time - 1;
-                elsif btn(RIGHT) = '1' and signed(trigger_time) < X_MAX then
-                    trigger_time <= trigger_time + 1;
-                end if;
-            end if;
+      if reset_n = '0' then
+        triggerTime <= (others => '0');
+        triggerVolt <= (others => '0');
+      elsif rising_edge(clk) then
+        if tick_50Hz = '1' then  -- Only update at the slower clock tick
+    
+          -- Trigger **voltage** adjustment
+          if btn(UP) = '1' and triggerVolt < to_unsigned(Y_MAX, triggerVolt'length) then
+            triggerVolt <= triggerVolt + 1;    -- increase toward Y_MAX
+          elsif btn(DOWN) = '1' and triggerVolt > to_unsigned(Y_MIN, triggerVolt'length) then
+            triggerVolt <= triggerVolt - 1;    -- decrease toward Y_MIN
+          end if;
+    
+          -- Trigger **time** adjustment
+          if btn(LEFT) = '1' and triggerTime > to_unsigned(X_MIN, triggerTime'length) then
+            triggerTime <= triggerTime - 1;    -- decrease toward X_MIN
+          elsif btn(RIGHT) = '1' and triggerTime < to_unsigned(X_MAX, triggerTime'length) then
+            triggerTime <= triggerTime + 1;    -- increase toward X_MAX
+          end if;
+    
         end if;
+      end if;
     end process;
+
 
 	
 	-------------------------------------------------------------------------------
@@ -238,10 +242,6 @@ begin
     sw(0) <= '1' when (writeCntr = x"3FF") else '0';
 
     L_bus_in <= feedback_sample;
-	
-   
-    triggerVolt <= trigger_volt;
-    triggerTime <= trigger_time;
 	
 	-------------------------------------------------------------------------------
 	-- Instantiate the video driver from Lab1 - should integrate smoothly
