@@ -17,7 +17,8 @@ use UNIMACRO.vcomponents.all;
 		    tmds : out  STD_LOGIC_VECTOR (3 downto 0);
             tmdsb : out  STD_LOGIC_VECTOR (3 downto 0);
 		    switch: in	STD_LOGIC_VECTOR(3 downto 0);
-		    btn: in	STD_LOGIC_VECTOR(4 downto 0));
+		    btn: in	STD_LOGIC_VECTOR(4 downto 0);
+		    led : out std_logic_vector(7 downto 0));
  end lab2;
 
 architecture behavior of lab2 is
@@ -25,7 +26,7 @@ architecture behavior of lab2 is
 	signal sw: std_logic_vector(2 downto 0);
 	signal cw: std_logic_vector (2 downto 0);
 
-component lab2_datapath
+component lab2_datapath is
     Port ( clk : in  STD_LOGIC;
 	reset_n : in  STD_LOGIC;
     ac_mclk : out STD_LOGIC;
@@ -48,18 +49,17 @@ component lab2_datapath
     flagQ: out std_logic;   
     flagClear: in std_logic); 
 end component;
-
-component lab2_fsm
+	
+component lab2_fsm is
     Port ( clk : in  STD_LOGIC;
            reset_n : in  STD_LOGIC;
            sw : in  STD_LOGIC_VECTOR (2 downto 0);
            cw : out  STD_LOGIC_VECTOR (2 downto 0));
 end component;
-
-	
 begin
 
 
+	
 	datapath: lab2_datapath port map(
 		clk => clk,
 		reset_n => reset_n,
@@ -75,7 +75,7 @@ begin
 		sw => sw,
 		cw => cw,
 		btn => btn, 
-		switch => switch,     
+		switch => switch,
 		exWrAddr => "0000000000",
 		exWen => '0',
 		exSel => switch(2),
@@ -83,7 +83,7 @@ begin
 		Rbus_out => OPEN,
 		exLbus => "0000000000000000",
 		exRbus => "0000000000000000",		
-		flagQ => OPEN,
+		flagQ => led(4),
 		flagClear => '0');
 		
 			  

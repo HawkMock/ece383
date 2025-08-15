@@ -4,10 +4,10 @@
 <!-- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.                   -->
 <!-- Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.   -->
 
-<Project Product="Vivado" Version="7" Minor="68" Path="C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.xpr">
+<Project Product="Vivado" Version="7" Minor="68" Path="C:/Users/Dustin.Mock/code/ece383-eadaa713c3e5065b652eb90ba7d57234c0d53428/ece383-eadaa713c3e5065b652eb90ba7d57234c0d53428/Lab2/Lab2.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
-    <Option Name="Id" Val="f4d684e5e9164dc5a7d723c2c399ddea"/>
+    <Option Name="Id" Val="09dafc35b098442a9fa5f441d270b9cd"/>
     <Option Name="Part" Val="xc7a200tsbg484-1"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="CompiledLibDirXSim" Val=""/>
@@ -44,9 +44,7 @@
     <Option Name="SimulatorGccVersionRiviera" Val="9.3.0"/>
     <Option Name="SimulatorGccVersionActiveHdl" Val="9.3.0"/>
     <Option Name="TargetLanguage" Val="VHDL"/>
-    <Option Name="SimulatorLanguage" Val="VHDL"/>
     <Option Name="BoardPart" Val="digilentinc.com:nexys_video:part0:1.2"/>
-    <Option Name="BoardPartRepoPaths" Val="$PPRDIR/../../../AppData/Roaming/Xilinx/Vivado/2024.2/xhub/board_store/xilinx_board_store"/>
     <Option Name="ActiveSimSet" Val="sim_1"/>
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
     <Option Name="ProjectType" Val="Default"/>
@@ -62,20 +60,20 @@
     <Option Name="IPStaticSourceDir" Val="$PIPUSERFILESDIR/ipstatic"/>
     <Option Name="EnableBDX" Val="FALSE"/>
     <Option Name="DSABoardId" Val="nexys_video"/>
-    <Option Name="WTXSimLaunchSim" Val="0"/>
+    <Option Name="WTXSimLaunchSim" Val="35"/>
     <Option Name="WTModelSimLaunchSim" Val="0"/>
     <Option Name="WTQuestaLaunchSim" Val="0"/>
     <Option Name="WTIesLaunchSim" Val="0"/>
     <Option Name="WTVcsLaunchSim" Val="0"/>
     <Option Name="WTRivieraLaunchSim" Val="0"/>
     <Option Name="WTActivehdlLaunchSim" Val="0"/>
-    <Option Name="WTXSimExportSim" Val="1"/>
-    <Option Name="WTModelSimExportSim" Val="1"/>
-    <Option Name="WTQuestaExportSim" Val="1"/>
+    <Option Name="WTXSimExportSim" Val="6"/>
+    <Option Name="WTModelSimExportSim" Val="6"/>
+    <Option Name="WTQuestaExportSim" Val="6"/>
     <Option Name="WTIesExportSim" Val="0"/>
     <Option Name="WTVcsExportSim" Val="0"/>
-    <Option Name="WTRivieraExportSim" Val="1"/>
-    <Option Name="WTActivehdlExportSim" Val="1"/>
+    <Option Name="WTRivieraExportSim" Val="6"/>
+    <Option Name="WTActivehdlExportSim" Val="6"/>
     <Option Name="GenerateIPUpgradeLog" Val="TRUE"/>
     <Option Name="XSimRadix" Val="hex"/>
     <Option Name="XSimTimeUnit" Val="ns"/>
@@ -93,19 +91,10 @@
   <FileSets Version="1" Minor="32">
     <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
       <Filter Type="Srcs"/>
-      <File Path="$PSRCDIR/sources_1/ip/clk_wiz_0/clk_wiz_0.xci">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../Lab1/ece383_lab1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci"/>
-          <Attr Name="ImportTime" Val="1738628885"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
       <File Path="$PSRCDIR/sources_1/imports/lab2_code_for_cadets/audio_init.v">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../Downloads/Lab02_cadet_code/lab2_code_for_cadets/audio_init.v"/>
-          <Attr Name="ImportTime" Val="1741788696"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../lab2_code_for_cadets/audio_init.v"/>
+          <Attr Name="ImportTime" Val="1739203324"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -113,71 +102,97 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/lab2_code_for_cadets/Audio_Codec_Wrapper.vhd">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../Downloads/Lab02_cadet_code/lab2_code_for_cadets/Audio_Codec_Wrapper.vhd"/>
-          <Attr Name="ImportTime" Val="1741788696"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../lab2_code_for_cadets/Audio_Codec_Wrapper.vhd"/>
+          <Attr Name="ImportTime" Val="1739203324"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/DinMux.vhd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/FlagRegister.vhd">
+        <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/imports/lab2_code_for_cadets/TWICtl.vhd">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../Downloads/Lab02_cadet_code/lab2_code_for_cadets/TWICtl.vhd"/>
-          <Attr Name="ImportTime" Val="1741788696"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../lab2_code_for_cadets/TWICtl.vhd"/>
+          <Attr Name="ImportTime" Val="1739203324"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/imports/new/VGA.vhd">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../Lab1/ece383_lab1.srcs/sources_1/new/VGA.vhd"/>
-          <Attr Name="ImportTime" Val="1739594957"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../ece383/Lab2/Lab2.srcs/sources_1/imports/new/VGA.vhd"/>
+          <Attr Name="ImportTime" Val="1755290607"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/WrAddrMux.vhd">
+        <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/imports/new/counter_baseN.vhd">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../Lab1/ece383_lab1.srcs/sources_1/new/counter_baseN.vhd"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../ece383/Lab2/Lab2.srcs/sources_1/imports/new/counter_baseN.vhd"/>
           <Attr Name="ImportTime" Val="1738047941"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/Lab01_cadet_code/dvid.vhdl">
+      <File Path="$PSRCDIR/sources_1/imports/ece383-lab1.srcs/sources_1/imports/lab1_cadet_code/dvid.vhdl">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../Lab1/ece383_lab1.srcs/sources_1/imports/Lab01_cadet_code/dvid.vhdl"/>
-          <Attr Name="ImportTime" Val="1738359138"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../ece383-lab1/ece383-lab1.srcs/sources_1/imports/lab1_cadet_code/dvid.vhdl"/>
+          <Attr Name="ImportTime" Val="1737845745"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/imports/lab2_code_for_cadets/i2s_ctl.vhd">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../Downloads/Lab02_cadet_code/lab2_code_for_cadets/i2s_ctl.vhd"/>
-          <Attr Name="ImportTime" Val="1741788696"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../lab2_code_for_cadets/i2s_ctl.vhd"/>
+          <Attr Name="ImportTime" Val="1739203324"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/imports/lab2_code_for_cadets/lab2_datapath.vhdl">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../Downloads/Lab02_cadet_code/lab2_code_for_cadets/lab2_datapath.vhdl"/>
-          <Attr Name="ImportTime" Val="1741788696"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../lab2_code_for_cadets/lab2_datapath.vhdl"/>
+          <Attr Name="ImportTime" Val="1739203324"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/imports/lab2_code_for_cadets/lab2_fsm.vhdl">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../Downloads/Lab02_cadet_code/lab2_code_for_cadets/lab2_fsm.vhdl"/>
-          <Attr Name="ImportTime" Val="1741788696"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../lab2_code_for_cadets/lab2_fsm.vhdl"/>
+          <Attr Name="ImportTime" Val="1739203324"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/ece383/lec10.vhdl">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../HW7/HW7.srcs/sources_1/imports/ece383/lec10.vhdl"/>
+          <Attr Name="ImportTime" Val="1740022269"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/imports/new/scopeFace.vhd">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../Lab1/ece383_lab1.srcs/sources_1/new/scopeFace.vhd"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../ece383/Lab2/Lab2.srcs/sources_1/imports/new/scopeFace.vhd"/>
           <Attr Name="ImportTime" Val="1739588016"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -185,48 +200,47 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/new/synch_blank.vhd">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../Lab1/ece383_lab1.srcs/sources_1/new/synch_blank.vhd"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../ece383/Lab2/Lab2.srcs/sources_1/imports/new/synch_blank.vhd"/>
           <Attr Name="ImportTime" Val="1738047917"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/Lab01_cadet_code/tdms.vhdl">
+      <File Path="$PSRCDIR/sources_1/imports/ece383-lab1.srcs/sources_1/imports/lab1_cadet_code/tdms.vhdl">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../Lab1/ece383_lab1.srcs/sources_1/imports/Lab01_cadet_code/tdms.vhdl"/>
-          <Attr Name="ImportTime" Val="1738359138"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../ece383-lab1/ece383-lab1.srcs/sources_1/imports/lab1_cadet_code/tdms.vhdl"/>
+          <Attr Name="ImportTime" Val="1737845745"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/imports/Lab01_cadet_code/video.vhdl">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../Lab1/ece383_lab1.srcs/sources_1/imports/Lab01_cadet_code/video.vhdl"/>
-          <Attr Name="ImportTime" Val="1738649993"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../ece383/Lab2/Lab2.srcs/sources_1/imports/Lab01_cadet_code/video.vhdl"/>
+          <Attr Name="ImportTime" Val="1755290632"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/wrEnbMux.vhd">
+        <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/imports/lab2_code_for_cadets/lab2.vhd">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../Downloads/Lab02_cadet_code/lab2_code_for_cadets/lab2.vhd"/>
-          <Attr Name="ImportTime" Val="1741788696"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../lab2_code_for_cadets/lab2.vhd"/>
+          <Attr Name="ImportTime" Val="1739203324"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/new/debounce_fsm.vhd">
+      <File Path="$PSRCDIR/sources_1/imports/ece383-lab1.srcs/sim_1/imports/lab1_cadet_code/vga_tb.vhdl">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../Lab1/ece383_lab1.srcs/sources_1/new/debounce_fsm.vhd"/>
-          <Attr Name="ImportTime" Val="1738651038"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/new/trigger.vhd">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../ece383-lab1/ece383-lab1.srcs/sim_1/imports/lab1_cadet_code/vga_tb.vhdl"/>
+          <Attr Name="ImportTime" Val="1737845746"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
@@ -240,8 +254,8 @@
       <Filter Type="Constrs"/>
       <File Path="$PSRCDIR/constrs_1/imports/lab2_code_for_cadets/Lab2.xdc">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../Downloads/Lab02_cadet_code/lab2_code_for_cadets/Lab2.xdc"/>
-          <Attr Name="ImportTime" Val="1741788696"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../lab2_code_for_cadets/Lab2.xdc"/>
+          <Attr Name="ImportTime" Val="1739203324"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
         </FileInfo>
@@ -252,42 +266,50 @@
     </FileSet>
     <FileSet Name="sim_1" Type="SimulationSrcs" RelSrcDir="$PSRCDIR/sim_1" RelGenDir="$PGENDIR/sim_1">
       <Filter Type="Srcs"/>
-      <File Path="$PSRCDIR/sources_1/imports/lab2_code_for_cadets/lab2_tb.vhdl">
+      <File Path="$PSRCDIR/sim_1/imports/lab2_code_for_cadets/Lab2_datapath_tb.vhd">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../Downloads/Lab02_cadet_code/lab2_code_for_cadets/lab2_tb.vhdl"/>
-          <Attr Name="ImportTime" Val="1741788696"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../lab2_code_for_cadets/Lab2_datapath_tb.vhd"/>
+          <Attr Name="ImportTime" Val="1739203324"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/lab2_code_for_cadets/Lab2_datapath_tb.vhd">
+      <File Path="$PSRCDIR/sim_1/imports/lab2_code_for_cadets/lab2_tb.vhdl">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../Downloads/Lab02_cadet_code/lab2_code_for_cadets/Lab2_datapath_tb.vhd"/>
-          <Attr Name="ImportTime" Val="1741788696"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../lab2_code_for_cadets/lab2_tb.vhdl"/>
+          <Attr Name="ImportTime" Val="1739203324"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/lab2_code_for_cadets/convert_unsigned_tb.vhdl">
+      <File Path="$PSRCDIR/sim_1/imports/lab2_code_for_cadets/convert_unsigned_tb.vhdl">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../Downloads/Lab02_cadet_code/lab2_code_for_cadets/convert_unsigned_tb.vhdl"/>
-          <Attr Name="ImportTime" Val="1741788696"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../lab2_code_for_cadets/convert_unsigned_tb.vhdl"/>
+          <Attr Name="ImportTime" Val="1739203324"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/lab2_code_for_cadets/sandbox_tb.vhdl">
+      <File Path="$PSRCDIR/sim_1/imports/lab2_code_for_cadets/sandbox_tb.vhdl">
         <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../Downloads/Lab02_cadet_code/lab2_code_for_cadets/sandbox_tb.vhdl"/>
-          <Attr Name="ImportTime" Val="1741788696"/>
+          <Attr Name="UserDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../lab2_code_for_cadets/sandbox_tb.vhdl"/>
+          <Attr Name="ImportTime" Val="1739203324"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/lab1_tb_behav.wcfg">
+        <FileInfo>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
-        <Option Name="TopModule" Val="lab2_tb"/>
+        <Option Name="TopModule" Val="Lab2_datapath_tb"/>
         <Option Name="TopLib" Val="xil_defaultlib"/>
-        <Option Name="TopAutoSet" Val="TRUE"/>
         <Option Name="TransportPathDelay" Val="0"/>
         <Option Name="TransportIntDelay" Val="0"/>
         <Option Name="SelectedSimModel" Val="rtl"/>
@@ -296,18 +318,21 @@
         <Option Name="PamSignalDriverFile" Val="xil_bypass_driver"/>
         <Option Name="PamPseudoTop" Val="pseudo_tb"/>
         <Option Name="SrcSet" Val="sources_1"/>
+        <Option Name="XSimWcfgFile" Val="$PPRDIR/lab1_tb_behav.wcfg"/>
         <Option Name="CosimPdi" Val=""/>
         <Option Name="CosimPlatform" Val=""/>
         <Option Name="CosimElf" Val=""/>
+        <Option Name="xsim.simulate.runtime" Val="20ms"/>
       </Config>
     </FileSet>
     <FileSet Name="utils_1" Type="Utils" RelSrcDir="$PSRCDIR/utils_1" RelGenDir="$PGENDIR/utils_1">
       <Filter Type="Utils"/>
-      <File Path="$PSRCDIR/utils_1/imports/synth_1/Lab2_datapath_tb.dcp">
+      <File Path="$PSRCDIR/utils_1/imports/synth_1/lab2.dcp">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedInSteps" Val="synth_1"/>
+          <Attr Name="UsedInSteps" Val="synth_1_copy_1"/>
           <Attr Name="AutoDcp" Val="1"/>
         </FileInfo>
       </File>
@@ -316,7 +341,7 @@
       </Config>
     </FileSet>
     <FileSet Name="clk_wiz_1" Type="BlockSrcs" RelSrcDir="$PSRCDIR/clk_wiz_1" RelGenDir="$PGENDIR/clk_wiz_1">
-      <File Path="$PSRCDIR/sources_1/ip/clk_wiz_1/clk_wiz_1.xci">
+      <File Path="$PSRCDIR/sources_1/ip/clk_wiz_1_2/clk_wiz_1.xci">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -325,6 +350,19 @@
       </File>
       <Config>
         <Option Name="TopModule" Val="clk_wiz_1"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="clk_wiz_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/clk_wiz_0" RelGenDir="$PGENDIR/clk_wiz_0">
+      <File Path="$PSRCDIR/sources_1/ip/clk_wiz_0_1/clk_wiz_0.xci">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <Config>
+        <Option Name="TopModule" Val="clk_wiz_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
@@ -348,7 +386,7 @@
     </Simulator>
   </Simulators>
   <Runs Version="1" Minor="22">
-    <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7a200tsbg484-1" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="true" IncrementalCheckpoint="$PSRCDIR/utils_1/imports/synth_1/Lab2_datapath_tb.dcp" WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/synth_1" ParallelReportGen="true">
+    <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7a200tsbg484-1" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="true" IncrementalCheckpoint="$PSRCDIR/utils_1/imports/synth_1/lab2.dcp" WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/synth_1" ParallelReportGen="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2024"/>
         <Step Id="synth_design"/>
@@ -358,7 +396,34 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
+    <Run Id="synth_1_copy_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7a200tsbg484-1" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="true" IncrementalCheckpoint="$PSRCDIR/utils_1/imports/synth_1/lab2.dcp" WriteIncrSynthDcp="false" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/synth_1/synth_1_copy_1" AutoRQSDir="$PSRCDIR/utils_1/imports/synth_1_copy_1" ParallelReportGen="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2024"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2024" CtrlBit="true">
+        <ReportConfig DisplayName="synthesis_report" Name="synth_1_copy_1_synth_synthesis_report_0" Spec="" RunStep="synth_design" ReportFile="lab2.vds">
+          <ReportConfigOption Name="dummy_option" Type="string"/>
+        </ReportConfig>
+        <ReportConfig DisplayName="Utilization - Synth Design" Name="synth_1_copy_1_synth_report_utilization_0" Spec="report_utilization" RunStep="synth_design" ReportFile="lab2_utilization_synth_1.rpt" Version="1" Minor="0">
+          <ReportConfigOption Name="dummy_option" Type="string"/>
+          <ReportConfigOutputOption Name="pb" Type="string" Value=""/>
+        </ReportConfig>
+      </ReportStrategy>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
     <Run Id="clk_wiz_1_synth_1" Type="Ft3:Synth" SrcSet="clk_wiz_1" Part="xc7a200tsbg484-1" ConstrsSet="clk_wiz_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/clk_wiz_1_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/clk_wiz_1_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/clk_wiz_1_synth_1" ParallelReportGen="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2024"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2024"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="clk_wiz_0_synth_1" Type="Ft3:Synth" SrcSet="clk_wiz_0" Part="xc7a200tsbg484-1" ConstrsSet="clk_wiz_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/clk_wiz_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/clk_wiz_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/clk_wiz_0_synth_1" ParallelReportGen="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2024"/>
         <Step Id="synth_design"/>
@@ -387,6 +452,23 @@
       <RQSFiles/>
     </Run>
     <Run Id="clk_wiz_1_impl_1" Type="Ft2:EntireDesign" Part="xc7a200tsbg484-1" ConstrsSet="clk_wiz_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="clk_wiz_1_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/clk_wiz_1_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/clk_wiz_1_impl_1" ParallelReportGen="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2024"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2024"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="clk_wiz_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a200tsbg484-1" ConstrsSet="clk_wiz_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="clk_wiz_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/clk_wiz_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/clk_wiz_0_impl_1" ParallelReportGen="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2024"/>
         <Step Id="init_design"/>

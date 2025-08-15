@@ -40,7 +40,7 @@ begin
     readyTrigger <= sw(2);
 	-------------------------------------------------------------------------------
 	--		SW		meaning
-	--		0       
+	--		
 	-------------------------------------------------------------------------------
 	state_proces: process(clk)  
 	begin
@@ -81,7 +81,7 @@ begin
        "01" when state = StoreSample else
        "00";
        
-           cw(2) <= '1' when state = StoreSample else
+       cw(2) <= '1' when state = StoreSample else
        '0';
        
        

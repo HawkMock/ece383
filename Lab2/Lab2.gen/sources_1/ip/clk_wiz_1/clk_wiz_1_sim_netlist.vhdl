@@ -2,10 +2,10 @@
 -- Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
--- Date        : Fri Mar 14 12:10:50 2025
--- Host        : C26-5CG2151GFM running 64-bit major release  (build 9200)
+-- Date        : Mon Feb 10 09:14:55 2025
+-- Host        : C26-5CG2151LB4 running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
---               c:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.gen/sources_1/ip/clk_wiz_1/clk_wiz_1_sim_netlist.vhdl
+--               c:/Users/Grantham.Zimmerman/Desktop/ece383/Lab2/Lab2.gen/sources_1/ip/clk_wiz_1/clk_wiz_1_sim_netlist.vhdl
 -- Design      : clk_wiz_1
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -17,10 +17,8 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity clk_wiz_1_clk_wiz is
   port (
-    clkfb_in : in STD_LOGIC;
     clk_out1 : out STD_LOGIC;
     clk_out2 : out STD_LOGIC;
-    clkfb_out : out STD_LOGIC;
     resetn : in STD_LOGIC;
     clk_in1 : in STD_LOGIC
   );
@@ -30,12 +28,9 @@ architecture STRUCTURE of clk_wiz_1_clk_wiz is
   signal clk_in1_clk_wiz_1 : STD_LOGIC;
   signal clk_out1_clk_wiz_1 : STD_LOGIC;
   signal clk_out2_clk_wiz_1 : STD_LOGIC;
-  signal clkfb_bufg_out : STD_LOGIC;
-  signal clkfb_in_buf_out : STD_LOGIC;
+  signal clkfbout_buf_clk_wiz_1 : STD_LOGIC;
   signal clkfbout_clk_wiz_1 : STD_LOGIC;
   signal reset_high : STD_LOGIC;
-  signal NLW_clkfbout_oddr_R_UNCONNECTED : STD_LOGIC;
-  signal NLW_clkfbout_oddr_S_UNCONNECTED : STD_LOGIC;
   signal NLW_mmcm_adv_inst_CLKFBOUTB_UNCONNECTED : STD_LOGIC;
   signal NLW_mmcm_adv_inst_CLKFBSTOPPED_UNCONNECTED : STD_LOGIC;
   signal NLW_mmcm_adv_inst_CLKINSTOPPED_UNCONNECTED : STD_LOGIC;
@@ -53,57 +48,22 @@ architecture STRUCTURE of clk_wiz_1_clk_wiz is
   signal NLW_mmcm_adv_inst_PSDONE_UNCONNECTED : STD_LOGIC;
   signal NLW_mmcm_adv_inst_DO_UNCONNECTED : STD_LOGIC_VECTOR ( 15 downto 0 );
   attribute BOX_TYPE : string;
-  attribute BOX_TYPE of clkfb_ibufg : label is "PRIMITIVE";
-  attribute CAPACITANCE : string;
-  attribute CAPACITANCE of clkfb_ibufg : label is "DONT_CARE";
-  attribute IBUF_DELAY_VALUE : string;
-  attribute IBUF_DELAY_VALUE of clkfb_ibufg : label is "0";
-  attribute IFD_DELAY_VALUE : string;
-  attribute IFD_DELAY_VALUE of clkfb_ibufg : label is "AUTO";
-  attribute BOX_TYPE of clkfbout_bufg : label is "PRIMITIVE";
-  attribute BOX_TYPE of clkfbout_oddr : label is "PRIMITIVE";
-  attribute OPT_MODIFIED : string;
-  attribute OPT_MODIFIED of clkfbout_oddr : label is "MLO";
-  attribute \__SRVAL\ : string;
-  attribute \__SRVAL\ of clkfbout_oddr : label is "TRUE";
+  attribute BOX_TYPE of clkf_buf : label is "PRIMITIVE";
   attribute BOX_TYPE of clkin1_ibufg : label is "PRIMITIVE";
+  attribute CAPACITANCE : string;
   attribute CAPACITANCE of clkin1_ibufg : label is "DONT_CARE";
+  attribute IBUF_DELAY_VALUE : string;
   attribute IBUF_DELAY_VALUE of clkin1_ibufg : label is "0";
+  attribute IFD_DELAY_VALUE : string;
   attribute IFD_DELAY_VALUE of clkin1_ibufg : label is "AUTO";
   attribute BOX_TYPE of clkout1_buf : label is "PRIMITIVE";
   attribute BOX_TYPE of clkout2_buf : label is "PRIMITIVE";
   attribute BOX_TYPE of mmcm_adv_inst : label is "PRIMITIVE";
 begin
-clkfb_ibufg: unisim.vcomponents.IBUF
-    generic map(
-      IOSTANDARD => "DEFAULT"
-    )
-        port map (
-      I => clkfb_in,
-      O => clkfb_in_buf_out
-    );
-clkfbout_bufg: unisim.vcomponents.BUFG
+clkf_buf: unisim.vcomponents.BUFG
      port map (
       I => clkfbout_clk_wiz_1,
-      O => clkfb_bufg_out
-    );
-clkfbout_oddr: unisim.vcomponents.ODDR
-    generic map(
-      DDR_CLK_EDGE => "OPPOSITE_EDGE",
-      INIT => '0',
-      IS_C_INVERTED => '0',
-      IS_D1_INVERTED => '0',
-      IS_D2_INVERTED => '0',
-      SRTYPE => "SYNC"
-    )
-        port map (
-      C => clkfb_bufg_out,
-      CE => '1',
-      D1 => '1',
-      D2 => '0',
-      Q => clkfb_out,
-      R => NLW_clkfbout_oddr_R_UNCONNECTED,
-      S => NLW_clkfbout_oddr_S_UNCONNECTED
+      O => clkfbout_buf_clk_wiz_1
     );
 clkin1_ibufg: unisim.vcomponents.IBUF
     generic map(
@@ -160,7 +120,7 @@ mmcm_adv_inst: unisim.vcomponents.MMCME2_ADV
       CLKOUT6_DUTY_CYCLE => 0.500000,
       CLKOUT6_PHASE => 0.000000,
       CLKOUT6_USE_FINE_PS => false,
-      COMPENSATION => "EXTERNAL",
+      COMPENSATION => "ZHOLD",
       DIVCLK_DIVIDE => 1,
       IS_CLKINSEL_INVERTED => '0',
       IS_PSEN_INVERTED => '0',
@@ -175,7 +135,7 @@ mmcm_adv_inst: unisim.vcomponents.MMCME2_ADV
       STARTUP_WAIT => false
     )
         port map (
-      CLKFBIN => clkfb_in_buf_out,
+      CLKFBIN => clkfbout_buf_clk_wiz_1,
       CLKFBOUT => clkfbout_clk_wiz_1,
       CLKFBOUTB => NLW_mmcm_adv_inst_CLKFBOUTB_UNCONNECTED,
       CLKFBSTOPPED => NLW_mmcm_adv_inst_CLKFBSTOPPED_UNCONNECTED,
@@ -224,10 +184,8 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity clk_wiz_1 is
   port (
-    clkfb_in : in STD_LOGIC;
     clk_out1 : out STD_LOGIC;
     clk_out2 : out STD_LOGIC;
-    clkfb_out : out STD_LOGIC;
     resetn : in STD_LOGIC;
     clk_in1 : in STD_LOGIC
   );
@@ -242,8 +200,6 @@ inst: entity work.clk_wiz_1_clk_wiz
       clk_in1 => clk_in1,
       clk_out1 => clk_out1,
       clk_out2 => clk_out2,
-      clkfb_in => clkfb_in,
-      clkfb_out => clkfb_out,
       resetn => resetn
     );
 end STRUCTURE;

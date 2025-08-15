@@ -44,7 +44,7 @@ entity lab2_datapath is
     switch: in    STD_LOGIC_VECTOR(3 downto 0);
     exWrAddr: in std_logic_vector(9 downto 0);
     exWen, exSel: in std_logic;
-    Lbus_out, Rbus_out: out std_logic_vector(15 downto 0);
+    LBus_out, Rbus_out : out std_logic_vector(15 downto 0);
     exLbus, exRbus: in std_logic_vector(15 downto 0);
     flagQ: out std_logic;   
     flagClear: in std_logic); 
@@ -53,38 +53,80 @@ end lab2_datapath;
 architecture Behavioral of lab2_datapath is
 
     signal sim_live: std_logic;
-    signal ready : std_logic;
-	signal L_bus_in, R_bus_in, L_bus_out, R_bus_out, feedback_sample: std_logic_vector(17 downto 0);	    
-    signal triggerVolt, triggerTime, writeCntr: unsigned (9 downto 0);
+	signal toADCL, toADCR, fromADCL, fromADCR: std_logic_vector(17 downto 0);	    
+    signal triggerVolt, triggerTime : unsigned (9 downto 0);
+    signal writeCntr : unsigned (9 downto 0);
     signal row, column: unsigned(9 downto 0);
     signal ch1, ch2, reset: std_logic;
-    signal readL, readR: std_logic_vector(15 downto 0);
-    -- additional signals
-    signal prev_sample, curr_sampleL, curr_sampleR : unsigned(9 downto 0);
-    signal flagReg : std_logic;
-    signal writeEnable : std_logic;
-    signal wrAddr : std_logic_vector(9 downto 0);
-    signal writeL, writeR : std_logic_vector(15 downto 0);
+    signal readL, readR : std_logic_vector(15 downto 0);
+    signal Q : std_logic;
+    signal w_wrEnbMux : std_logic;
+    signal w_wrAddrMux : std_logic_vector(9 downto 0);
+    signal w_DinMuxL, w_DinMuxR : std_logic_vector(15 downto 0);
+    signal btn_up_pressed : std_logic := '0';
+    signal btn_down_pressed : std_logic := '0';
+	signal btn_right_pressed : std_logic := '0';
+	signal btn_left_pressed : std_logic := '0';
+	signal w_Lbus_out, w_Rbus_out : std_logic_vector(15 downto 0);
+	signal w_compareGL, w_compareGR, w_compareLL, w_compareLR : std_logic;
+	signal nreset_n : std_logic;
+	signal PLbus_out, PRbus_out: std_logic_vector(15 downto 0);
+	signal UnLeftCur, UnRightCur, UnLeftPrev, UnRightPrev : unsigned(9 downto 0) := to_unsigned(0,10);
+    signal readyTrigger, readyCompare, readyReady : std_logic;
+    
+    constant offset : unsigned(9 downto 0) := to_unsigned(92, 10);
+    
     -- Clock divider signals for generating a 50Hz tick
     constant MAX_COUNT : unsigned(19 downto 0) := to_unsigned(1048575, 20); -- Adjust as needed for your clock frequency
     signal counter_50Hz: unsigned(19 downto 0) := (others => '0');
     signal tick_50Hz: std_logic := '0';
-    -- Register for syncing BRAM writing
-    signal writeEnable_reg : std_logic;
     -- Trigger arrow limiters
     constant X_MAX : integer := 600;
     constant X_MIN : integer := 0;
     constant Y_MAX : integer := 400;
     constant Y_MIN : integer := 0;
+    
+    constant UP: integer := 0;
+    constant DOWN: integer := 2;
+    constant LEFT: integer := 1;
+    constant RIGHT: integer := 3;
+    
+    
+    
+    
+component WrAddrMux is
+    port(
+        clk : in std_logic;
+        writeCntr : in unsigned(9 downto 0);
+        exWrAddr : in std_logic_vector(9 downto 0);
+        exSel : in std_logic;
+        result : out std_logic_vector(9 downto 0)
+    );
+end component;
 
-    -- Internal "ready" flags and capture latch
-    signal readyTrigger : std_logic := '0';
-    signal readyCompare : std_logic := '0';
-    signal capturing    : std_logic := '0';
+component DinMux is
+    port(
+        clk : in std_logic;
+        busIn : in std_logic_vector(15 downto 0);
+        exBus : in std_logic_vector(15 downto 0);
+        exSel : in std_logic;
+        result : out std_logic_vector(15 downto 0)
+    );
+end component;
+
+component wrEnbMux is
+    port(
+        clk : in std_logic;
+        cw : in std_logic;
+        exWen : in std_logic;
+        exSel : in std_logic;
+        result : out std_logic
+    );
+end component;
 	
-	component video is
+component video is
     Port ( clk : in  STD_LOGIC;
-           reset_n : in STD_LOGIC;
+           reset_n : in  STD_LOGIC;
            tmds : out  STD_LOGIC_VECTOR (3 downto 0);
            tmdsb : out  STD_LOGIC_VECTOR (3 downto 0);
 			  trigger_time: in unsigned(9 downto 0);
@@ -95,9 +137,9 @@ architecture Behavioral of lab2_datapath is
 			  ch1_enb: in std_logic;
 			  ch2: in std_logic;
 			  ch2_enb: in std_logic);
-	end component;
+end component;
 	
-	component Audio_Codec_Wrapper 
+component Audio_Codec_Wrapper 
     Port ( clk : in STD_LOGIC;
         reset_n : in STD_LOGIC;
         ac_mclk : out STD_LOGIC;
@@ -113,32 +155,49 @@ architecture Behavioral of lab2_datapath is
         scl : inout STD_LOGIC;
         sda : inout STD_LOGIC;
         sim_live : in STD_LOGIC);   --  '0' simulate audio; '1' live audio
-	end component;
-
-    constant UP: integer := 0;
-    constant DOWN: integer := 2;
-    constant LEFT: integer := 1;
-    constant RIGHT: integer := 3;
-begin
-
-    ---------------------------------------------------------------------------
-    -- Compare BRAM values to current row to draw waveforms
-    ---------------------------------------------------------------------------
-    ch1 <= '1' when (row = (("00" & unsigned(readL(15 downto 8))) + to_unsigned(92, 10))) else '0';
-    ch2 <= '1' when (row = (("00" & unsigned(readR(15 downto 8))) + to_unsigned(92, 10))) else '0';
-
-    -- Export upper 16 bits
-    Lbus_out <= L_bus_out(17 downto 2); -- Just the upper 16 Bits
-    Rbus_out <= R_bus_out(17 downto 2);
+end component;
 	
-    ---------------------------------------------------------------------------
-    -- FLAG register (sticky on 'ready', clears on flagClear)
-    ---------------------------------------------------------------------------
-    flagQ <= flagReg;
-    flagReg <= '1' when (ready = '1') else
-               '0' when (flagClear = '1') else
-               flagReg;
-		
+component FlagRegister is
+    port(
+        clk : in std_logic;
+        reset_n : in std_logic;
+        set : in std_logic;
+        clear : in std_logic;
+        Q : in std_logic;
+        flagQ : out std_logic
+    );
+end component;
+
+component lec10 is
+	generic (N: integer);
+	Port(	clk: in  STD_LOGIC;
+			reset : in  STD_LOGIC;
+			crtl: in std_logic_vector(1 downto 0);
+			D: in unsigned (N-1 downto 0);
+			Q: out unsigned (N-1 downto 0));
+end component;
+
+begin
+-- TEST 3: Now that you know the offset, can properly use BRAM, and set up its comparator to video
+--          uncomment BRAM code at the bottom of the file
+--      If this works, the two waveforms in the BRAM should display on scopeface
+--    syntax might need work... vectors must be the proper size and proper type
+	ch1 <= '1' when (row - offset = unsigned(("00" & readL(15 downto 8)))) else '0';		
+	ch2 <= '1' when (row - offset = unsigned(("00" & readR(15 downto 8)))) else '0';
+    nreset_n <= not reset_n;
+   
+	
+-- Need logic for the FLAG register
+	fg : FlagRegister
+    port map(
+        Q => Q,
+        clear => flagClear,
+        flagQ => OPEN,
+        clk => clk,
+        set => readyReady,
+        reset_n => reset_n
+    );
+	
     ---------------------------------------------------------------------------
     -- Clock divider: 50 Hz tick (for button-driven adjustments)
     ---------------------------------------------------------------------------
@@ -162,8 +221,8 @@ begin
     process(clk, reset_n)
     begin
       if reset_n = '0' then
-        triggerTime <= (others => '0');
-        triggerVolt <= (others => '0');
+            triggerTime <= "0101000000";
+            triggerVolt <= "0011001000";
       elsif rising_edge(clk) then
         if tick_50Hz = '1' then
           -- Trigger voltage
@@ -183,86 +242,124 @@ begin
       end if;
     end process;
 
+    
+    ENBMUX : wrEnbMux
+        port map(
+            clk => clk,
+            cw => cw(2),
+            exSel => exSel,
+            exWen => exWen,
+            result => w_wrEnbMux
+        );
+        
+    memory_counter : lec10
+        generic map(
+         N => 10
+         )
+         port map(
+            clk => clk,
+             reset => reset_n,
+             crtl => cw(1 downto 0),
+             D => to_unsigned(20, 10),
+             Q => writeCntr);
 	
+	readyCompare <= '1' when (writeCntr = to_unsigned(1020, 10)) else '0';
 	-------------------------------------------------------------------------------
-	-- Address counter for RAM
-	--		00		hold
-	--		01		up
-	--		10		down
-	--		11		reset
-	-------------------------------------------------------------------------------	
-	writeCounter: process(clk)
+	--  Buffer a copy of the sample memory to look for positive trigger crossing
+	--  "Loop back" digitized audio input to the output to confirm interface is working
+	-------------------------------------------------------------------------------
+	process(clk)
+	begin
+	   if(rising_edge(clk)) then
+	       if(readyReady = '1') then
+	           toADCL <= fromADCL;
+	           toADCR <= fromADCR;
+	           w_Lbus_out <= not(fromADCL(17)) & fromADCL(16 downto 2);		-- Just the upper 16 Bits
+	           w_Rbus_out <= not(fromADCR(17)) & fromADCR(16 downto 2);
+	       end if;
+	   end if;
+    end process;
+	
+
+
+-----------------------------------------------------------------------------------------
+--Trigger Logic : A positive trigger cross happens when the previous value is less than
+--  or equal and the current value is greater than to trigger. Set sw(0) so FSM records samples.
+-----------------------------------------------------------------------------------------
+
+
+    process(clk)
+    begin
+        if(rising_edge(clk)) then
+            if reset_n = '0' then
+                UnRightCur <= to_unsigned(0, 10);
+                UnRightPrev <= UnRightCur;
+            else
+                if(readyReady = '1') then
+                    UnRightPrev <= UnRightCur;
+                    UnRightCur <= (unsigned("00" & w_Rbus_out(15 downto 8))) + offset;
+                end if;
+           end if;
+       end if;
+   end process;
+   
+   readyTrigger <= '1' when (UnRightCur > triggerVolt and UnRightPrev <= triggerVolt) else
+   '0';
+
+	process (clk)
 	begin
 		if (rising_edge(clk)) then
-			if (reset_n = '0') then
-				writeCntr <= "0000010100"; -- start at 20 on BRAM
-			else 
-				case cw(1 downto 0) is
-                    when "00" => writeCntr <= writeCntr;            -- hold
-                    when "01" => writeCntr <= writeCntr + 1;        -- up
-                    when "10" => writeCntr <= writeCntr - 1;        -- down
-                    when others => writeCntr <= (others => '0');     -- reset to zero
-				end case;
+			if reset_n = '0' then
+					flagQ <= '0';		
+			elsif(readyReady = '1') then
+				    flagQ <= Q;	
 			end if;
 		end if;
 	end process;
 	
-    sw(1) <= ready;
+	process(clk)
+	   begin
+	   if(rising_edge(clk)) then
+	       Lbus_out <= w_Lbus_out;
+	       Rbus_out <= w_Rbus_out;
+	       end if;
+	   end process;
+                
+    CntrMux : WrAddrMux
+	   port map(
+	       clk => clk,
+	       exSel => exSel,
+	       exWrAddr => exWrAddr,
+	       writeCntr => writeCntr,
+	       result => w_wrAddrMux
+	   );
+	   
+        LDinMux : DinMux
+        port map(
+            exBus => exLBus,
+            clk => clk,
+            exSel => exSel,
+            result => w_DinMuxL,
+            busIn => w_LBus_out
+        );
+
+    RDinMux : DinMux
+        port map(
+            exBus => exRBus,
+            clk => clk,
+            exSel => exSel,
+            result => w_DinMuxR,
+            busIn => w_RBus_out
+        );
+    
     
 
+           
 	-------------------------------------------------------------------------------
-	--  Buffer samples and detect positive trigger crossing
-	--  Loop back digitized audio input to DAC to confirm interface
-	-------------------------------------------------------------------------------
-    sampleBuffer: process(clk)
-    begin
-        if rising_edge(clk) then
-            if reset_n = '0' then
-                prev_sample      <= (others => '0');
-                curr_sampleL     <= (others => '0');
-                curr_sampleR     <= (others => '0');
-                feedback_sample  <= (others => '0');
-            else
-                prev_sample  <= curr_sampleL;
-                -- Take the top 10 bits (no sign inversion)
-                curr_sampleL <= unsigned(L_bus_out(17 downto 8));
-                curr_sampleR <= unsigned(R_bus_out(17 downto 8));
-                feedback_sample <= L_bus_out;
-            end if;
-        end if;
-    end process;
-
-    -- DAC loopback (both channels)
-    L_bus_in <= feedback_sample;
-    R_bus_in <= feedback_sample;
-
-    -- Internal ready signals
-    readyTrigger <= '1' when (prev_sample < triggerVolt) and (curr_sampleL >= triggerVolt) else '0';
-    readyCompare <= '1' when (writeCntr = to_unsigned(1023, writeCntr'length)) else '0';
-
-    -- Status LEDs
-    sw(2) <= readyTrigger;
-    sw(0) <= readyCompare;
-
-    -- Sticky capture window: set on trigger, clear when full or on flagClear
-    process(clk)
-    begin
-      if rising_edge(clk) then
-        if reset_n = '0' then
-          capturing <= '0';
-        elsif readyTrigger = '1' then
-          capturing <= '1';
-        elsif (readyCompare = '1') or (flagClear = '1') then
-          capturing <= '0';
-        end if;
-      end if;
-    end process;
-
-	-------------------------------------------------------------------------------
-	-- Video driver
+	-- Instantiate the video driver from Lab1 - should integrate smoothly
 	-------------------------------------------------------------------------------
 	video_inst: video port map( 
-		clk => clk,
+		clk =>clk,
 		reset_n => reset_n,
         tmds => tmds,
 		tmdsb => tmdsb,
@@ -271,58 +368,43 @@ begin
 		row => row,
 		column => column,
 		ch1 => ch1,
-		ch1_enb => switch(0), 
+		ch1_enb => switch(0), -- should this be a switch?
 		ch2 => ch2,
-		ch2_enb => switch(1)); 
+		ch2_enb => switch(1)); -- should this be a switch?
 
 
-    ---------------------------------------------------------------------------
-    -- Audio Codec
-    ---------------------------------------------------------------------------
-    sim_live <= switch(3);  -- '0' simulate audio; '1' live audio
+-- Audio Codec stuff goes here
 
-    Audio_Codec : Audio_Codec_Wrapper
-        Port map ( clk => clk,
-            reset_n => reset_n, 
-            ac_mclk => ac_mclk,
-            ac_adc_sdata => ac_adc_sdata,
-            ac_dac_sdata => ac_dac_sdata,
-            ac_bclk => ac_bclk,
-            ac_lrclk => ac_lrclk,
-            ready => ready,
-            L_bus_in => L_bus_in, -- left channel input to DAC
-            R_bus_in => R_bus_in, -- right channel input to DAC
-            L_bus_out => L_bus_out, -- left channel output from ADC
-            R_bus_out => R_bus_out, -- right channel output from ADC
-            scl => scl,
-            sda => sda,
-            sim_live => sim_live);  --  '0' simulate audio; '1' live audio
+sim_live <= switch(3);  --  '0' simulate audio; '1' live audio
+                  -- should a switch go here?
+
+Audio_Codec : Audio_Codec_Wrapper
+    Port map ( clk => clk,
+        reset_n => reset_n, 
+        ac_mclk => ac_mclk,
+        ac_adc_sdata => ac_adc_sdata,
+        ac_dac_sdata => ac_dac_sdata,
+        ac_bclk => ac_bclk,
+        ac_lrclk => ac_lrclk,
+        ready => readyReady,
+        L_bus_in => toADCL, -- left channel input to DAC
+        R_bus_in => toADCR, -- right channel input to DAC
+        L_bus_out => fromADCL, -- left channel output from ADC
+        R_bus_out => fromADCR, -- right channel output from ADC
+        scl => scl,
+        sda => sda,
+        sim_live => sim_live);  --  '0' simulate audio; '1' live audio
 
 
-    ---------------------------------------------------------------------------
-    -- BRAMs
-    ---------------------------------------------------------------------------
+-- BRAM stuff goes here
 
-    -- Sync cw(2), then gate with 'capturing' (external path bypasses gating)
-    process(clk)
-    begin
-      if rising_edge(clk) then
-        writeEnable_reg <= cw(2);
-      end if;
-    end process;
-    
-    writeEnable <= exWen when exSel='1' else (writeEnable_reg and capturing);
-    wrAddr      <= std_logic_vector(writeCntr) when (exSel = '0') else exWrAddr;
-	reset       <= not reset_n;
-	writeL      <= std_logic_vector(curr_sampleL) & "000000" when (exSel = '0') else exLBus;
-	writeR      <= std_logic_vector(curr_sampleR) & "000000" when (exSel = '0') else exRBus;
-	
+	reset <= not reset_n;
 	leftChannelMemory : BRAM_SDP_MACRO
 		generic map (
             BRAM_SIZE => "18Kb",            -- Target BRAM, "18Kb" or "36Kb"
             DEVICE => "7SERIES",            -- Target device: "VIRTEX5", "VIRTEX6", "SPARTAN6", "7SERIES"
             DO_REG => 0,                    -- Optional output register (0 or 1)
-            INIT => X"000000000000000000",  -- Initial values on output port
+            INIT => X"000000000000000000",            -- Initial values on output port
             INIT_FILE => "NONE",            -- Initial values on output port
             WRITE_WIDTH => 16,              -- Valid values are 1-72 (37-72 only valid when BRAM_SIZE="36Kb")
             READ_WIDTH => 16,               -- Valid values are 1-72 (37-72 only valid when BRAM_SIZE="36Kb")
@@ -393,33 +475,34 @@ begin
             INIT_3D => X"748072D8712C6F7E6DCE6C1B6A6768B166F96540638761CC60125E575C9C5AE1",
             INIT_3E => X"8CD18B738A0F88A5873685C0844682C681417FB87E2A7C977B01796677C77625",
             INIT_3F => X"9F199E2B9D369C399B349A29991597FB96D995B094809349920B90C67FFF8E29")
-        port map (
-            DO => readL,    -- Output read data port, width defined by READ_WIDTH parameter
-            RDADDR => std_logic_vector(column), -- Input address, width defined by port depth
+    port map (
+            DO(15 downto 0) => readL,    -- Output read data port, width defined by READ_WIDTH parameter
+            RDADDR => std_logic_vector(column),-- Input address, width defined by port depth
             RDCLK => clk,                   -- 1-bit input clock
-            RST => reset,                   -- active high reset
+            RST => reset,                 -- active high reset
             RDEN => '1',                    -- read enable
-            REGCE => '1',                   -- read output register enable
-            DI => writeL,                   -- Input data port
-            WE => "11",                     -- write enable
-            WRADDR => wrAddr,               -- write address
-            WRCLK => clk,                   -- write clock
-            WREN => writeEnable);           -- write port enable
-            -- End of BRAM_SDP_MACRO instantiation
+            REGCE => '1',                   -- 1-bit input read output register enable
+            DI => w_DinMuxL,                   -- Input data port, width defined by WRITE_WIDTH parameter
+            WE => "11",                     -- Input write enable, width defined by write port depth
+            WRADDR => w_wrAddrMux,--std_logic_vector(writeCntr), --w_wrAddrMux,                -- Input write address, width defined by write port depth
+            WRCLK => clk,                   -- 1-bit input write clock
+            WREN => w_wrEnbMux); --'1');             -- 1-bit input write port enable
+            -- End of BRAM_SDP_MACRO_inst instantiation
+
 
 		
 	rightChannelMemory : BRAM_SDP_MACRO
 		generic map (
             BRAM_SIZE => "18Kb",            -- Target BRAM, "18Kb" or "36Kb"
             DEVICE => "7SERIES",            -- Target device: "VIRTEX5", "VIRTEX6", "7SERIES", "SPARTAN6"
-            DO_REG => 0,                    -- Optional output register (0 or 1)
-            INIT => X"000000000000000000",  -- Initial values on output port
+            DO_REG => 0,                     -- Optional output register (0 or 1)
+            INIT => X"000000000000000000",			-- Initial values on output port
             INIT_FILE => "NONE",
             WRITE_WIDTH => 16,              -- Valid values are 1-72 (37-72 only valid when BRAM_SIZE="36Kb")
             READ_WIDTH => 16,               -- Valid values are 1-72 (37-72 only valid when BRAM_SIZE="36Kb")
-            SIM_COLLISION_CHECK => "NONE",  -- Collision check enable
+            SIM_COLLISION_CHECK => "NONE",  -- Collision check enable "ALL", "WARNING_ONLY", "GENERATE_X_ONLY" or "NONE"
             SRVAL => X"000000000000000000", -- Set/Reset value for port output
-            -- Initial contents of the RAM
+            -- Here is where you insert the INIT_xx declarations to specify the initial contents of the RAM
 			INIT_00 => X"8BC28AF98A31896988A087D8870F8647857E84B583EC8323825A819180C88000",
 			INIT_01 => X"9830976A96A595DF95199452938C92C591FE913790708FA98EE18E198D528C8A",
 			INIT_02 => X"A462A3A2A2E0A21FA15DA09B9FD89F169E529D8F9CCB9C079B439A7F99BA98F5",
@@ -484,18 +567,22 @@ begin
 			INIT_3D => X"65E0651B6457639362CF620B614860855FC35F005E3E5D7D5CBB5BFA5B3A5A79",
 			INIT_3E => X"7247717F70B76FF06F296E616D9A6CD46C0D6B476A8069BA68F5682F676A66A5",
 			INIT_3F => X"7ECF7E067D3D7C747BAC7AE37A1A7951788977C076F7762F7567749F73D6730E")	
-        port map (
-            DO => readR,    -- Output read data port
-            RDADDR => std_logic_vector(column),
-            RDCLK => clk,
-            RST => reset,    -- active high reset
+		port map (
+            DO => readR,    -- Output read data port, width defined by READ_WIDTH parameter,
+            RDADDR => std_logic_vector(column),-- Input address, width defined by port depth
+            RDCLK => clk,                     -- 1-bit input clock
+            RST => reset,
             RDEN => '1',
-            REGCE => '1',
-            DI => writeR,
-            WE => "11",
-            WRADDR => wrAddr,
-            WRCLK => clk,
-            WREN => writeEnable);
-            -- End of BRAM_SDP_MACRO instantiation
+            REGCE => '1',                   -- 1-bit input read output register enable
+            DI => w_DinMuxR,                    -- Input data port, width defined by WRITE_WIDTH parameter
+            WE => "11",                        -- Input write enable, width defined by write port depth
+            WRADDR => w_wrAddrMux, --std_logic_vector(writeCntr), --w_wrAddrMux,                -- Input write address, width defined by write port depth
+            WRCLK => clk,                    -- 1-bit input write clock
+            WREN => w_wrEnbMux);                -- 1-bit input write port enable
+            -- End of BRAM_SDP_MACRO_inst instantiation
+    
+    sw(0) <= readyCompare;
+    sw(1) <= readyReady;
+    sw(2) <= readyTrigger;
 
 end Behavioral;

@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-| Date         : Fri Mar 14 12:10:50 2025
-| Host         : C26-5CG2151GFM running 64-bit major release  (build 9200)
+| Date         : Tue Mar  4 18:08:04 2025
+| Host         : C26-5CG2151LB4 running 64-bit major release  (build 9200)
 | Command      : report_utilization -file clk_wiz_1_utilization_synth.rpt -pb clk_wiz_1_utilization_synth.pb
 | Design       : clk_wiz_1
 | Device       : xc7a200tsbg484-1
@@ -93,7 +93,7 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 +-----------------------------+------+-------+------------+-----------+-------+
 |          Site Type          | Used | Fixed | Prohibited | Available | Util% |
 +-----------------------------+------+-------+------------+-----------+-------+
-| Bonded IOB                  |    2 |     0 |          0 |       285 |  0.70 |
+| Bonded IOB                  |    1 |     0 |          0 |       285 |  0.35 |
 | Bonded IPADs                |    0 |     0 |          0 |        14 |  0.00 |
 | Bonded OPADs                |    0 |     0 |          0 |         8 |  0.00 |
 | PHY_CONTROL                 |    0 |     0 |          0 |        10 |  0.00 |
@@ -108,8 +108,7 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 | IDELAYE2/IDELAYE2_FINEDELAY |    0 |     0 |          0 |       500 |  0.00 |
 | IBUFDS_GTE2                 |    0 |     0 |          0 |         2 |  0.00 |
 | ILOGIC                      |    0 |     0 |          0 |       285 |  0.00 |
-| OLOGIC                      |    1 |     0 |          0 |       285 |  0.35 |
-|   ODDR                      |    1 |       |            |           |       |
+| OLOGIC                      |    0 |     0 |          0 |       285 |  0.00 |
 +-----------------------------+------+-------+------------+-----------+-------+
 
 
@@ -154,10 +153,9 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 |  Ref Name  | Used | Functional Category |
 +------------+------+---------------------+
 | BUFG       |    3 |               Clock |
-| IBUF       |    2 |                  IO |
-| ODDR       |    1 |                  IO |
 | MMCME2_ADV |    1 |               Clock |
 | LUT1       |    1 |                 LUT |
+| IBUF       |    1 |                  IO |
 +------------+------+---------------------+
 
 

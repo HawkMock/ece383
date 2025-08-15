@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.runs/synth_1/lab2.tcl"
+  variable script "C:/Users/Dustin.Mock/code/ece383-eadaa713c3e5065b652eb90ba7d57234c0d53428/ece383-eadaa713c3e5065b652eb90ba7d57234c0d53428/Lab2/Lab2.runs/synth_1/lab2.tcl"
   variable category "vivado_synth"
 }
 
@@ -65,42 +65,47 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.cache/wt [current_project]
-set_property parent.project_path C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.xpr [current_project]
+set_property webtalk.parent_dir C:/Users/Dustin.Mock/code/ece383-eadaa713c3e5065b652eb90ba7d57234c0d53428/ece383-eadaa713c3e5065b652eb90ba7d57234c0d53428/Lab2/Lab2.cache/wt [current_project]
+set_property parent.project_path C:/Users/Dustin.Mock/code/ece383-eadaa713c3e5065b652eb90ba7d57234c0d53428/ece383-eadaa713c3e5065b652eb90ba7d57234c0d53428/Lab2/Lab2.xpr [current_project]
 set_property XPM_LIBRARIES XPM_CDC [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
 set_property board_part_repo_paths {C:/Users/Dustin.Mock/AppData/Roaming/Xilinx/Vivado/2024.2/xhub/board_store/xilinx_board_store} [current_project]
 set_property board_part digilentinc.com:nexys_video:part0:1.2 [current_project]
-set_property ip_output_repo c:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.cache/ip [current_project]
+set_property ip_output_repo c:/Users/Dustin.Mock/code/ece383-eadaa713c3e5065b652eb90ba7d57234c0d53428/ece383-eadaa713c3e5065b652eb90ba7d57234c0d53428/Lab2/Lab2.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_verilog -library xil_defaultlib C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/sources_1/imports/lab2_code_for_cadets/audio_init.v
+read_verilog -library xil_defaultlib C:/Users/Dustin.Mock/code/ece383-eadaa713c3e5065b652eb90ba7d57234c0d53428/ece383-eadaa713c3e5065b652eb90ba7d57234c0d53428/Lab2/Lab2.srcs/sources_1/imports/lab2_code_for_cadets/audio_init.v
 read_vhdl -library xil_defaultlib {
-  C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/sources_1/imports/lab2_code_for_cadets/Audio_Codec_Wrapper.vhd
-  C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/sources_1/imports/lab2_code_for_cadets/TWICtl.vhd
-  C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/sources_1/imports/new/VGA.vhd
-  C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/sources_1/imports/new/counter_baseN.vhd
-  C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/sources_1/imports/Lab01_cadet_code/dvid.vhdl
-  C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/sources_1/imports/lab2_code_for_cadets/i2s_ctl.vhd
-  C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/sources_1/imports/lab2_code_for_cadets/lab2_datapath.vhdl
-  C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/sources_1/imports/lab2_code_for_cadets/lab2_fsm.vhdl
-  C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/sources_1/imports/new/scopeFace.vhd
-  C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/sources_1/imports/new/synch_blank.vhd
-  C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/sources_1/imports/Lab01_cadet_code/tdms.vhdl
-  C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/sources_1/imports/Lab01_cadet_code/video.vhdl
-  C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/sources_1/imports/lab2_code_for_cadets/lab2.vhd
+  C:/Users/Dustin.Mock/code/ece383-eadaa713c3e5065b652eb90ba7d57234c0d53428/ece383-eadaa713c3e5065b652eb90ba7d57234c0d53428/Lab2/Lab2.srcs/sources_1/imports/lab2_code_for_cadets/Audio_Codec_Wrapper.vhd
+  C:/Users/Dustin.Mock/code/ece383-eadaa713c3e5065b652eb90ba7d57234c0d53428/ece383-eadaa713c3e5065b652eb90ba7d57234c0d53428/Lab2/Lab2.srcs/sources_1/new/DinMux.vhd
+  C:/Users/Dustin.Mock/code/ece383-eadaa713c3e5065b652eb90ba7d57234c0d53428/ece383-eadaa713c3e5065b652eb90ba7d57234c0d53428/Lab2/Lab2.srcs/sources_1/new/FlagRegister.vhd
+  C:/Users/Dustin.Mock/code/ece383-eadaa713c3e5065b652eb90ba7d57234c0d53428/ece383-eadaa713c3e5065b652eb90ba7d57234c0d53428/Lab2/Lab2.srcs/sources_1/imports/lab2_code_for_cadets/TWICtl.vhd
+  C:/Users/Dustin.Mock/code/ece383-eadaa713c3e5065b652eb90ba7d57234c0d53428/ece383-eadaa713c3e5065b652eb90ba7d57234c0d53428/Lab2/Lab2.srcs/sources_1/imports/new/VGA.vhd
+  C:/Users/Dustin.Mock/code/ece383-eadaa713c3e5065b652eb90ba7d57234c0d53428/ece383-eadaa713c3e5065b652eb90ba7d57234c0d53428/Lab2/Lab2.srcs/sources_1/new/WrAddrMux.vhd
+  C:/Users/Dustin.Mock/code/ece383-eadaa713c3e5065b652eb90ba7d57234c0d53428/ece383-eadaa713c3e5065b652eb90ba7d57234c0d53428/Lab2/Lab2.srcs/sources_1/imports/new/counter_baseN.vhd
+  C:/Users/Dustin.Mock/code/ece383-eadaa713c3e5065b652eb90ba7d57234c0d53428/ece383-eadaa713c3e5065b652eb90ba7d57234c0d53428/Lab2/Lab2.srcs/sources_1/imports/ece383-lab1.srcs/sources_1/imports/lab1_cadet_code/dvid.vhdl
+  C:/Users/Dustin.Mock/code/ece383-eadaa713c3e5065b652eb90ba7d57234c0d53428/ece383-eadaa713c3e5065b652eb90ba7d57234c0d53428/Lab2/Lab2.srcs/sources_1/imports/lab2_code_for_cadets/i2s_ctl.vhd
+  C:/Users/Dustin.Mock/code/ece383-eadaa713c3e5065b652eb90ba7d57234c0d53428/ece383-eadaa713c3e5065b652eb90ba7d57234c0d53428/Lab2/Lab2.srcs/sources_1/imports/lab2_code_for_cadets/lab2_datapath.vhdl
+  C:/Users/Dustin.Mock/code/ece383-eadaa713c3e5065b652eb90ba7d57234c0d53428/ece383-eadaa713c3e5065b652eb90ba7d57234c0d53428/Lab2/Lab2.srcs/sources_1/imports/lab2_code_for_cadets/lab2_fsm.vhdl
+  C:/Users/Dustin.Mock/code/ece383-eadaa713c3e5065b652eb90ba7d57234c0d53428/ece383-eadaa713c3e5065b652eb90ba7d57234c0d53428/Lab2/Lab2.srcs/sources_1/imports/ece383/lec10.vhdl
+  C:/Users/Dustin.Mock/code/ece383-eadaa713c3e5065b652eb90ba7d57234c0d53428/ece383-eadaa713c3e5065b652eb90ba7d57234c0d53428/Lab2/Lab2.srcs/sources_1/imports/new/scopeFace.vhd
+  C:/Users/Dustin.Mock/code/ece383-eadaa713c3e5065b652eb90ba7d57234c0d53428/ece383-eadaa713c3e5065b652eb90ba7d57234c0d53428/Lab2/Lab2.srcs/sources_1/imports/new/synch_blank.vhd
+  C:/Users/Dustin.Mock/code/ece383-eadaa713c3e5065b652eb90ba7d57234c0d53428/ece383-eadaa713c3e5065b652eb90ba7d57234c0d53428/Lab2/Lab2.srcs/sources_1/imports/ece383-lab1.srcs/sources_1/imports/lab1_cadet_code/tdms.vhdl
+  C:/Users/Dustin.Mock/code/ece383-eadaa713c3e5065b652eb90ba7d57234c0d53428/ece383-eadaa713c3e5065b652eb90ba7d57234c0d53428/Lab2/Lab2.srcs/sources_1/imports/Lab01_cadet_code/video.vhdl
+  C:/Users/Dustin.Mock/code/ece383-eadaa713c3e5065b652eb90ba7d57234c0d53428/ece383-eadaa713c3e5065b652eb90ba7d57234c0d53428/Lab2/Lab2.srcs/sources_1/new/wrEnbMux.vhd
+  C:/Users/Dustin.Mock/code/ece383-eadaa713c3e5065b652eb90ba7d57234c0d53428/ece383-eadaa713c3e5065b652eb90ba7d57234c0d53428/Lab2/Lab2.srcs/sources_1/imports/lab2_code_for_cadets/lab2.vhd
 }
-read_ip -quiet C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
-set_property used_in_implementation false [get_files -all c:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_ooc.xdc]
+read_ip -quiet C:/Users/Dustin.Mock/code/ece383-eadaa713c3e5065b652eb90ba7d57234c0d53428/ece383-eadaa713c3e5065b652eb90ba7d57234c0d53428/Lab2/Lab2.srcs/sources_1/ip/clk_wiz_1_2/clk_wiz_1.xci
+set_property used_in_implementation false [get_files -all c:/Users/Dustin.Mock/code/ece383-eadaa713c3e5065b652eb90ba7d57234c0d53428/ece383-eadaa713c3e5065b652eb90ba7d57234c0d53428/Lab2/Lab2.gen/sources_1/ip/clk_wiz_1_2/clk_wiz_1_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Dustin.Mock/code/ece383-eadaa713c3e5065b652eb90ba7d57234c0d53428/ece383-eadaa713c3e5065b652eb90ba7d57234c0d53428/Lab2/Lab2.gen/sources_1/ip/clk_wiz_1_2/clk_wiz_1.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Dustin.Mock/code/ece383-eadaa713c3e5065b652eb90ba7d57234c0d53428/ece383-eadaa713c3e5065b652eb90ba7d57234c0d53428/Lab2/Lab2.gen/sources_1/ip/clk_wiz_1_2/clk_wiz_1_ooc.xdc]
 
-read_ip -quiet C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/sources_1/ip/clk_wiz_1/clk_wiz_1.xci
-set_property used_in_implementation false [get_files -all c:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.gen/sources_1/ip/clk_wiz_1/clk_wiz_1_board.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.gen/sources_1/ip/clk_wiz_1/clk_wiz_1.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.gen/sources_1/ip/clk_wiz_1/clk_wiz_1_ooc.xdc]
+read_ip -quiet C:/Users/Dustin.Mock/code/ece383-eadaa713c3e5065b652eb90ba7d57234c0d53428/ece383-eadaa713c3e5065b652eb90ba7d57234c0d53428/Lab2/Lab2.srcs/sources_1/ip/clk_wiz_0_1/clk_wiz_0.xci
+set_property used_in_implementation false [get_files -all c:/Users/Dustin.Mock/code/ece383-eadaa713c3e5065b652eb90ba7d57234c0d53428/ece383-eadaa713c3e5065b652eb90ba7d57234c0d53428/Lab2/Lab2.gen/sources_1/ip/clk_wiz_0_1/clk_wiz_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Dustin.Mock/code/ece383-eadaa713c3e5065b652eb90ba7d57234c0d53428/ece383-eadaa713c3e5065b652eb90ba7d57234c0d53428/Lab2/Lab2.gen/sources_1/ip/clk_wiz_0_1/clk_wiz_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Dustin.Mock/code/ece383-eadaa713c3e5065b652eb90ba7d57234c0d53428/ece383-eadaa713c3e5065b652eb90ba7d57234c0d53428/Lab2/Lab2.gen/sources_1/ip/clk_wiz_0_1/clk_wiz_0_ooc.xdc]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -111,14 +116,12 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/constrs_1/imports/lab2_code_for_cadets/Lab2.xdc
-set_property used_in_implementation false [get_files C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/constrs_1/imports/lab2_code_for_cadets/Lab2.xdc]
+read_xdc C:/Users/Dustin.Mock/code/ece383-eadaa713c3e5065b652eb90ba7d57234c0d53428/ece383-eadaa713c3e5065b652eb90ba7d57234c0d53428/Lab2/Lab2.srcs/constrs_1/imports/lab2_code_for_cadets/Lab2.xdc
+set_property used_in_implementation false [get_files C:/Users/Dustin.Mock/code/ece383-eadaa713c3e5065b652eb90ba7d57234c0d53428/ece383-eadaa713c3e5065b652eb90ba7d57234c0d53428/Lab2/Lab2.srcs/constrs_1/imports/lab2_code_for_cadets/Lab2.xdc]
 
-read_xdc dont_touch.xdc
-set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1
 
-read_checkpoint -auto_incremental -incremental C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/utils_1/imports/synth_1/Lab2_datapath_tb.dcp
+read_checkpoint -auto_incremental -incremental C:/Users/Dustin.Mock/code/ece383-eadaa713c3e5065b652eb90ba7d57234c0d53428/ece383-eadaa713c3e5065b652eb90ba7d57234c0d53428/Lab2/Lab2.srcs/utils_1/imports/synth_1/lab2.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }

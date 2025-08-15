@@ -66,11 +66,9 @@
 component clk_wiz_1
 port
  (-- Clock in ports
-  clkfb_in          : in     std_logic;
   -- Clock out ports
   clk_out1          : out    std_logic;
   clk_out2          : out    std_logic;
-  clkfb_out         : out    std_logic;
   -- Status and control signals
   resetn             : in     std_logic;
   clk_in1           : in     std_logic
@@ -83,11 +81,9 @@ end component;
 ------------- Begin Cut here for INSTANTIATION Template ----- INST_TAG
 your_instance_name : clk_wiz_1
    port map ( 
-   clkfb_in => clkfb_in,
   -- Clock out ports  
    clk_out1 => clk_out1,
    clk_out2 => clk_out2,
-   clkfb_out => clkfb_out,
   -- Status and control signals                
    resetn => resetn,
    -- Clock in ports

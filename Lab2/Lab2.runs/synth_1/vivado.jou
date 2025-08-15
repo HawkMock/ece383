@@ -3,12 +3,12 @@
 # SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
 # IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
 # SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
-# Start of session at: Fri Aug 15 12:41:20 2025
-# Process ID         : 15848
-# Current directory  : C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.runs/synth_1
+# Start of session at: Fri Aug 15 16:02:09 2025
+# Process ID         : 19476
+# Current directory  : C:/Users/Dustin.Mock/code/ece383-eadaa713c3e5065b652eb90ba7d57234c0d53428/ece383-eadaa713c3e5065b652eb90ba7d57234c0d53428/Lab2/Lab2.runs/synth_1
 # Command line       : vivado.exe -log lab2.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source lab2.tcl
-# Log file           : C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.runs/synth_1/lab2.vds
-# Journal file       : C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.runs/synth_1\vivado.jou
+# Log file           : C:/Users/Dustin.Mock/code/ece383-eadaa713c3e5065b652eb90ba7d57234c0d53428/ece383-eadaa713c3e5065b652eb90ba7d57234c0d53428/Lab2/Lab2.runs/synth_1/lab2.vds
+# Journal file       : C:/Users/Dustin.Mock/code/ece383-eadaa713c3e5065b652eb90ba7d57234c0d53428/ece383-eadaa713c3e5065b652eb90ba7d57234c0d53428/Lab2/Lab2.runs/synth_1\vivado.jou
 # Running On         : C26-5CG2151GFM
 # Platform           : Windows Server 2016 or Windows 10
 # Operating System   : 22631
@@ -19,6 +19,6 @@
 # Host memory        : 16374 MB
 # Swap memory        : 13958 MB
 # Total Virtual      : 30333 MB
-# Available Virtual  : 9132 MB
+# Available Virtual  : 6785 MB
 #-----------------------------------------------------------
 source lab2.tcl -notrace

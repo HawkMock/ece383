@@ -1,5 +1,5 @@
 namespace eval ::optrace {
-  variable script "C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.runs/impl_1/lab2.tcl"
+  variable script "C:/Users/Dustin.Mock/code/ece383-eadaa713c3e5065b652eb90ba7d57234c0d53428/ece383-eadaa713c3e5065b652eb90ba7d57234c0d53428/Lab2/Lab2.runs/impl_1/lab2.tcl"
   variable category "vivado_impl"
 }
 
@@ -115,18 +115,18 @@ OPTRACE "create in-memory project" START { }
   set_param project.singleFileAddWarning.threshold 0
 OPTRACE "create in-memory project" END { }
 OPTRACE "set parameters" START { }
-  set_property webtalk.parent_dir C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.cache/wt [current_project]
-  set_property parent.project_path C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.xpr [current_project]
-  set_property ip_output_repo C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.cache/ip [current_project]
+  set_property webtalk.parent_dir C:/Users/Dustin.Mock/code/ece383-eadaa713c3e5065b652eb90ba7d57234c0d53428/ece383-eadaa713c3e5065b652eb90ba7d57234c0d53428/Lab2/Lab2.cache/wt [current_project]
+  set_property parent.project_path C:/Users/Dustin.Mock/code/ece383-eadaa713c3e5065b652eb90ba7d57234c0d53428/ece383-eadaa713c3e5065b652eb90ba7d57234c0d53428/Lab2/Lab2.xpr [current_project]
+  set_property ip_output_repo C:/Users/Dustin.Mock/code/ece383-eadaa713c3e5065b652eb90ba7d57234c0d53428/ece383-eadaa713c3e5065b652eb90ba7d57234c0d53428/Lab2/Lab2.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES XPM_CDC [current_project]
 OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
-  add_files -quiet C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.runs/synth_1/lab2.dcp
-  read_ip -quiet C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
-  read_ip -quiet C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/sources_1/ip/clk_wiz_1/clk_wiz_1.xci
+  add_files -quiet C:/Users/Dustin.Mock/code/ece383-eadaa713c3e5065b652eb90ba7d57234c0d53428/ece383-eadaa713c3e5065b652eb90ba7d57234c0d53428/Lab2/Lab2.runs/synth_1/lab2.dcp
+  read_ip -quiet C:/Users/Dustin.Mock/code/ece383-eadaa713c3e5065b652eb90ba7d57234c0d53428/ece383-eadaa713c3e5065b652eb90ba7d57234c0d53428/Lab2/Lab2.srcs/sources_1/ip/clk_wiz_1_2/clk_wiz_1.xci
+  read_ip -quiet C:/Users/Dustin.Mock/code/ece383-eadaa713c3e5065b652eb90ba7d57234c0d53428/ece383-eadaa713c3e5065b652eb90ba7d57234c0d53428/Lab2/Lab2.srcs/sources_1/ip/clk_wiz_0_1/clk_wiz_0.xci
 OPTRACE "read constraints: implementation" START { }
-  read_xdc C:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.srcs/constrs_1/imports/lab2_code_for_cadets/Lab2.xdc
+  read_xdc C:/Users/Dustin.Mock/code/ece383-eadaa713c3e5065b652eb90ba7d57234c0d53428/ece383-eadaa713c3e5065b652eb90ba7d57234c0d53428/Lab2/Lab2.srcs/constrs_1/imports/lab2_code_for_cadets/Lab2.xdc
 OPTRACE "read constraints: implementation" END { }
 OPTRACE "read constraints: implementation_pre" START { }
 OPTRACE "read constraints: implementation_pre" END { }

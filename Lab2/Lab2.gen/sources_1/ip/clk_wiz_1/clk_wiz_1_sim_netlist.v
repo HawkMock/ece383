@@ -2,10 +2,10 @@
 // Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-// Date        : Fri Mar 14 12:10:50 2025
-// Host        : C26-5CG2151GFM running 64-bit major release  (build 9200)
+// Date        : Mon Feb 10 09:14:55 2025
+// Host        : C26-5CG2151LB4 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
-//               c:/Users/Dustin.Mock/code/ece383/Lab2/Lab2.gen/sources_1/ip/clk_wiz_1/clk_wiz_1_sim_netlist.v
+//               c:/Users/Grantham.Zimmerman/Desktop/ece383/Lab2/Lab2.gen/sources_1/ip/clk_wiz_1/clk_wiz_1_sim_netlist.v
 // Design      : clk_wiz_1
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -15,46 +15,34 @@
 
 (* NotValidForBitStream *)
 module clk_wiz_1
-   (clkfb_in,
-    clk_out1,
+   (clk_out1,
     clk_out2,
-    clkfb_out,
     resetn,
     clk_in1);
-  input clkfb_in;
   output clk_out1;
   output clk_out2;
-  output clkfb_out;
   input resetn;
   input clk_in1;
 
   (* IBUF_LOW_PWR *) (* RTL_KEEP = "yes" *) wire clk_in1;
   wire clk_out1;
   wire clk_out2;
-  (* IBUF_LOW_PWR *) wire clkfb_in;
-  wire clkfb_out;
   (* RTL_KEEP = "yes" *) wire resetn;
 
   clk_wiz_1_clk_wiz inst
        (.clk_in1(clk_in1),
         .clk_out1(clk_out1),
         .clk_out2(clk_out2),
-        .clkfb_in(clkfb_in),
-        .clkfb_out(clkfb_out),
         .resetn(resetn));
 endmodule
 
 module clk_wiz_1_clk_wiz
-   (clkfb_in,
-    clk_out1,
+   (clk_out1,
     clk_out2,
-    clkfb_out,
     resetn,
     clk_in1);
-  input clkfb_in;
   output clk_out1;
   output clk_out2;
-  output clkfb_out;
   input resetn;
   input clk_in1;
 
@@ -64,15 +52,10 @@ module clk_wiz_1_clk_wiz
   wire clk_out1_clk_wiz_1;
   wire clk_out2;
   wire clk_out2_clk_wiz_1;
-  wire clkfb_bufg_out;
-  wire clkfb_in;
-  wire clkfb_in_buf_out;
-  wire clkfb_out;
+  wire clkfbout_buf_clk_wiz_1;
   wire clkfbout_clk_wiz_1;
   wire reset_high;
   wire resetn;
-  wire NLW_clkfbout_oddr_R_UNCONNECTED;
-  wire NLW_clkfbout_oddr_S_UNCONNECTED;
   wire NLW_mmcm_adv_inst_CLKFBOUTB_UNCONNECTED;
   wire NLW_mmcm_adv_inst_CLKFBSTOPPED_UNCONNECTED;
   wire NLW_mmcm_adv_inst_CLKINSTOPPED_UNCONNECTED;
@@ -91,36 +74,9 @@ module clk_wiz_1_clk_wiz
   wire [15:0]NLW_mmcm_adv_inst_DO_UNCONNECTED;
 
   (* BOX_TYPE = "PRIMITIVE" *) 
-  (* CAPACITANCE = "DONT_CARE" *) 
-  (* IBUF_DELAY_VALUE = "0" *) 
-  (* IFD_DELAY_VALUE = "AUTO" *) 
-  IBUF #(
-    .IOSTANDARD("DEFAULT")) 
-    clkfb_ibufg
-       (.I(clkfb_in),
-        .O(clkfb_in_buf_out));
-  (* BOX_TYPE = "PRIMITIVE" *) 
-  BUFG clkfbout_bufg
+  BUFG clkf_buf
        (.I(clkfbout_clk_wiz_1),
-        .O(clkfb_bufg_out));
-  (* BOX_TYPE = "PRIMITIVE" *) 
-  (* OPT_MODIFIED = "MLO" *) 
-  (* __SRVAL = "TRUE" *) 
-  ODDR #(
-    .DDR_CLK_EDGE("OPPOSITE_EDGE"),
-    .INIT(1'b0),
-    .IS_C_INVERTED(1'b0),
-    .IS_D1_INVERTED(1'b0),
-    .IS_D2_INVERTED(1'b0),
-    .SRTYPE("SYNC")) 
-    clkfbout_oddr
-       (.C(clkfb_bufg_out),
-        .CE(1'b1),
-        .D1(1'b1),
-        .D2(1'b0),
-        .Q(clkfb_out),
-        .R(NLW_clkfbout_oddr_R_UNCONNECTED),
-        .S(NLW_clkfbout_oddr_S_UNCONNECTED));
+        .O(clkfbout_buf_clk_wiz_1));
   (* BOX_TYPE = "PRIMITIVE" *) 
   (* CAPACITANCE = "DONT_CARE" *) 
   (* IBUF_DELAY_VALUE = "0" *) 
@@ -175,7 +131,7 @@ module clk_wiz_1_clk_wiz
     .CLKOUT6_DUTY_CYCLE(0.500000),
     .CLKOUT6_PHASE(0.000000),
     .CLKOUT6_USE_FINE_PS("FALSE"),
-    .COMPENSATION("EXTERNAL"),
+    .COMPENSATION("ZHOLD"),
     .DIVCLK_DIVIDE(1),
     .IS_CLKINSEL_INVERTED(1'b0),
     .IS_PSEN_INVERTED(1'b0),
@@ -189,7 +145,7 @@ module clk_wiz_1_clk_wiz
     .SS_MOD_PERIOD(10000),
     .STARTUP_WAIT("FALSE")) 
     mmcm_adv_inst
-       (.CLKFBIN(clkfb_in_buf_out),
+       (.CLKFBIN(clkfbout_buf_clk_wiz_1),
         .CLKFBOUT(clkfbout_clk_wiz_1),
         .CLKFBOUTB(NLW_mmcm_adv_inst_CLKFBOUTB_UNCONNECTED),
         .CLKFBSTOPPED(NLW_mmcm_adv_inst_CLKFBSTOPPED_UNCONNECTED),
