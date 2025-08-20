@@ -1,0 +1,13 @@
+Selected nets (clk/rst/areset only)
+clk_wiz_0_locked : /clk_wiz_0/locked, /proc_sys_reset_0/dcm_locked
+clk_wiz_0_pix_clk : /axi_vdma_0/m_axi_mm2s_aclk, /clk_wiz_0/pix_clk, /rgb2dvi_0/PixelClk, /rst_pix/slowest_sync_clk, /v_axi4s_vid_out_0/aclk, /v_tc_0/clk
+clk_wiz_0_ser_clk : /clk_wiz_0/ser_clk, /rgb2dvi_0/SerialClk
+mdm_1_debug_sys_rst : /mdm_1/Debug_SYS_Rst, /proc_sys_reset_0/mb_debug_sys_rst
+microblaze_0_Clk : /axi_intc_0/s_axi_aclk, /axi_interconnect_0/ACLK, /axi_interconnect_0/M00_ACLK, /axi_interconnect_0/M01_ACLK, /axi_interconnect_0/M02_ACLK, /axi_interconnect_0/M03_ACLK, /axi_interconnect_0/M04_ACLK, /axi_interconnect_0/S00_ACLK, /axi_interconnect_0/S01_ACLK, /axi_interconnect_0/S02_ACLK, /axi_interconnect_0/S03_ACLK, /axi_timer_0/s_axi_aclk, /axi_uartlite_0/s_axi_aclk, /axi_vdma_0/s_axi_lite_aclk, /clk_wiz_0/clk_sys, /microblaze_0/Clk, /microblaze_0_local_memory/LMB_Clk, /mig_7series_0/clk_ref_i, /mig_7series_0/sys_clk_i, /proc_sys_reset_0/slowest_sync_clk, /v_tc_0/s_axi_aclk
+mig_7series_0_ui_clk : /axi_interconnect_0/M05_ACLK, /mig_7series_0/ui_clk, /rst_mig_7series_0_100M/slowest_sync_clk
+mig_7series_0_ui_clk_sync_rst : /mig_7series_0/ui_clk_sync_rst, /rst_mig_7series_0_100M/ext_reset_in
+proc_sys_reset_0_peripheral_aresetn : /axi_intc_0/s_axi_aresetn, /axi_interconnect_0/ARESETN, /axi_interconnect_0/M00_ARESETN, /axi_interconnect_0/M01_ARESETN, /axi_interconnect_0/M02_ARESETN, /axi_interconnect_0/M03_ARESETN, /axi_interconnect_0/M04_ARESETN, /axi_interconnect_0/S00_ARESETN, /axi_interconnect_0/S01_ARESETN, /axi_interconnect_0/S02_ARESETN, /axi_interconnect_0/S03_ARESETN, /axi_timer_0/s_axi_aresetn, /axi_uartlite_0/s_axi_aresetn, /proc_sys_reset_0/peripheral_aresetn, /v_tc_0/s_axi_aresetn
+rgb2dvi_0_TMDS_Clk_n : /rgb2dvi_0/TMDS_Clk_n
+rgb2dvi_0_TMDS_Clk_p : /rgb2dvi_0/TMDS_Clk_p
+rst_mig_7series_0_100M_peripheral_aresetn : /axi_interconnect_0/M05_ARESETN, /mig_7series_0/aresetn, /rst_mig_7series_0_100M/peripheral_aresetn
+rst_pix_peripheral_reset : /axi_vdma_0/axi_resetn, /rst_pix/peripheral_reset, /util_vector_logic_0/Op1, /v_axi4s_vid_out_0/aresetn

@@ -1,0 +1,10 @@
+Top-level ports
+/hdmi_tx_clk_n
+/hdmi_tx_clk_p
+/hdmi_tx_d_n
+/hdmi_tx_d_p
+/reset
+/reset_0
+/sys_clock
+/usb_uart_rxd
+/usb_uart_txd

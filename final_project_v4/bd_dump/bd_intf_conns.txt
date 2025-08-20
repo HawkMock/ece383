@@ -1,0 +1,17 @@
+Interface connections (pin <-> pin)
+/axi_intc_0/s_axi  <->  /axi_interconnect_0/M00_AXI
+/axi_interconnect_0/M01_AXI  <->  /axi_timer_0/S_AXI
+/axi_interconnect_0/M02_AXI  <->  /axi_uartlite_0/S_AXI
+/axi_interconnect_0/M03_AXI  <->  /axi_vdma_0/S_AXI_LITE
+/axi_interconnect_0/M04_AXI  <->  /v_tc_0/ctrl
+/axi_interconnect_0/M05_AXI  <->  /mig_7series_0/S_AXI
+/axi_uartlite_0/UART
+/lmb_bram_if_cntlr_0/BRAM_PORT  <->  /lmb_bram_if_cntlr_0_bram/BRAM_PORTA
+/axi_interconnect_0/S01_AXI  <->  /microblaze_0/M_AXI_DC
+/axi_interconnect_0/S00_AXI  <->  /microblaze_0/M_AXI_DP
+/axi_interconnect_0/S02_AXI  <->  /microblaze_0/M_AXI_IC
+/axi_interconnect_0/S03_AXI  <->  /microblaze_0/M_AXI_IP
+/mdm_1/MBDEBUG_0  <->  /microblaze_0/DEBUG
+/microblaze_0/DLMB  <->  /microblaze_0_local_memory/DLMB
+/microblaze_0/ILMB  <->  /microblaze_0_local_memory/ILMB
+/v_axi4s_vid_out_0/vtiming_in  <->  /v_tc_0/vtiming_out

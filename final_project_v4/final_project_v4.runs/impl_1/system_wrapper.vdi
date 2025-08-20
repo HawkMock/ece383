@@ -1,0 +1,585 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Wed Aug 20 15:59:28 2025
+# Process ID         : 2004
+# Current directory  : X:/final_project_v4.runs/impl_1
+# Command line       : vivado.exe -log system_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source system_wrapper.tcl -notrace
+# Log file           : X:/final_project_v4.runs/impl_1/system_wrapper.vdi
+# Journal file       : X:/final_project_v4.runs/impl_1\vivado.jou
+# Running On         : C26-5CG2151GFM
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 22631
+# Processor Detail   : 11th Gen Intel(R) Core(TM) i7-1165G7 @ 2.80GHz
+# CPU Frequency      : 2803 MHz
+# CPU Physical cores : 4
+# CPU Logical cores  : 8
+# Host memory        : 16374 MB
+# Swap memory        : 15032 MB
+# Total Virtual      : 31407 MB
+# Available Virtual  : 9313 MB
+#-----------------------------------------------------------
+source system_wrapper.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Digilent/vivado-library'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2024.2/data/ip'.
+add_files: Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 384.730 ; gain = 88.812
+Command: link_design -top system_wrapper -part xc7a200tsbg484-1
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Device 21-403] Loading part xc7a200tsbg484-1
+INFO: [Project 1-454] Reading design checkpoint 'x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_gpio_btn_0/system_axi_gpio_btn_0.dcp' for cell 'system_i/axi_gpio_btn'
+INFO: [Project 1-454] Reading design checkpoint 'x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_intc_0_0/system_axi_intc_0_0.dcp' for cell 'system_i/axi_intc_0'
+INFO: [Project 1-454] Reading design checkpoint 'x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_timer_0_0/system_axi_timer_0_0.dcp' for cell 'system_i/axi_timer_0'
+INFO: [Project 1-454] Reading design checkpoint 'x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_uartlite_0_0/system_axi_uartlite_0_0.dcp' for cell 'system_i/axi_uartlite_0'
+INFO: [Project 1-454] Reading design checkpoint 'x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_vdma_0_0/system_axi_vdma_0_0.dcp' for cell 'system_i/axi_vdma_0'
+INFO: [Project 1-454] Reading design checkpoint 'x:/final_project_v4.gen/sources_1/bd/system/ip/system_clk_wiz_0_0/system_clk_wiz_0_0.dcp' for cell 'system_i/clk_wiz_0'
+INFO: [Project 1-454] Reading design checkpoint 'x:/final_project_v4.gen/sources_1/bd/system/ip/system_mdm_1_0/system_mdm_1_0.dcp' for cell 'system_i/mdm_1'
+INFO: [Project 1-454] Reading design checkpoint 'x:/final_project_v4.gen/sources_1/bd/system/ip/system_microblaze_0_0/system_microblaze_0_0.dcp' for cell 'system_i/microblaze_0'
+INFO: [Project 1-454] Reading design checkpoint 'x:/final_project_v4.gen/sources_1/bd/system/ip/system_mig_7series_0_1/system_mig_7series_0_1.dcp' for cell 'system_i/mig_7series_0'
+INFO: [Project 1-454] Reading design checkpoint 'x:/final_project_v4.gen/sources_1/bd/system/ip/system_proc_sys_reset_0_0/system_proc_sys_reset_0_0.dcp' for cell 'system_i/proc_sys_reset_0'
+INFO: [Project 1-454] Reading design checkpoint 'x:/final_project_v4.gen/sources_1/bd/system/ip/system_reset_inv_0_0/system_reset_inv_0_0.dcp' for cell 'system_i/reset_inv_0'
+INFO: [Project 1-454] Reading design checkpoint 'x:/final_project_v4.gen/sources_1/bd/system/ip/system_rgb2dvi_0_0/system_rgb2dvi_0_0.dcp' for cell 'system_i/rgb2dvi_0'
+INFO: [Project 1-454] Reading design checkpoint 'x:/final_project_v4.gen/sources_1/bd/system/ip/system_rst_mig_7series_0_100M_0/system_rst_mig_7series_0_100M_0.dcp' for cell 'system_i/rst_mig_7series_0_100M'
+INFO: [Project 1-454] Reading design checkpoint 'x:/final_project_v4.gen/sources_1/bd/system/ip/system_proc_sys_reset_1_0/system_proc_sys_reset_1_0.dcp' for cell 'system_i/rst_pix'
+INFO: [Project 1-454] Reading design checkpoint 'x:/final_project_v4.gen/sources_1/bd/system/ip/system_rst_ser_0/system_rst_ser_0.dcp' for cell 'system_i/rst_ser'
+INFO: [Project 1-454] Reading design checkpoint 'x:/final_project_v4.gen/sources_1/bd/system/ip/system_util_or_irq_0/system_util_or_irq_0.dcp' for cell 'system_i/util_or_irq'
+INFO: [Project 1-454] Reading design checkpoint 'x:/final_project_v4.gen/sources_1/bd/system/ip/system_v_axi4s_vid_out_0_0/system_v_axi4s_vid_out_0_0.dcp' for cell 'system_i/v_axi4s_vid_out_0'
+INFO: [Project 1-454] Reading design checkpoint 'x:/final_project_v4.gen/sources_1/bd/system/ip/system_v_tc_0_0/system_v_tc_0_0.dcp' for cell 'system_i/v_tc_0'
+INFO: [Project 1-454] Reading design checkpoint 'x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_interconnect_0_upgraded_ipi_imp_xbar_0/system_axi_interconnect_0_upgraded_ipi_imp_xbar_0.dcp' for cell 'system_i/axi_interconnect_0/xbar'
+INFO: [Project 1-454] Reading design checkpoint 'x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_auto_ds_0/system_axi_interconnect_0_imp_auto_ds_0.dcp' for cell 'system_i/axi_interconnect_0/m00_couplers/auto_ds'
+INFO: [Project 1-454] Reading design checkpoint 'x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_auto_pc_0/system_axi_interconnect_0_imp_auto_pc_0.dcp' for cell 'system_i/axi_interconnect_0/m00_couplers/auto_pc'
+INFO: [Project 1-454] Reading design checkpoint 'x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_auto_ds_1/system_axi_interconnect_0_imp_auto_ds_1.dcp' for cell 'system_i/axi_interconnect_0/m01_couplers/auto_ds'
+INFO: [Project 1-454] Reading design checkpoint 'x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_auto_pc_1/system_axi_interconnect_0_imp_auto_pc_1.dcp' for cell 'system_i/axi_interconnect_0/m01_couplers/auto_pc'
+INFO: [Project 1-454] Reading design checkpoint 'x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_auto_ds_2/system_axi_interconnect_0_imp_auto_ds_2.dcp' for cell 'system_i/axi_interconnect_0/m02_couplers/auto_ds'
+INFO: [Project 1-454] Reading design checkpoint 'x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_auto_pc_2/system_axi_interconnect_0_imp_auto_pc_2.dcp' for cell 'system_i/axi_interconnect_0/m02_couplers/auto_pc'
+INFO: [Project 1-454] Reading design checkpoint 'x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_auto_ds_3/system_axi_interconnect_0_imp_auto_ds_3.dcp' for cell 'system_i/axi_interconnect_0/m03_couplers/auto_ds'
+INFO: [Project 1-454] Reading design checkpoint 'x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_auto_pc_3/system_axi_interconnect_0_imp_auto_pc_3.dcp' for cell 'system_i/axi_interconnect_0/m03_couplers/auto_pc'
+INFO: [Project 1-454] Reading design checkpoint 'x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_auto_ds_4/system_axi_interconnect_0_imp_auto_ds_4.dcp' for cell 'system_i/axi_interconnect_0/m04_couplers/auto_ds'
+INFO: [Project 1-454] Reading design checkpoint 'x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_auto_pc_4/system_axi_interconnect_0_imp_auto_pc_4.dcp' for cell 'system_i/axi_interconnect_0/m04_couplers/auto_pc'
+INFO: [Project 1-454] Reading design checkpoint 'x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_auto_cc_0/system_axi_interconnect_0_imp_auto_cc_0.dcp' for cell 'system_i/axi_interconnect_0/m05_couplers/auto_cc'
+INFO: [Project 1-454] Reading design checkpoint 'x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_auto_ds_5/system_axi_interconnect_0_imp_auto_ds_5.dcp' for cell 'system_i/axi_interconnect_0/m05_couplers/auto_ds'
+INFO: [Project 1-454] Reading design checkpoint 'x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_auto_ds_6/system_axi_interconnect_0_imp_auto_ds_6.dcp' for cell 'system_i/axi_interconnect_0/m06_couplers/auto_ds'
+INFO: [Project 1-454] Reading design checkpoint 'x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_auto_pc_5/system_axi_interconnect_0_imp_auto_pc_5.dcp' for cell 'system_i/axi_interconnect_0/m06_couplers/auto_pc'
+INFO: [Project 1-454] Reading design checkpoint 'x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_auto_pc_6/system_axi_interconnect_0_imp_auto_pc_6.dcp' for cell 'system_i/axi_interconnect_0/s00_couplers/auto_pc'
+INFO: [Project 1-454] Reading design checkpoint 'x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_auto_us_0/system_axi_interconnect_0_imp_auto_us_0.dcp' for cell 'system_i/axi_interconnect_0/s00_couplers/auto_us'
+INFO: [Project 1-454] Reading design checkpoint 'x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_auto_us_1/system_axi_interconnect_0_imp_auto_us_1.dcp' for cell 'system_i/axi_interconnect_0/s01_couplers/auto_us'
+INFO: [Project 1-454] Reading design checkpoint 'x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_auto_us_2/system_axi_interconnect_0_imp_auto_us_2.dcp' for cell 'system_i/axi_interconnect_0/s02_couplers/auto_us'
+INFO: [Project 1-454] Reading design checkpoint 'x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_auto_pc_7/system_axi_interconnect_0_imp_auto_pc_7.dcp' for cell 'system_i/axi_interconnect_0/s03_couplers/auto_pc'
+INFO: [Project 1-454] Reading design checkpoint 'x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_auto_us_3/system_axi_interconnect_0_imp_auto_us_3.dcp' for cell 'system_i/axi_interconnect_0/s03_couplers/auto_us'
+INFO: [Project 1-454] Reading design checkpoint 'x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_auto_cc_1/system_axi_interconnect_0_imp_auto_cc_1.dcp' for cell 'system_i/axi_interconnect_0/s04_couplers/auto_cc'
+INFO: [Project 1-454] Reading design checkpoint 'x:/final_project_v4.gen/sources_1/bd/system/ip/system_dlmb_bram_if_cntlr_0/system_dlmb_bram_if_cntlr_0.dcp' for cell 'system_i/microblaze_0_local_memory/dlmb_bram_if_cntlr'
+INFO: [Project 1-454] Reading design checkpoint 'x:/final_project_v4.gen/sources_1/bd/system/ip/system_dlmb_v10_0/system_dlmb_v10_0.dcp' for cell 'system_i/microblaze_0_local_memory/dlmb_v10'
+INFO: [Project 1-454] Reading design checkpoint 'x:/final_project_v4.gen/sources_1/bd/system/ip/system_ilmb_bram_if_cntlr_0/system_ilmb_bram_if_cntlr_0.dcp' for cell 'system_i/microblaze_0_local_memory/ilmb_bram_if_cntlr'
+INFO: [Project 1-454] Reading design checkpoint 'x:/final_project_v4.gen/sources_1/bd/system/ip/system_ilmb_v10_0/system_ilmb_v10_0.dcp' for cell 'system_i/microblaze_0_local_memory/ilmb_v10'
+INFO: [Project 1-454] Reading design checkpoint 'x:/final_project_v4.gen/sources_1/bd/system/ip/system_lmb_bram_0/system_lmb_bram_0.dcp' for cell 'system_i/microblaze_0_local_memory/lmb_bram'
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 781.199 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 2272 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2024.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. system_i/mig_7series_0/u_system_mig_7series_0_1_mig/u_ddr3_clk_ibuf/se_input_clk.u_ibufg_sys_clk 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'system_i/mig_7series_0/sys_clk_i' is not directly connected to top level port. 'IBUF_LOW_PWR' is ignored for synthesis but preserved for implementation.
+Parsing XDC File [x:/final_project_v4.gen/sources_1/bd/system/ip/system_clk_wiz_0_0/system_clk_wiz_0_0_board.xdc] for cell 'system_i/clk_wiz_0/inst'
+Finished Parsing XDC File [x:/final_project_v4.gen/sources_1/bd/system/ip/system_clk_wiz_0_0/system_clk_wiz_0_0_board.xdc] for cell 'system_i/clk_wiz_0/inst'
+Parsing XDC File [x:/final_project_v4.gen/sources_1/bd/system/ip/system_clk_wiz_0_0/system_clk_wiz_0_0.xdc] for cell 'system_i/clk_wiz_0/inst'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [x:/final_project_v4.gen/sources_1/bd/system/ip/system_clk_wiz_0_0/system_clk_wiz_0_0.xdc:54]
+INFO: [Timing 38-2] Deriving generated clocks [x:/final_project_v4.gen/sources_1/bd/system/ip/system_clk_wiz_0_0/system_clk_wiz_0_0.xdc:54]
+get_clocks: Time (s): cpu = 00:00:08 ; elapsed = 00:00:14 . Memory (MB): peak = 1637.219 ; gain = 607.594
+Finished Parsing XDC File [x:/final_project_v4.gen/sources_1/bd/system/ip/system_clk_wiz_0_0/system_clk_wiz_0_0.xdc] for cell 'system_i/clk_wiz_0/inst'
+Parsing XDC File [x:/final_project_v4.gen/sources_1/bd/system/ip/system_proc_sys_reset_0_0/system_proc_sys_reset_0_0_board.xdc] for cell 'system_i/proc_sys_reset_0/U0'
+Finished Parsing XDC File [x:/final_project_v4.gen/sources_1/bd/system/ip/system_proc_sys_reset_0_0/system_proc_sys_reset_0_0_board.xdc] for cell 'system_i/proc_sys_reset_0/U0'
+Parsing XDC File [x:/final_project_v4.gen/sources_1/bd/system/ip/system_proc_sys_reset_0_0/system_proc_sys_reset_0_0.xdc] for cell 'system_i/proc_sys_reset_0/U0'
+Finished Parsing XDC File [x:/final_project_v4.gen/sources_1/bd/system/ip/system_proc_sys_reset_0_0/system_proc_sys_reset_0_0.xdc] for cell 'system_i/proc_sys_reset_0/U0'
+Parsing XDC File [x:/final_project_v4.gen/sources_1/bd/system/ip/system_microblaze_0_0/system_microblaze_0_0.xdc] for cell 'system_i/microblaze_0/U0'
+Finished Parsing XDC File [x:/final_project_v4.gen/sources_1/bd/system/ip/system_microblaze_0_0/system_microblaze_0_0.xdc] for cell 'system_i/microblaze_0/U0'
+Parsing XDC File [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_uartlite_0_0/system_axi_uartlite_0_0_board.xdc] for cell 'system_i/axi_uartlite_0/U0'
+Finished Parsing XDC File [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_uartlite_0_0/system_axi_uartlite_0_0_board.xdc] for cell 'system_i/axi_uartlite_0/U0'
+Parsing XDC File [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_uartlite_0_0/system_axi_uartlite_0_0.xdc] for cell 'system_i/axi_uartlite_0/U0'
+Finished Parsing XDC File [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_uartlite_0_0/system_axi_uartlite_0_0.xdc] for cell 'system_i/axi_uartlite_0/U0'
+Parsing XDC File [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_timer_0_0/system_axi_timer_0_0.xdc] for cell 'system_i/axi_timer_0/U0'
+Finished Parsing XDC File [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_timer_0_0/system_axi_timer_0_0.xdc] for cell 'system_i/axi_timer_0/U0'
+Parsing XDC File [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_intc_0_0/system_axi_intc_0_0.xdc] for cell 'system_i/axi_intc_0/U0'
+Finished Parsing XDC File [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_intc_0_0/system_axi_intc_0_0.xdc] for cell 'system_i/axi_intc_0/U0'
+Parsing XDC File [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_vdma_0_0/system_axi_vdma_0_0.xdc] for cell 'system_i/axi_vdma_0/U0'
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-4' -to list should not be empty. [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_vdma_0_0/system_axi_vdma_0_0.xdc:65]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-4' -to list should not be empty. [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_vdma_0_0/system_axi_vdma_0_0.xdc:69]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-4' -to list should not be empty. [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_vdma_0_0/system_axi_vdma_0_0.xdc:93]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-4' -to list should not be empty. [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_vdma_0_0/system_axi_vdma_0_0.xdc:97]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-4' -to list should not be empty. [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_vdma_0_0/system_axi_vdma_0_0.xdc:101]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-4' -to list should not be empty. [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_vdma_0_0/system_axi_vdma_0_0.xdc:105]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-4' -to list should not be empty. [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_vdma_0_0/system_axi_vdma_0_0.xdc:109]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_vdma_0_0/system_axi_vdma_0_0.xdc:113]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-4' -to list should not be empty. [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_vdma_0_0/system_axi_vdma_0_0.xdc:121]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-4' -to list should not be empty. [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_vdma_0_0/system_axi_vdma_0_0.xdc:125]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_vdma_0_0/system_axi_vdma_0_0.xdc:129]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-4' -to list should not be empty. [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_vdma_0_0/system_axi_vdma_0_0.xdc:141]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-4' -to list should not be empty. [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_vdma_0_0/system_axi_vdma_0_0.xdc:145]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_vdma_0_0/system_axi_vdma_0_0.xdc:149]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-4' -to list should not be empty. [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_vdma_0_0/system_axi_vdma_0_0.xdc:153]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-4' -to list should not be empty. [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_vdma_0_0/system_axi_vdma_0_0.xdc:157]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-4' -to list should not be empty. [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_vdma_0_0/system_axi_vdma_0_0.xdc:161]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-4' -to list should not be empty. [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_vdma_0_0/system_axi_vdma_0_0.xdc:165]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-4' -to list should not be empty. [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_vdma_0_0/system_axi_vdma_0_0.xdc:169]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-4' -to list should not be empty. [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_vdma_0_0/system_axi_vdma_0_0.xdc:173]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-4' -to list should not be empty. [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_vdma_0_0/system_axi_vdma_0_0.xdc:177]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_vdma_0_0/system_axi_vdma_0_0.xdc:181]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-4' -to list should not be empty. [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_vdma_0_0/system_axi_vdma_0_0.xdc:185]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_vdma_0_0/system_axi_vdma_0_0.xdc:189]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-6' -to list should not be empty. [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_vdma_0_0/system_axi_vdma_0_0.xdc:197]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-6' -to list should not be empty. [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_vdma_0_0/system_axi_vdma_0_0.xdc:205]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-6' -to list should not be empty. [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_vdma_0_0/system_axi_vdma_0_0.xdc:213]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-6' -to list should not be empty. [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_vdma_0_0/system_axi_vdma_0_0.xdc:217]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-6' -to list should not be empty. [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_vdma_0_0/system_axi_vdma_0_0.xdc:221]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-6' -to list should not be empty. [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_vdma_0_0/system_axi_vdma_0_0.xdc:225]
+Finished Parsing XDC File [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_vdma_0_0/system_axi_vdma_0_0.xdc] for cell 'system_i/axi_vdma_0/U0'
+Parsing XDC File [x:/final_project_v4.gen/sources_1/bd/system/ip/system_proc_sys_reset_1_0/system_proc_sys_reset_1_0_board.xdc] for cell 'system_i/rst_pix/U0'
+Finished Parsing XDC File [x:/final_project_v4.gen/sources_1/bd/system/ip/system_proc_sys_reset_1_0/system_proc_sys_reset_1_0_board.xdc] for cell 'system_i/rst_pix/U0'
+Parsing XDC File [x:/final_project_v4.gen/sources_1/bd/system/ip/system_proc_sys_reset_1_0/system_proc_sys_reset_1_0.xdc] for cell 'system_i/rst_pix/U0'
+Finished Parsing XDC File [x:/final_project_v4.gen/sources_1/bd/system/ip/system_proc_sys_reset_1_0/system_proc_sys_reset_1_0.xdc] for cell 'system_i/rst_pix/U0'
+Parsing XDC File [x:/final_project_v4.gen/sources_1/bd/system/ip/system_rgb2dvi_0_0/src/rgb2dvi.xdc] for cell 'system_i/rgb2dvi_0/U0'
+Finished Parsing XDC File [x:/final_project_v4.gen/sources_1/bd/system/ip/system_rgb2dvi_0_0/src/rgb2dvi.xdc] for cell 'system_i/rgb2dvi_0/U0'
+Parsing XDC File [x:/final_project_v4.gen/sources_1/bd/system/ip/system_mig_7series_0_1/system_mig_7series_0_1_board.xdc] for cell 'system_i/mig_7series_0'
+Finished Parsing XDC File [x:/final_project_v4.gen/sources_1/bd/system/ip/system_mig_7series_0_1/system_mig_7series_0_1_board.xdc] for cell 'system_i/mig_7series_0'
+Parsing XDC File [x:/final_project_v4.gen/sources_1/bd/system/ip/system_rst_mig_7series_0_100M_0/system_rst_mig_7series_0_100M_0_board.xdc] for cell 'system_i/rst_mig_7series_0_100M/U0'
+Finished Parsing XDC File [x:/final_project_v4.gen/sources_1/bd/system/ip/system_rst_mig_7series_0_100M_0/system_rst_mig_7series_0_100M_0_board.xdc] for cell 'system_i/rst_mig_7series_0_100M/U0'
+Parsing XDC File [x:/final_project_v4.gen/sources_1/bd/system/ip/system_rst_mig_7series_0_100M_0/system_rst_mig_7series_0_100M_0.xdc] for cell 'system_i/rst_mig_7series_0_100M/U0'
+Finished Parsing XDC File [x:/final_project_v4.gen/sources_1/bd/system/ip/system_rst_mig_7series_0_100M_0/system_rst_mig_7series_0_100M_0.xdc] for cell 'system_i/rst_mig_7series_0_100M/U0'
+Parsing XDC File [x:/final_project_v4.gen/sources_1/bd/system/ip/system_rst_ser_0/system_rst_ser_0_board.xdc] for cell 'system_i/rst_ser/U0'
+Finished Parsing XDC File [x:/final_project_v4.gen/sources_1/bd/system/ip/system_rst_ser_0/system_rst_ser_0_board.xdc] for cell 'system_i/rst_ser/U0'
+Parsing XDC File [x:/final_project_v4.gen/sources_1/bd/system/ip/system_rst_ser_0/system_rst_ser_0.xdc] for cell 'system_i/rst_ser/U0'
+Finished Parsing XDC File [x:/final_project_v4.gen/sources_1/bd/system/ip/system_rst_ser_0/system_rst_ser_0.xdc] for cell 'system_i/rst_ser/U0'
+Parsing XDC File [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_gpio_btn_0/system_axi_gpio_btn_0_board.xdc] for cell 'system_i/axi_gpio_btn/U0'
+Finished Parsing XDC File [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_gpio_btn_0/system_axi_gpio_btn_0_board.xdc] for cell 'system_i/axi_gpio_btn/U0'
+Parsing XDC File [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_gpio_btn_0/system_axi_gpio_btn_0.xdc] for cell 'system_i/axi_gpio_btn/U0'
+Finished Parsing XDC File [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_gpio_btn_0/system_axi_gpio_btn_0.xdc] for cell 'system_i/axi_gpio_btn/U0'
+Parsing XDC File [X:/final_project_v4.srcs/constrs_1/new/nexys_hdmi.xdc]
+Finished Parsing XDC File [X:/final_project_v4.srcs/constrs_1/new/nexys_hdmi.xdc]
+Parsing XDC File [X:/final_project_v4.srcs/constrs_1/new/fix_backbone.xdc]
+WARNING: [Vivado 12-507] No nets matched 'system_i/clk_wiz_0/inst/clk_sys'. [X:/final_project_v4.srcs/constrs_1/new/fix_backbone.xdc:1]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [X:/final_project_v4.srcs/constrs_1/new/fix_backbone.xdc:1]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [X:/final_project_v4.srcs/constrs_1/new/fix_backbone.xdc]
+Parsing XDC File [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_auto_us_0/system_axi_interconnect_0_imp_auto_us_0_clocks.xdc] for cell 'system_i/axi_interconnect_0/s00_couplers/auto_us/inst'
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_auto_us_0/system_axi_interconnect_0_imp_auto_us_0_clocks.xdc:9]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_auto_us_0/system_axi_interconnect_0_imp_auto_us_0_clocks.xdc:12]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_auto_us_0/system_axi_interconnect_0_imp_auto_us_0_clocks.xdc:15]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_auto_us_0/system_axi_interconnect_0_imp_auto_us_0_clocks.xdc:18]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_auto_us_0/system_axi_interconnect_0_imp_auto_us_0_clocks.xdc:21]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_auto_us_0/system_axi_interconnect_0_imp_auto_us_0_clocks.xdc:24]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_auto_us_0/system_axi_interconnect_0_imp_auto_us_0_clocks.xdc:27]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_auto_us_0/system_axi_interconnect_0_imp_auto_us_0_clocks.xdc:33]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_auto_us_0/system_axi_interconnect_0_imp_auto_us_0_clocks.xdc:36]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-10' -to list should not be empty. [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_auto_us_0/system_axi_interconnect_0_imp_auto_us_0_clocks.xdc:39]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-10' -to list should not be empty. [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_auto_us_0/system_axi_interconnect_0_imp_auto_us_0_clocks.xdc:42]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-10' -to list should not be empty. [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_auto_us_0/system_axi_interconnect_0_imp_auto_us_0_clocks.xdc:45]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-2' -to list should not be empty. [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_auto_us_0/system_axi_interconnect_0_imp_auto_us_0_clocks.xdc:48]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-11' -to list should not be empty. [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_auto_us_0/system_axi_interconnect_0_imp_auto_us_0_clocks.xdc:51]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-11' -to list should not be empty. [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_auto_us_0/system_axi_interconnect_0_imp_auto_us_0_clocks.xdc:54]
+Finished Parsing XDC File [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_auto_us_0/system_axi_interconnect_0_imp_auto_us_0_clocks.xdc] for cell 'system_i/axi_interconnect_0/s00_couplers/auto_us/inst'
+Parsing XDC File [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_auto_us_1/system_axi_interconnect_0_imp_auto_us_1_clocks.xdc] for cell 'system_i/axi_interconnect_0/s01_couplers/auto_us/inst'
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_auto_us_1/system_axi_interconnect_0_imp_auto_us_1_clocks.xdc:9]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_auto_us_1/system_axi_interconnect_0_imp_auto_us_1_clocks.xdc:12]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_auto_us_1/system_axi_interconnect_0_imp_auto_us_1_clocks.xdc:15]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_auto_us_1/system_axi_interconnect_0_imp_auto_us_1_clocks.xdc:18]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_auto_us_1/system_axi_interconnect_0_imp_auto_us_1_clocks.xdc:21]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_auto_us_1/system_axi_interconnect_0_imp_auto_us_1_clocks.xdc:24]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_auto_us_1/system_axi_interconnect_0_imp_auto_us_1_clocks.xdc:27]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_auto_us_1/system_axi_interconnect_0_imp_auto_us_1_clocks.xdc:33]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_auto_us_1/system_axi_interconnect_0_imp_auto_us_1_clocks.xdc:36]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-10' -to list should not be empty. [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_auto_us_1/system_axi_interconnect_0_imp_auto_us_1_clocks.xdc:39]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-10' -to list should not be empty. [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_auto_us_1/system_axi_interconnect_0_imp_auto_us_1_clocks.xdc:42]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-10' -to list should not be empty. [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_auto_us_1/system_axi_interconnect_0_imp_auto_us_1_clocks.xdc:45]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-2' -to list should not be empty. [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_auto_us_1/system_axi_interconnect_0_imp_auto_us_1_clocks.xdc:48]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-11' -to list should not be empty. [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_auto_us_1/system_axi_interconnect_0_imp_auto_us_1_clocks.xdc:51]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-11' -to list should not be empty. [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_auto_us_1/system_axi_interconnect_0_imp_auto_us_1_clocks.xdc:54]
+Finished Parsing XDC File [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_auto_us_1/system_axi_interconnect_0_imp_auto_us_1_clocks.xdc] for cell 'system_i/axi_interconnect_0/s01_couplers/auto_us/inst'
+Parsing XDC File [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_auto_us_2/system_axi_interconnect_0_imp_auto_us_2_clocks.xdc] for cell 'system_i/axi_interconnect_0/s02_couplers/auto_us/inst'
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_auto_us_2/system_axi_interconnect_0_imp_auto_us_2_clocks.xdc:9]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_auto_us_2/system_axi_interconnect_0_imp_auto_us_2_clocks.xdc:12]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_auto_us_2/system_axi_interconnect_0_imp_auto_us_2_clocks.xdc:15]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_auto_us_2/system_axi_interconnect_0_imp_auto_us_2_clocks.xdc:18]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_auto_us_2/system_axi_interconnect_0_imp_auto_us_2_clocks.xdc:21]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_auto_us_2/system_axi_interconnect_0_imp_auto_us_2_clocks.xdc:24]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_auto_us_2/system_axi_interconnect_0_imp_auto_us_2_clocks.xdc:27]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_auto_us_2/system_axi_interconnect_0_imp_auto_us_2_clocks.xdc:33]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_auto_us_2/system_axi_interconnect_0_imp_auto_us_2_clocks.xdc:36]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-10' -to list should not be empty. [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_auto_us_2/system_axi_interconnect_0_imp_auto_us_2_clocks.xdc:39]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-10' -to list should not be empty. [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_auto_us_2/system_axi_interconnect_0_imp_auto_us_2_clocks.xdc:42]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-10' -to list should not be empty. [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_auto_us_2/system_axi_interconnect_0_imp_auto_us_2_clocks.xdc:45]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-2' -to list should not be empty. [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_auto_us_2/system_axi_interconnect_0_imp_auto_us_2_clocks.xdc:48]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-11' -to list should not be empty. [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_auto_us_2/system_axi_interconnect_0_imp_auto_us_2_clocks.xdc:51]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-11' -to list should not be empty. [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_auto_us_2/system_axi_interconnect_0_imp_auto_us_2_clocks.xdc:54]
+Finished Parsing XDC File [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_auto_us_2/system_axi_interconnect_0_imp_auto_us_2_clocks.xdc] for cell 'system_i/axi_interconnect_0/s02_couplers/auto_us/inst'
+Parsing XDC File [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_auto_us_3/system_axi_interconnect_0_imp_auto_us_3_clocks.xdc] for cell 'system_i/axi_interconnect_0/s03_couplers/auto_us/inst'
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_auto_us_3/system_axi_interconnect_0_imp_auto_us_3_clocks.xdc:9]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_auto_us_3/system_axi_interconnect_0_imp_auto_us_3_clocks.xdc:12]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_auto_us_3/system_axi_interconnect_0_imp_auto_us_3_clocks.xdc:15]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_auto_us_3/system_axi_interconnect_0_imp_auto_us_3_clocks.xdc:18]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_auto_us_3/system_axi_interconnect_0_imp_auto_us_3_clocks.xdc:21]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_auto_us_3/system_axi_interconnect_0_imp_auto_us_3_clocks.xdc:24]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_auto_us_3/system_axi_interconnect_0_imp_auto_us_3_clocks.xdc:27]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_auto_us_3/system_axi_interconnect_0_imp_auto_us_3_clocks.xdc:33]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_auto_us_3/system_axi_interconnect_0_imp_auto_us_3_clocks.xdc:36]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-10' -to list should not be empty. [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_auto_us_3/system_axi_interconnect_0_imp_auto_us_3_clocks.xdc:39]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-10' -to list should not be empty. [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_auto_us_3/system_axi_interconnect_0_imp_auto_us_3_clocks.xdc:42]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-10' -to list should not be empty. [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_auto_us_3/system_axi_interconnect_0_imp_auto_us_3_clocks.xdc:45]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-2' -to list should not be empty. [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_auto_us_3/system_axi_interconnect_0_imp_auto_us_3_clocks.xdc:48]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-11' -to list should not be empty. [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_auto_us_3/system_axi_interconnect_0_imp_auto_us_3_clocks.xdc:51]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-11' -to list should not be empty. [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_auto_us_3/system_axi_interconnect_0_imp_auto_us_3_clocks.xdc:54]
+Finished Parsing XDC File [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_auto_us_3/system_axi_interconnect_0_imp_auto_us_3_clocks.xdc] for cell 'system_i/axi_interconnect_0/s03_couplers/auto_us/inst'
+Parsing XDC File [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_auto_cc_1/system_axi_interconnect_0_imp_auto_cc_1_clocks.xdc] for cell 'system_i/axi_interconnect_0/s04_couplers/auto_cc/inst'
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'LUTAR-1' object list specifies likely unusable hierarchical instance 'system_i/axi_interconnect_0/s04_couplers/auto_cc/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi'. [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_auto_cc_1/system_axi_interconnect_0_imp_auto_cc_1_clocks.xdc:30]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_auto_cc_1/system_axi_interconnect_0_imp_auto_cc_1_clocks.xdc:35]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_auto_cc_1/system_axi_interconnect_0_imp_auto_cc_1_clocks.xdc:39]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_auto_cc_1/system_axi_interconnect_0_imp_auto_cc_1_clocks.xdc:42]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_auto_cc_1/system_axi_interconnect_0_imp_auto_cc_1_clocks.xdc:45]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-10' -to list should not be empty. [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_auto_cc_1/system_axi_interconnect_0_imp_auto_cc_1_clocks.xdc:49]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_auto_cc_1/system_axi_interconnect_0_imp_auto_cc_1_clocks.xdc:52]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_auto_cc_1/system_axi_interconnect_0_imp_auto_cc_1_clocks.xdc:56]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_auto_cc_1/system_axi_interconnect_0_imp_auto_cc_1_clocks.xdc:60]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_auto_cc_1/system_axi_interconnect_0_imp_auto_cc_1_clocks.xdc:63]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_auto_cc_1/system_axi_interconnect_0_imp_auto_cc_1_clocks.xdc:66]
+INFO: [Common 17-14] Message 'Vivado_Tcl 4-921' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings. [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_auto_cc_1/system_axi_interconnect_0_imp_auto_cc_1_clocks.xdc:66]
+Finished Parsing XDC File [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_auto_cc_1/system_axi_interconnect_0_imp_auto_cc_1_clocks.xdc] for cell 'system_i/axi_interconnect_0/s04_couplers/auto_cc/inst'
+Parsing XDC File [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_auto_ds_0/system_axi_interconnect_0_imp_auto_ds_0_clocks.xdc] for cell 'system_i/axi_interconnect_0/m00_couplers/auto_ds/inst'
+Finished Parsing XDC File [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_auto_ds_0/system_axi_interconnect_0_imp_auto_ds_0_clocks.xdc] for cell 'system_i/axi_interconnect_0/m00_couplers/auto_ds/inst'
+Parsing XDC File [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_auto_ds_1/system_axi_interconnect_0_imp_auto_ds_1_clocks.xdc] for cell 'system_i/axi_interconnect_0/m01_couplers/auto_ds/inst'
+INFO: [Common 17-14] Message 'Vivado 12-180' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings. [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_auto_ds_1/system_axi_interconnect_0_imp_auto_ds_1_clocks.xdc:30]
+Finished Parsing XDC File [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_auto_ds_1/system_axi_interconnect_0_imp_auto_ds_1_clocks.xdc] for cell 'system_i/axi_interconnect_0/m01_couplers/auto_ds/inst'
+Parsing XDC File [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_auto_ds_2/system_axi_interconnect_0_imp_auto_ds_2_clocks.xdc] for cell 'system_i/axi_interconnect_0/m02_couplers/auto_ds/inst'
+Finished Parsing XDC File [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_auto_ds_2/system_axi_interconnect_0_imp_auto_ds_2_clocks.xdc] for cell 'system_i/axi_interconnect_0/m02_couplers/auto_ds/inst'
+Parsing XDC File [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_auto_ds_3/system_axi_interconnect_0_imp_auto_ds_3_clocks.xdc] for cell 'system_i/axi_interconnect_0/m03_couplers/auto_ds/inst'
+Finished Parsing XDC File [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_auto_ds_3/system_axi_interconnect_0_imp_auto_ds_3_clocks.xdc] for cell 'system_i/axi_interconnect_0/m03_couplers/auto_ds/inst'
+Parsing XDC File [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_auto_ds_4/system_axi_interconnect_0_imp_auto_ds_4_clocks.xdc] for cell 'system_i/axi_interconnect_0/m04_couplers/auto_ds/inst'
+Finished Parsing XDC File [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_auto_ds_4/system_axi_interconnect_0_imp_auto_ds_4_clocks.xdc] for cell 'system_i/axi_interconnect_0/m04_couplers/auto_ds/inst'
+Parsing XDC File [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_auto_cc_0/system_axi_interconnect_0_imp_auto_cc_0_clocks.xdc] for cell 'system_i/axi_interconnect_0/m05_couplers/auto_cc/inst'
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'LUTAR-1' object list specifies likely unusable hierarchical instance 'system_i/axi_interconnect_0/m05_couplers/auto_cc/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi'. [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_auto_cc_0/system_axi_interconnect_0_imp_auto_cc_0_clocks.xdc:30]
+Finished Parsing XDC File [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_auto_cc_0/system_axi_interconnect_0_imp_auto_cc_0_clocks.xdc] for cell 'system_i/axi_interconnect_0/m05_couplers/auto_cc/inst'
+Parsing XDC File [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_auto_ds_5/system_axi_interconnect_0_imp_auto_ds_5_clocks.xdc] for cell 'system_i/axi_interconnect_0/m05_couplers/auto_ds/inst'
+Finished Parsing XDC File [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_auto_ds_5/system_axi_interconnect_0_imp_auto_ds_5_clocks.xdc] for cell 'system_i/axi_interconnect_0/m05_couplers/auto_ds/inst'
+Parsing XDC File [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_auto_ds_6/system_axi_interconnect_0_imp_auto_ds_6_clocks.xdc] for cell 'system_i/axi_interconnect_0/m06_couplers/auto_ds/inst'
+Finished Parsing XDC File [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_interconnect_0_imp_auto_ds_6/system_axi_interconnect_0_imp_auto_ds_6_clocks.xdc] for cell 'system_i/axi_interconnect_0/m06_couplers/auto_ds/inst'
+Parsing XDC File [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_intc_0_0/system_axi_intc_0_0_clocks.xdc] for cell 'system_i/axi_intc_0/U0'
+Finished Parsing XDC File [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_intc_0_0/system_axi_intc_0_0_clocks.xdc] for cell 'system_i/axi_intc_0/U0'
+Parsing XDC File [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_vdma_0_0/system_axi_vdma_0_0_clocks.xdc] for cell 'system_i/axi_vdma_0/U0'
+Finished Parsing XDC File [x:/final_project_v4.gen/sources_1/bd/system/ip/system_axi_vdma_0_0/system_axi_vdma_0_0_clocks.xdc] for cell 'system_i/axi_vdma_0/U0'
+Parsing XDC File [x:/final_project_v4.gen/sources_1/bd/system/ip/system_v_tc_0_0/system_v_tc_0_0_clocks.xdc] for cell 'system_i/v_tc_0/U0'
+Finished Parsing XDC File [x:/final_project_v4.gen/sources_1/bd/system/ip/system_v_tc_0_0/system_v_tc_0_0_clocks.xdc] for cell 'system_i/v_tc_0/U0'
+Parsing XDC File [x:/final_project_v4.gen/sources_1/bd/system/ip/system_v_axi4s_vid_out_0_0/system_v_axi4s_vid_out_0_0_clocks.xdc] for cell 'system_i/v_axi4s_vid_out_0/inst'
+Finished Parsing XDC File [x:/final_project_v4.gen/sources_1/bd/system/ip/system_v_axi4s_vid_out_0_0/system_v_axi4s_vid_out_0_0_clocks.xdc] for cell 'system_i/v_axi4s_vid_out_0/inst'
+Parsing XDC File [x:/final_project_v4.gen/sources_1/bd/system/ip/system_rgb2dvi_0_0/src/rgb2dvi_clocks.xdc] for cell 'system_i/rgb2dvi_0/U0'
+Finished Parsing XDC File [x:/final_project_v4.gen/sources_1/bd/system/ip/system_rgb2dvi_0_0/src/rgb2dvi_clocks.xdc] for cell 'system_i/rgb2dvi_0/U0'
+Parsing XDC File [x:/final_project_v4.gen/sources_1/bd/system/ip/system_mdm_1_0/system_mdm_1_0.xdc] for cell 'system_i/mdm_1/U0'
+Finished Parsing XDC File [x:/final_project_v4.gen/sources_1/bd/system/ip/system_mdm_1_0/system_mdm_1_0.xdc] for cell 'system_i/mdm_1/U0'
+INFO: [Project 1-1714] 72 XPM XDC files have been applied to the design.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Generating merged BMM file for the design top 'system_wrapper'...
+INFO: [Memdata 28-144] Successfully populated the BRAM INIT strings from the following elf files: x:/final_project_v4.gen/sources_1/bd/system/ip/system_microblaze_0_0/data/mb_bootloop_le.elf 
+INFO: [Project 1-1687] 204 scoped IP constraints or related sub-commands were skipped due to synthesis logic optimizations usually triggered by constant connectivity or unconnected output pins. To review the skipped constraints and messages, run the command 'set_param netlist.IPMsgFiltering false' before opening the design.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.040 . Memory (MB): peak = 1647.566 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 434 instances were transformed.
+  IOBUFDS_DIFF_OUT_INTERMDISABLE => IOBUFDS_DIFF_OUT_INTERMDISABLE (IBUFDS_INTERMDISABLE_INT(x2), INV, OBUFTDS(x2)): 2 instances
+  IOBUF_INTERMDISABLE => IOBUF_INTERMDISABLE (IBUF_INTERMDISABLE, OBUFT): 16 instances
+  LUT6_2 => LUT6_2 (LUT5, LUT6): 88 instances
+  OBUFDS => OBUFDS_DUAL_BUF (INV, OBUFDS(x2)): 1 instance 
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 257 instances
+  RAM32X1D => RAM32X1D (RAMD32(x2)): 70 instances
+
+62 Infos, 105 Warnings, 1 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+link_design: Time (s): cpu = 00:00:24 ; elapsed = 00:00:48 . Memory (MB): peak = 1647.566 ; gain = 1262.836
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a200t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a200t'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1647.566 ; gain = 0.000
+
+Starting Cache Timing Information Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Ending Cache Timing Information Task | Checksum: 206706d6c
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:03 . Memory (MB): peak = 1647.566 ; gain = 0.000
+
+Starting Logic Optimization Task
+
+Phase 1 Initialization
+
+Phase 1.1 Core Generation And Design Setup
+Phase 1.1 Core Generation And Design Setup | Checksum: 206706d6c
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.105 . Memory (MB): peak = 2061.324 ; gain = 0.000
+
+Phase 1.2 Setup Constraints And Sort Netlist
+Phase 1.2 Setup Constraints And Sort Netlist | Checksum: 206706d6c
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.159 . Memory (MB): peak = 2061.324 ; gain = 0.000
+Phase 1 Initialization | Checksum: 206706d6c
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.167 . Memory (MB): peak = 2061.324 ; gain = 0.000
+
+Phase 2 Timer Update And Timing Data Collection
+
+Phase 2.1 Timer Update
+Phase 2.1 Timer Update | Checksum: 206706d6c
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 2061.324 ; gain = 0.000
+
+Phase 2.2 Timing Data Collection
+Phase 2.2 Timing Data Collection | Checksum: 206706d6c
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 2061.324 ; gain = 0.000
+Phase 2 Timer Update And Timing Data Collection | Checksum: 206706d6c
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 2061.324 ; gain = 0.000
+
+Phase 3 Retarget
+INFO: [Opt 31-1851] Number of loadless carry chains removed were: 0
+INFO: [Opt 31-1834] Total Chains To Be Transformed Were: 0 AND Number of Transformed insts Created are: 0
+INFO: [Opt 31-1566] Pulled 57 inverters resulting in an inversion of 520 pins
+INFO: [Opt 31-138] Pushed 12 inverter(s) to 15 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 3 Retarget | Checksum: 2940439a1
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2061.324 ; gain = 0.000
+Retarget | Checksum: 2940439a1
+INFO: [Opt 31-389] Phase Retarget created 445 cells and removed 802 cells
+INFO: [Opt 31-1021] In phase Retarget, 295 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 4 Constant propagation
+INFO: [Opt 31-138] Pushed 205 inverter(s) to 251 load pin(s).
+Phase 4 Constant propagation | Checksum: 27593609e
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 2061.324 ; gain = 0.000
+Constant propagation | Checksum: 27593609e
+INFO: [Opt 31-389] Phase Constant propagation created 1776 cells and removed 5467 cells
+INFO: [Opt 31-1021] In phase Constant propagation, 521 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 5 Sweep
+INFO: [Constraints 18-11670] Building netlist checker database with flags, 0x8
+Done building netlist checker database: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.036 . Memory (MB): peak = 2061.324 ; gain = 0.000
+INFO: [Constraints 18-11670] Building netlist checker database with flags, 0x8
+Done building netlist checker database: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.036 . Memory (MB): peak = 2061.324 ; gain = 0.000
+Phase 5 Sweep | Checksum: 21ef014d1
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 2061.324 ; gain = 0.000
+Sweep | Checksum: 21ef014d1
+INFO: [Opt 31-389] Phase Sweep created 1 cells and removed 5414 cells
+INFO: [Opt 31-1021] In phase Sweep, 917 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 6 BUFG optimization
+INFO: [Opt 31-194] Inserted BUFG system_i/mdm_1/U0/Use_E2.BSCAN_I/Dbg_Update_0_BUFG_inst to drive 40 load(s) on clock net system_i/mdm_1/U0/Use_E2.BSCAN_I/Dbg_Update_0_BUFG
+INFO: [Opt 31-193] Inserted 1 BUFG(s) on clock nets
+Phase 6 BUFG optimization | Checksum: 2690c412d
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 2061.324 ; gain = 0.000
+BUFG optimization | Checksum: 2690c412d
+INFO: [Opt 31-662] Phase BUFG optimization created 1 cells of which 1 are BUFGs and removed 0 cells.
+
+Phase 7 Shift Register Optimization
+INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
+Phase 7 Shift Register Optimization | Checksum: 2690c412d
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 2061.324 ; gain = 0.000
+Shift Register Optimization | Checksum: 2690c412d
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 8 Post Processing Netlist
+Phase 8 Post Processing Netlist | Checksum: 256a510a7
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 2061.324 ; gain = 0.000
+Post Processing Netlist | Checksum: 256a510a7
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+INFO: [Opt 31-1021] In phase Post Processing Netlist, 295 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 9 Finalization
+
+Phase 9.1 Finalizing Design Cores and Updating Shapes
+Phase 9.1 Finalizing Design Cores and Updating Shapes | Checksum: 24258b15d
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 2061.324 ; gain = 0.000
+
+Phase 9.2 Verifying Netlist Connectivity
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.101 . Memory (MB): peak = 2061.324 ; gain = 0.000
+Phase 9.2 Verifying Netlist Connectivity | Checksum: 24258b15d
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 2061.324 ; gain = 0.000
+Phase 9 Finalization | Checksum: 24258b15d
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 2061.324 ; gain = 0.000
+Opt_design Change Summary
+=========================
+
+
+-------------------------------------------------------------------------------------------------------------------------
+|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+-------------------------------------------------------------------------------------------------------------------------
+|  Retarget                     |             445  |             802  |                                            295  |
+|  Constant propagation         |            1776  |            5467  |                                            521  |
+|  Sweep                        |               1  |            5414  |                                            917  |
+|  BUFG optimization            |               1  |               0  |                                              0  |
+|  Shift Register Optimization  |               0  |               0  |                                              0  |
+|  Post Processing Netlist      |               0  |               0  |                                            295  |
+-------------------------------------------------------------------------------------------------------------------------
+
+
+Ending Logic Optimization Task | Checksum: 24258b15d
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 2061.324 ; gain = 0.000
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Pwropt 34-9] Applying IDT optimizations ...
+INFO: [Pwropt 34-10] Applying ODC optimizations ...
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+
+
+Starting PowerOpt Patch Enables Task
+INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 45 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
+INFO: [Pwropt 34-201] Structural ODC has moved 5 WE to EN ports
+Number of BRAM Ports augmented: 34 newly gated: 9 Total Ports: 90
+Ending PowerOpt Patch Enables Task | Checksum: 26620e82c
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.400 . Memory (MB): peak = 2457.023 ; gain = 0.000
+Ending Power Optimization Task | Checksum: 26620e82c
+
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 2457.023 ; gain = 395.699
+
+Starting Final Cleanup Task
+
+Starting Logic Optimization Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Ending Logic Optimization Task | Checksum: 243454fd8
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 2457.023 ; gain = 0.000
+Ending Final Cleanup Task | Checksum: 243454fd8
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:10 . Memory (MB): peak = 2457.023 ; gain = 0.000
+
+Starting Netlist Obfuscation Task
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.034 . Memory (MB): peak = 2457.023 ; gain = 0.000
+Ending Netlist Obfuscation Task | Checksum: 243454fd8
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.040 . Memory (MB): peak = 2457.023 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+96 Infos, 105 Warnings, 1 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:28 ; elapsed = 00:00:47 . Memory (MB): peak = 2457.023 ; gain = 809.457
+INFO: [Vivado 12-24828] Executing command : report_drc -file system_wrapper_drc_opted.rpt -pb system_wrapper_drc_opted.pb -rpx system_wrapper_drc_opted.rpx
+Command: report_drc -file system_wrapper_drc_opted.rpt -pb system_wrapper_drc_opted.pb -rpx system_wrapper_drc_opted.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file X:/final_project_v4.runs/impl_1/system_wrapper_drc_opted.rpt.
+report_drc completed successfully
+report_drc: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 2457.023 ; gain = 0.000
+generate_parallel_reports: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 2457.023 ; gain = 0.000
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Wrote PlaceDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 2457.023 ; gain = 0.000
+Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2457.023 ; gain = 0.000
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Wrote RouteStorage: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.155 . Memory (MB): peak = 2457.023 ; gain = 0.000
+Wrote Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2457.023 ; gain = 0.000
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.185 . Memory (MB): peak = 2457.023 ; gain = 0.000
+Wrote Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 2457.023 ; gain = 0.000
+Write Physdb Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.192 . Memory (MB): peak = 2457.023 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'X:/final_project_v4.runs/impl_1/system_wrapper_opt.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:06 ; elapsed = 00:00:10 . Memory (MB): peak = 2457.023 ; gain = 0.000
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a200t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a200t'
+INFO: [Common 17-83] Releasing license: Implementation
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors, 12 Warnings
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 2 CPUs
+
+Starting Placer Task
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.032 . Memory (MB): peak = 2457.023 ; gain = 0.000
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 21d95f529
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.043 . Memory (MB): peak = 2457.023 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.035 . Memory (MB): peak = 2457.023 ; gain = 0.000
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+ERROR: [Place 30-370] An unconstrained Phaser instance has been found. Phaser instances and their associated IO logic must be LOC constrained to a legal site locations for placement to succeed. Check to see whether all core constraints were properly used or manually add LOC constraints for the following instance(s).
+
+Unconstrained Phaser instance(s):
+Inst 'phaser_out'
+
+ERROR: [Place 30-370] An unconstrained Phaser instance has been found. Phaser instances and their associated IO logic must be LOC constrained to a legal site locations for placement to succeed. Check to see whether all core constraints were properly used or manually add LOC constraints for the following instance(s).
+
+Unconstrained Phaser instance(s):
+Inst 'phaser_out'
+
+ERROR: [Place 30-370] An unconstrained Phaser instance has been found. Phaser instances and their associated IO logic must be LOC constrained to a legal site locations for placement to succeed. Check to see whether all core constraints were properly used or manually add LOC constraints for the following instance(s).
+
+Unconstrained Phaser instance(s):
+Inst 'phaser_in_gen.phaser_in'
+
+ERROR: [Place 30-370] An unconstrained Phaser instance has been found. Phaser instances and their associated IO logic must be LOC constrained to a legal site locations for placement to succeed. Check to see whether all core constraints were properly used or manually add LOC constraints for the following instance(s).
+
+Unconstrained Phaser instance(s):
+Inst 'phaser_out'
+
+ERROR: [Place 30-370] An unconstrained Phaser instance has been found. Phaser instances and their associated IO logic must be LOC constrained to a legal site locations for placement to succeed. Check to see whether all core constraints were properly used or manually add LOC constraints for the following instance(s).
+
+Unconstrained Phaser instance(s):
+Inst 'phaser_in_gen.phaser_in'
+
+ERROR: [Place 30-370] An unconstrained Phaser instance has been found. Phaser instances and their associated IO logic must be LOC constrained to a legal site locations for placement to succeed. Check to see whether all core constraints were properly used or manually add LOC constraints for the following instance(s).
+
+Unconstrained Phaser instance(s):
+Inst 'phaser_out'
+
+ERROR: [Place 30-370] An unconstrained Phaser instance has been found. Phaser instances and their associated IO logic must be LOC constrained to a legal site locations for placement to succeed. Check to see whether all core constraints were properly used or manually add LOC constraints for the following instance(s).
+
+Unconstrained Phaser instance(s):
+Inst 'phaser_ref_i'
+
+ERROR: [Place 30-370] An unconstrained Phaser instance has been found. Phaser instances and their associated IO logic must be LOC constrained to a legal site locations for placement to succeed. Check to see whether all core constraints were properly used or manually add LOC constraints for the following instance(s).
+
+Unconstrained Phaser instance(s):
+Inst 'phy_control_i'
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: f2132ba5
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:03 . Memory (MB): peak = 2457.023 ; gain = 0.000
+Phase 1 Placer Initialization | Checksum: f2132ba5
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:03 . Memory (MB): peak = 2457.023 ; gain = 0.000
+ERROR: [Place 30-99] Placer failed with error: 'IO Clock Placer stopped due to earlier errors. Implementation Feasibility check failed, Please see the previously displayed individual error or warning messages for more details.'
+Please review all ERROR, CRITICAL WARNING, and WARNING messages during placement to understand the cause for failure.
+Ending Placer Task | Checksum: 1680601dc
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:03 . Memory (MB): peak = 2457.023 ; gain = 0.000
+112 Infos, 105 Warnings, 1 Critical Warnings and 10 Errors encountered.
+place_design failed
+ERROR: [Common 17-69] Command failed: Placer could not place all instances
+INFO: [Common 17-206] Exiting Vivado at Wed Aug 20 16:01:41 2025...

@@ -1,0 +1,28 @@
+######################################################################################
+# This is a generated CSV file representing the addressing in design system
+#
+# Format:
+# Master Segment Name, Address Space, Slave Segment, Offset, Range ...
+#      Excluded (optional), Included (optional), Unassigned (optional)
+######################################################################################
+
+# 
+# Assignments in Address Space /microblaze_0/Data
+#
+SEG_dlmb_bram_if_cntlr_Mem,/microblaze_0/Data,/microblaze_0_local_memory/dlmb_bram_if_cntlr/SLMB/Mem,0x00000,128K
+SEG_axi_uartlite_0_Reg,/microblaze_0/Data,/axi_uartlite_0/S_AXI/Reg,0x40600000,64K
+SEG_axi_intc_0_Reg,/microblaze_0/Data,/axi_intc_0/S_AXI/Reg,0x41200000,64K
+SEG_axi_timer_0_Reg,/microblaze_0/Data,/axi_timer_0/S_AXI/Reg,0x41C00000,64K
+SEG_axi_vdma_0_Reg,/microblaze_0/Data,/axi_vdma_0/S_AXI_LITE/Reg,0x44A00000,64K
+SEG_v_tc_0_Reg,/microblaze_0/Data,/v_tc_0/ctrl/Reg,0x44A10000,64K
+SEG_mig_7series_0_memaddr,/microblaze_0/Data,/mig_7series_0/memmap/memaddr,0x80000000,512M
+# 
+# Assignments in Address Space /microblaze_0/Instruction
+#
+SEG_ilmb_bram_if_cntlr_Mem,/microblaze_0/Instruction,/microblaze_0_local_memory/ilmb_bram_if_cntlr/SLMB/Mem,0x00000,128K
+SEG_axi_uartlite_0_Reg,/microblaze_0/Instruction,/axi_uartlite_0/S_AXI/Reg,0x40600000,64K
+SEG_axi_intc_0_Reg,/microblaze_0/Instruction,/axi_intc_0/S_AXI/Reg,0x41200000,64K
+SEG_axi_timer_0_Reg,/microblaze_0/Instruction,/axi_timer_0/S_AXI/Reg,0x41C00000,64K
+SEG_axi_vdma_0_Reg,/microblaze_0/Instruction,/axi_vdma_0/S_AXI_LITE/Reg,0x44A00000,64K
+SEG_v_tc_0_Reg,/microblaze_0/Instruction,/v_tc_0/ctrl/Reg,0x44A10000,64K
+SEG_mig_7series_0_memaddr,/microblaze_0/Instruction,/mig_7series_0/memmap/memaddr,0x80000000,512M

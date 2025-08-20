@@ -1,0 +1,22 @@
+BD cells (name : VLNV)
+/axi_intc_0 : xilinx.com:ip:axi_intc:4.1
+/axi_interconnect_0 : xilinx.com:ip:axi_interconnect:2.1
+/axi_timer_0 : xilinx.com:ip:axi_timer:2.0
+/axi_uartlite_0 : xilinx.com:ip:axi_uartlite:2.0
+/axi_vdma_0 : xilinx.com:ip:axi_vdma:6.3
+/clk_wiz_0 : xilinx.com:ip:clk_wiz:6.0
+/lmb_bram_if_cntlr_0 : xilinx.com:ip:lmb_bram_if_cntlr:4.0
+/lmb_bram_if_cntlr_0_bram : xilinx.com:ip:blk_mem_gen:8.4
+/mdm_1 : xilinx.com:ip:mdm:3.2
+/microblaze_0 : xilinx.com:ip:microblaze:11.0
+/microblaze_0_local_memory : 
+/microblaze_mcs_0 : xilinx.com:ip:microblaze_mcs:3.0
+/mig_7series_0 : xilinx.com:ip:mig_7series:4.2
+/proc_sys_reset_0 : xilinx.com:ip:proc_sys_reset:5.0
+/reset_inv_0 : xilinx.com:ip:util_vector_logic:2.0
+/rgb2dvi_0 : digilentinc.com:ip:rgb2dvi:1.4
+/rst_mig_7series_0_100M : xilinx.com:ip:proc_sys_reset:5.0
+/rst_pix : xilinx.com:ip:proc_sys_reset:5.0
+/util_vector_logic_0 : xilinx.com:ip:util_vector_logic:2.0
+/v_axi4s_vid_out_0 : xilinx.com:ip:v_axi4s_vid_out:4.0
+/v_tc_0 : xilinx.com:ip:v_tc:6.2

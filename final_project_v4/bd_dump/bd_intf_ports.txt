@@ -1,0 +1,2 @@
+Top-level interface ports
+/usb_uart : xilinx.com:interface:uart_rtl:1.0
