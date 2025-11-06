@@ -3,7 +3,7 @@
 
 # XDC: new/nexys_hdmi.xdc
 
-# XDC: new/fix_backbone.xdc
+# XDC: new/fix_backbone_impl.xdc
 
 # Block Designs: bd/system/system.bd
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==system || ORIG_REF_NAME==system} -quiet] -quiet

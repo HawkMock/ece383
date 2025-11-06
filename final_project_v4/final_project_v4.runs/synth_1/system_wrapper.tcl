@@ -199,9 +199,6 @@ foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
 read_xdc X:/final_project_v4.srcs/constrs_1/new/nexys_hdmi.xdc
 set_property used_in_implementation false [get_files X:/final_project_v4.srcs/constrs_1/new/nexys_hdmi.xdc]
 
-read_xdc X:/final_project_v4.srcs/constrs_1/new/fix_backbone.xdc
-set_property used_in_implementation false [get_files X:/final_project_v4.srcs/constrs_1/new/fix_backbone.xdc]
-
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1

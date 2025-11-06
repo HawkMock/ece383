@@ -1,0 +1,7 @@
+set_property SRC_FILE_INFO {cfile:c:/Users/Dustin.Mock/code/ece383/final_project_lab2_branch/final_project_lab2_branch.gen/sources_1/ip/clk_wiz_0_1/clk_wiz_0_board.xdc rfile:../../../final_project_lab2_branch.gen/sources_1/ip/clk_wiz_0_1/clk_wiz_0_board.xdc id:1 order:EARLY used_in_board:yes scoped_inst:inst prop_thru_buffer:yes} [current_design]
+set_property SRC_FILE_INFO {cfile:c:/Users/Dustin.Mock/code/ece383/final_project_lab2_branch/final_project_lab2_branch.gen/sources_1/ip/clk_wiz_0_1/clk_wiz_0.xdc rfile:../../../final_project_lab2_branch.gen/sources_1/ip/clk_wiz_0_1/clk_wiz_0.xdc id:2 order:EARLY scoped_inst:inst} [current_design]
+current_instance inst
+set_property src_info {type:SCOPED_XDC file:1 line:4 export:INPUT save:INPUT read:READ} [current_design]
+--set_property BOARD_PART_PIN {reset} [get_ports resetn]
+set_property src_info {type:SCOPED_XDC file:2 line:54 export:INPUT save:INPUT read:READ} [current_design]
+set_input_jitter [get_clocks -of_objects [get_ports clk_in1]] 0.100

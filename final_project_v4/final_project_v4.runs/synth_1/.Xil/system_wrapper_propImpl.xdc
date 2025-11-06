@@ -1,5 +1,4 @@
 set_property SRC_FILE_INFO {cfile:X:/final_project_v4.srcs/constrs_1/new/nexys_hdmi.xdc rfile:../../../final_project_v4.srcs/constrs_1/new/nexys_hdmi.xdc id:1} [current_design]
-set_property SRC_FILE_INFO {cfile:X:/final_project_v4.srcs/constrs_1/new/fix_backbone.xdc rfile:../../../final_project_v4.srcs/constrs_1/new/fix_backbone.xdc id:2} [current_design]
 set_property src_info {type:XDC file:1 line:2 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN R4      [get_ports sys_clock]
 set_property src_info {type:XDC file:1 line:7 export:INPUT save:INPUT read:READ} [current_design]
@@ -34,5 +33,3 @@ set_property src_info {type:XDC file:1 line:59 export:INPUT save:INPUT read:READ
 set_property -dict { PACKAGE_PIN D14 IOSTANDARD LVCMOS33 } [get_ports { btn[3] }]; # right
 set_property src_info {type:XDC file:1 line:60 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN F15 IOSTANDARD LVCMOS33 } [get_ports { btn[0] }]; # up
-set_property src_info {type:XDC file:2 line:1 export:INPUT save:INPUT read:READ} [current_design]
-set_property CLOCK_DEDICATED_ROUTE AUTO [get_nets -hier system_i/clk_wiz_0/inst/clk_sys]

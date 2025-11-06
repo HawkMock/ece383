@@ -136,7 +136,7 @@ OPTRACE "add files" START { }
   set_param project.isImplRun false
 OPTRACE "read constraints: implementation" START { }
   read_xdc X:/final_project_v4.srcs/constrs_1/new/nexys_hdmi.xdc
-  read_xdc X:/final_project_v4.srcs/constrs_1/new/fix_backbone.xdc
+  read_xdc X:/final_project_v4.srcs/constrs_1/new/fix_backbone_impl.xdc
 OPTRACE "read constraints: implementation" END { }
 OPTRACE "read constraints: implementation_pre" START { }
 OPTRACE "read constraints: implementation_pre" END { }
